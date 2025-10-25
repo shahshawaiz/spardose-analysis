@@ -73,6 +73,17 @@ export const api = {
     }
   },
 
+  // Chat with AI assistant (streaming by default)
+  chat: async (data: AnalysisRequest, stream: boolean = true): Promise<AnalysisResponse> => {
+    if (stream) {
+      const response = await apiClient.post('/chat', data, { params: { stream: true } });
+      return response.data;
+    } else {
+      const response = await apiClient.post('/chat', data, { params: { stream: false } });
+      return response.data;
+    }
+  },
+
   // Streaming methods for real-time updates
   streamAnalyzePosition: async (data: AnalysisRequest) => {
     const response = await fetch(`${API_BASE_URL}/analyze/position`, {
@@ -85,6 +96,15 @@ export const api = {
 
   streamAnalyzeTopEarning: async (data: AnalysisRequest) => {
     const response = await fetch(`${API_BASE_URL}/analyze/top-earning`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+    });
+    return response;
+  },
+
+  streamChat: async (data: AnalysisRequest) => {
+    const response = await fetch(`${API_BASE_URL}/chat`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data),

@@ -2,26 +2,88 @@
 
 import { useState } from 'react';
 import { Send, Bot, User } from 'lucide-react';
+import { api } from '../lib/api';
 
 export default function ChatInterface() {
   const [message, setMessage] = useState('');
   const [messages, setMessages] = useState<Array<{type: 'user' | 'bot', content: string}>>([]);
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!message.trim()) return;
+  const handleSubmit = async (e?: React.FormEvent) => {
+    if (e) e.preventDefault();
+    if (!message.trim() || loading) return;
 
     const userMessage = message.trim();
     setMessages(prev => [...prev, { type: 'user', content: userMessage }]);
     setMessage('');
+    setLoading(true);
 
-    // Simple placeholder response
-    setTimeout(() => {
+    try {
+      // Use streaming chat
+      const response = await api.streamChat({ message: userMessage });
+      
+      // Handle streaming response
+      const reader = response.body?.getReader();
+      if (!reader) {
+        throw new Error('No response body');
+      }
+      
+      let botResponse = '';
+      const decoder = new TextDecoder();
+      
+      // Add initial bot message
+      setMessages(prev => [...prev, { type: 'bot', content: '' }]);
+      
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
+        
+        const chunk = decoder.decode(value);
+        const lines = chunk.split('\n');
+        
+        for (const line of lines) {
+          if (line.startsWith('data: ')) {
+            try {
+              const data = JSON.parse(line.slice(6));
+              if (data.content) {
+                botResponse += data.content;
+                // Update the last message (bot's response) with streaming content
+                setMessages(prev => {
+                  const newMessages = [...prev];
+                  newMessages[newMessages.length - 1] = { type: 'bot', content: botResponse };
+                  return newMessages;
+                });
+              }
+              if (data.error) {
+                setMessages(prev => {
+                  const newMessages = [...prev];
+                  newMessages[newMessages.length - 1] = { type: 'bot', content: `Error: ${data.error}` };
+                  return newMessages;
+                });
+                break;
+              }
+            } catch (e) {
+              // Skip malformed JSON
+            }
+          }
+        }
+      }
+      
+    } catch (error) {
       setMessages(prev => [...prev, { 
         type: 'bot', 
-        content: 'Chat functionality is currently disabled. Use the main analysis tools above for AI-powered insights.' 
+        content: `Error: ${(error as Error).message}` 
       }]);
-    }, 1000);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      handleSubmit();
+    }
   };
 
   return (
@@ -49,6 +111,13 @@ export default function ChatInterface() {
             )}
           </div>
         ))}
+        
+        {messages.length === 0 && (
+          <div className="text-center text-gray-400 py-8">
+            <Bot className="w-8 h-8 mx-auto mb-3 text-gray-500" />
+            <p className="text-xs">Ask me anything about DeFi, positions, or analysis!</p>
+          </div>
+        )}
       </div>
 
       {/* Input Form */}
@@ -57,15 +126,16 @@ export default function ChatInterface() {
           <textarea
             value={message}
             onChange={(e) => setMessage(e.target.value)}
-            placeholder="Chat disabled - use analysis tools above..."
+            onKeyDown={handleKeyDown}
+            placeholder="Ask about DeFi, positions, or analysis..."
             className="w-full p-2 pr-10 border border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent resize-none bg-black text-green-400 text-xs"
             rows={2}
-            disabled
+            disabled={loading}
           />
           <button
             type="submit"
-            disabled={true}
-            className="absolute right-2 bottom-2 p-1 bg-gray-600 text-gray-400 rounded transition-colors cursor-not-allowed"
+            disabled={loading || !message.trim()}
+            className="absolute right-2 bottom-2 p-1 bg-green-600 text-black rounded transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
           >
             <Send className="w-3 h-3" />
           </button>

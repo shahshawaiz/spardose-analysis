@@ -63,6 +63,24 @@ async def analyze_top_earning(data: dict, stream: bool = Query(True, description
     except Exception as e:
         return {"error": str(e)}
 
+@app.post("/chat")
+async def chat(data: dict, stream: bool = Query(True, description="Enable streaming response")):
+    """Chat with AI assistant for general DeFi questions"""
+    try:
+        if stream:
+            async def generate():
+                try:
+                    async for chunk in llm_service.complete_stream(data, "chat_assistant"):
+                        yield f"data: {json.dumps({'content': chunk})}\n\n"
+                except Exception as e:
+                    yield f"data: {json.dumps({'error': str(e)})}\n\n"
+            return StreamingResponse(generate(), media_type="text/plain")
+        else:
+            result = await llm_service.complete(data, "chat_assistant")
+            return {"result": result}
+    except Exception as e:
+        return {"error": str(e)}
+
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8000)
