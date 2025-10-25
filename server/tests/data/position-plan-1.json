@@ -1,0 +1,57 @@
+{
+  "poolAddress": "0xc473e2aee3441bf9240be85eb122abb059a3b57c",
+  "token0": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+  "token1": "0xaf88d065e77c8cc2239327c5edb3a432268e5831",
+  "fee": 3000,
+  "symbols": {
+    "token0": "WETH",
+    "token1": "USDC"
+  },
+  "ticks": {
+    "current": -193256,
+    "lower": -193500,
+    "upper": -193080
+  },
+  "prices": {
+    "currentToken1PerToken0": 4.049656458807099e-21,
+    "lowerToken1PerToken0": 3.952045418888768e-21,
+    "upperToken1PerToken0": 4.121557692428058e-21
+  },
+  "wallet": {
+    "address": "0x0221f639961C5B82b4950ca1112022e12f426117",
+    "token0": {
+      "symbol": "WETH",
+      "decimals": 18,
+      "balance": "0.026121268329238309"
+    },
+    "token1": {
+      "symbol": "USDC",
+      "decimals": 6,
+      "balance": "1.610804"
+    }
+  },
+  "required": {
+    "amount0": "0.000287068504875017",
+    "amount1": "1.610803",
+    "liquidity": "2086568810156"
+  },
+  "rebalance": {
+    "position": "inside_range",
+    "targetFractions": {
+      "token0": 7.225331444260519e-13,
+      "token1": 0.9999999999992775
+    },
+    "valueInToken1": 1.610804,
+    "side": "token1_to_token0",
+    "amountIn": {
+      "token": "token1",
+      "amount": "1.1639578190170141e-12"
+    },
+    "postSwapRequired": {
+      "amount0": "287398389.43954355",
+      "amount1": "1.610803999998836"
+    }
+  },
+  "note": "Centered range around current price for higher fee capture; narrower ranges increase fee APR but require active management.",
+  "createCommand": "node index.js create-position --token0 0x82af49447d8a07e3bd95bd0d56f35241523fbab1 --token1 0xaf88d065e77c8cc2239327c5edb3a432268e5831 --fee 3000 --amount0 0.000287068504875017 --amount1 1.610803"
+}

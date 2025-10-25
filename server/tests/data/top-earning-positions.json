@@ -1,0 +1,4561 @@
+{
+  "success": true,
+  "total_count": 169685,
+  "data": [
+    {
+      "in_range": true,
+      "pool": "0x73b14a78a0d396c521f954532d43fd5ffe385216",
+      "age": 0.5724537037,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "31.70938926133217745890233504237",
+          "roi": "0.4937452806",
+          "apr": "194610.5770",
+          "pool_pnl": "31.723435257372472881964744",
+          "pool_roi": "0.4939639901",
+          "pool_apr": "194808.0124",
+          "il": "-0.000437873613122719574911",
+          "fee_apr": "194699.4691"
+        }
+      },
+      "nft_id": 1029039,
+      "underlying_value": "6422.2016883177718734961036",
+      "token1": "0x68f180fcce6836688e9084f035309e29bf0a2095",
+      "token0": "0x4200000000000000000000000000000000000006",
+      "real_owner": "0x7776bf9e5de1b648e642f3ea854a8c464ede4884",
+      "exited": false,
+      "tick_upper": -262800,
+      "tokens": {
+        "0x68f180fcce6836688e9084f035309e29bf0a2095": {
+          "address": "0x68f180fcce6836688e9084f035309e29bf0a2095",
+          "decimals": 8,
+          "symbol": "WBTC"
+        },
+        "0x4200000000000000000000000000000000000006": {
+          "address": "0x4200000000000000000000000000000000000006",
+          "decimals": 18,
+          "symbol": "WETH"
+        }
+      },
+      "network": "optimism",
+      "exchange": "uniswapv3",
+      "fee_tier": "3000",
+      "autocompounding": null,
+      "tick_lower": -264000
+    },
+    {
+      "in_range": true,
+      "pool": "0xcc41a2279baf85e6d4fa2e30b2a80583095dbf94",
+      "age": 0.7478703704,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "7247.966380478462993644324383529298005",
+          "roi": "90.57481402",
+          "apr": "44325.29003",
+          "pool_pnl": "7269.817211473389959855171852952798005",
+          "pool_roi": "90.84787475",
+          "pool_apr": "44459.93452",
+          "il": "-894.259062893723181233439913549782023",
+          "fee_apr": "49927.80452"
+        }
+      },
+      "nft_id": 4075943,
+      "underlying_value": "7086.0775341062768187663403",
+      "token1": "0x4200000000000000000000000000000000000006",
+      "token0": "0x164a105d774e33a528e9c687d06573c6b7e711c2",
+      "real_owner": "0xb1900f41d78d330a2a35c6771b3a6088a1b51309",
+      "exited": false,
+      "tick_upper": 887200,
+      "tokens": {
+        "0x4200000000000000000000000000000000000006": {
+          "address": "0x4200000000000000000000000000000000000006",
+          "decimals": 18,
+          "symbol": "WETH"
+        },
+        "0x164a105d774e33a528e9c687d06573c6b7e711c2": {
+          "address": "0x164a105d774e33a528e9c687d06573c6b7e711c2",
+          "decimals": 18,
+          "symbol": "RODEO"
+        }
+      },
+      "network": "base",
+      "exchange": "uniswapv3",
+      "fee_tier": "10000",
+      "autocompounding": null,
+      "tick_lower": -208200
+    },
+    {
+      "in_range": true,
+      "pool": "0x2a216495584e406c39582d3ee583aeda937beba6",
+      "age": 1.666111111,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "28689.2214070116341167127441501281822113",
+          "roi": "138.9087387",
+          "apr": "30431.15750",
+          "pool_pnl": "28689.4797980932156732041975951281822113",
+          "pool_roi": "138.9099898",
+          "pool_apr": "30431.81231",
+          "il": "25633.3084743549185988868297951281822113",
+          "fee_apr": "3241.734224"
+        }
+      },
+      "nft_id": 1111314,
+      "underlying_value": "46286.337753135223568218038",
+      "token1": "0xf19308f923582a6f7c465e5ce7a9dc1bec6665b1",
+      "token0": "0xd536e7a9543cf9867a580b45cec7f748a1fe11ec",
+      "real_owner": "0xb0d1a98b4669ec986db27f925b85a951a390ca42",
+      "exited": false,
+      "tick_upper": 117400,
+      "tokens": {
+        "0xd536e7a9543cf9867a580b45cec7f748a1fe11ec": {
+          "address": "0xd536e7a9543cf9867a580b45cec7f748a1fe11ec",
+          "decimals": 18,
+          "symbol": "ORX"
+        },
+        "0xf19308f923582a6f7c465e5ce7a9dc1bec6665b1": {
+          "address": "0xf19308f923582a6f7c465e5ce7a9dc1bec6665b1",
+          "decimals": 18,
+          "symbol": "TITANX"
+        },
+        "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2": {
+          "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+          "decimals": 18,
+          "symbol": "WETH"
+        }
+      },
+      "network": "mainnet",
+      "exchange": "uniswapv3",
+      "fee_tier": "10000",
+      "autocompounding": null,
+      "tick_lower": 114800
+    },
+    {
+      "in_range": true,
+      "pool": "0x4955ccb513deee8523119d8c4c4e2c1f277ccd0d",
+      "age": 0.7904976852,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "976.1551668558931757317755906080",
+          "roi": "50.51269030",
+          "apr": "23323.44838",
+          "pool_pnl": "976.16775262170201040311076",
+          "pool_roi": "50.51334157",
+          "pool_apr": "23323.90100",
+          "il": "-133.66770746923203380000000",
+          "fee_apr": "26517.49532"
+        }
+      },
+      "nft_id": 4075615,
+      "underlying_value": "1798.8146125307679662",
+      "token1": "0x69f7098f704d622e55ff87b4556b65eedb405841",
+      "token0": "0x4200000000000000000000000000000000000006",
+      "real_owner": "0xaa8d2a6a61b721161e89217ad85eae6e1afb4348",
+      "exited": false,
+      "tick_upper": 139200,
+      "tokens": {
+        "0x69f7098f704d622e55ff87b4556b65eedb405841": {
+          "address": "0x69f7098f704d622e55ff87b4556b65eedb405841",
+          "decimals": 18,
+          "symbol": "Base人生"
+        },
+        "0x4200000000000000000000000000000000000006": {
+          "address": "0x4200000000000000000000000000000000000006",
+          "decimals": 18,
+          "symbol": "WETH"
+        }
+      },
+      "network": "base",
+      "exchange": "uniswapv3",
+      "fee_tier": "10000",
+      "autocompounding": null,
+      "tick_lower": 132400
+    },
+    {
+      "in_range": true,
+      "pool": "0xdad8bccfc4b5fd68e26da0ac34cee693f2b442b9",
+      "age": 0.7416319444,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "146.1687586227935640855931781552",
+          "roi": "19.44333987",
+          "apr": "9569.192785",
+          "pool_pnl": "146.4855037094699614737508981552",
+          "pool_roi": "19.48547324",
+          "pool_apr": "9593.971319",
+          "il": "-0.5150490547792304046859118448",
+          "fee_apr": "9623.647637"
+        }
+      },
+      "nft_id": 1111910,
+      "underlying_value": "750.93595571565524835858918",
+      "token1": "0xfa1c09fc8b491b6a4d3ff53a10cad29381b3f949",
+      "token0": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "real_owner": "0x4436a2d073e750590a06ae7f0934bc1b06e48c36",
+      "exited": false,
+      "tick_upper": 296600,
+      "tokens": {
+        "0xfa1c09fc8b491b6a4d3ff53a10cad29381b3f949": {
+          "address": "0xfa1c09fc8b491b6a4d3ff53a10cad29381b3f949",
+          "decimals": 18,
+          "symbol": "FF"
+        },
+        "0xdac17f958d2ee523a2206206994597c13d831ec7": {
+          "address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+          "decimals": 6,
+          "symbol": "USDT"
+        },
+        "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2": {
+          "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+          "decimals": 18,
+          "symbol": "WETH"
+        }
+      },
+      "network": "mainnet",
+      "exchange": "uniswapv3",
+      "fee_tier": "10000",
+      "autocompounding": null,
+      "tick_lower": 295400
+    },
+    {
+      "in_range": true,
+      "pool": "0x4955ccb513deee8523119d8c4c4e2c1f277ccd0d",
+      "age": 0.860775463,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "1152.399364597615366222237618730928",
+          "roi": "22.17647478",
+          "apr": "9403.629217",
+          "pool_pnl": "1152.408245388089385874256304274728",
+          "pool_roi": "22.17664568",
+          "pool_apr": "9403.717756",
+          "il": "-38.332936291359404393159015725272",
+          "fee_apr": "9716.500120"
+        }
+      },
+      "nft_id": 4075375,
+      "underlying_value": "5158.1530083446404380",
+      "token1": "0x69f7098f704d622e55ff87b4556b65eedb405841",
+      "token0": "0x4200000000000000000000000000000000000006",
+      "real_owner": "0x0f2cebc974ada87dbb2c4cafadee1c281b6741db",
+      "exited": false,
+      "tick_upper": 887200,
+      "tokens": {
+        "0x69f7098f704d622e55ff87b4556b65eedb405841": {
+          "address": "0x69f7098f704d622e55ff87b4556b65eedb405841",
+          "decimals": 18,
+          "symbol": "Base人生"
+        },
+        "0x4200000000000000000000000000000000000006": {
+          "address": "0x4200000000000000000000000000000000000006",
+          "decimals": 18,
+          "symbol": "WETH"
+        }
+      },
+      "network": "base",
+      "exchange": "uniswapv3",
+      "fee_tier": "10000",
+      "autocompounding": null,
+      "tick_lower": -887200
+    },
+    {
+      "in_range": true,
+      "pool": "0xda6cd43693fb69f6048fee311347407506f9d196",
+      "age": 1.210405093,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "356.72153562038181037512693663680",
+          "roi": "23.80419498",
+          "apr": "7565.204672",
+          "pool_pnl": "356.73655396416410254886778088000",
+          "pool_roi": "23.80519716",
+          "pool_apr": "7565.541681",
+          "il": "-0.46463457764442064990485559625",
+          "fee_apr": "7575.376954"
+        }
+      },
+      "nft_id": 4073935,
+      "underlying_value": "1498.0861921591513855",
+      "token1": "0x9d5c1c400dc828a3409f9c209b83ff51a65d2a0e",
+      "token0": "0x4200000000000000000000000000000000000006",
+      "real_owner": "0xf954978c2cb5916c56124071b7208509efa11af2",
+      "exited": false,
+      "tick_upper": 128400,
+      "tokens": {
+        "0x9d5c1c400dc828a3409f9c209b83ff51a65d2a0e": {
+          "address": "0x9d5c1c400dc828a3409f9c209b83ff51a65d2a0e",
+          "decimals": 18,
+          "symbol": "TAIRO"
+        },
+        "0x4200000000000000000000000000000000000006": {
+          "address": "0x4200000000000000000000000000000000000006",
+          "decimals": 18,
+          "symbol": "WETH"
+        }
+      },
+      "network": "base",
+      "exchange": "uniswapv3",
+      "fee_tier": "10000",
+      "autocompounding": null,
+      "tick_lower": 128200
+    },
+    {
+      "in_range": true,
+      "pool": "0xda6cd43693fb69f6048fee311347407506f9d196",
+      "age": 1.002546296,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "117.84743287062830969478864096742",
+          "roi": "19.51555264",
+          "apr": "7532.363833",
+          "pool_pnl": "117.91463308125585612146871420902",
+          "pool_roi": "19.52668101",
+          "pool_apr": "7537.183048",
+          "il": "-0.37537305653102554869628886768",
+          "fee_apr": "7560.651446"
+        }
+      },
+      "nft_id": 4074587,
+      "underlying_value": "603.4216114805560130",
+      "token1": "0x9d5c1c400dc828a3409f9c209b83ff51a65d2a0e",
+      "token0": "0x4200000000000000000000000000000000000006",
+      "real_owner": "0x600469c37f16d24479184d6ab3de72b793ed5d0a",
+      "exited": false,
+      "tick_upper": 128400,
+      "tokens": {
+        "0x9d5c1c400dc828a3409f9c209b83ff51a65d2a0e": {
+          "address": "0x9d5c1c400dc828a3409f9c209b83ff51a65d2a0e",
+          "decimals": 18,
+          "symbol": "TAIRO"
+        },
+        "0x4200000000000000000000000000000000000006": {
+          "address": "0x4200000000000000000000000000000000000006",
+          "decimals": 18,
+          "symbol": "WETH"
+        }
+      },
+      "network": "base",
+      "exchange": "uniswapv3",
+      "fee_tier": "10000",
+      "autocompounding": null,
+      "tick_lower": 128200
+    },
+    {
+      "in_range": true,
+      "pool": "0xda6cd43693fb69f6048fee311347407506f9d196",
+      "age": 1.304780093,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "149.48313841828342631290309834590",
+          "roi": "25.60534145",
+          "apr": "7458.158852",
+          "pool_pnl": "149.87616033742066486228286482080",
+          "pool_roi": "25.67266316",
+          "pool_apr": "7480.418188",
+          "il": "-0.06134784711330140461400330976",
+          "fee_apr": "7480.828713"
+        }
+      },
+      "nft_id": 4073777,
+      "underlying_value": "583.34233018210443748",
+      "token1": "0x9d5c1c400dc828a3409f9c209b83ff51a65d2a0e",
+      "token0": "0x4200000000000000000000000000000000000006",
+      "real_owner": "0x441aa315b78ccca6049e5619052ca6974160c8d9",
+      "exited": false,
+      "tick_upper": 128400,
+      "tokens": {
+        "0x9d5c1c400dc828a3409f9c209b83ff51a65d2a0e": {
+          "address": "0x9d5c1c400dc828a3409f9c209b83ff51a65d2a0e",
+          "decimals": 18,
+          "symbol": "TAIRO"
+        },
+        "0x4200000000000000000000000000000000000006": {
+          "address": "0x4200000000000000000000000000000000000006",
+          "decimals": 18,
+          "symbol": "WETH"
+        }
+      },
+      "network": "base",
+      "exchange": "uniswapv3",
+      "fee_tier": "10000",
+      "autocompounding": null,
+      "tick_lower": 128200
+    },
+    {
+      "in_range": true,
+      "pool": "0xda6cd43693fb69f6048fee311347407506f9d196",
+      "age": 1.305046296,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "247.54203594845697231911233222670",
+          "roi": "25.54380678",
+          "apr": "7437.159931",
+          "pool_pnl": "247.92521664925568568858898433820",
+          "pool_roi": "25.58334711",
+          "pool_apr": "7450.230842",
+          "il": "-0.27985028490438327233321135517",
+          "fee_apr": "7457.080052"
+        }
+      },
+      "nft_id": 4073778,
+      "underlying_value": "968.42524185968444852347445",
+      "token1": "0x9d5c1c400dc828a3409f9c209b83ff51a65d2a0e",
+      "token0": "0x4200000000000000000000000000000000000006",
+      "real_owner": "0xe19311e72f0e757fdcccfdbe8a958d88f2543995",
+      "exited": false,
+      "tick_upper": 128400,
+      "tokens": {
+        "0x9d5c1c400dc828a3409f9c209b83ff51a65d2a0e": {
+          "address": "0x9d5c1c400dc828a3409f9c209b83ff51a65d2a0e",
+          "decimals": 18,
+          "symbol": "TAIRO"
+        },
+        "0x4200000000000000000000000000000000000006": {
+          "address": "0x4200000000000000000000000000000000000006",
+          "decimals": 18,
+          "symbol": "WETH"
+        }
+      },
+      "network": "base",
+      "exchange": "uniswapv3",
+      "fee_tier": "10000",
+      "autocompounding": null,
+      "tick_lower": 128200
+    },
+    {
+      "in_range": true,
+      "pool": "0xda6cd43693fb69f6048fee311347407506f9d196",
+      "age": 1.305023148,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "247.89676293888421036954162624800",
+          "roi": "25.54859454",
+          "apr": "7426.268115",
+          "pool_pnl": "248.28140235062630775820973995300",
+          "pool_roi": "25.58823603",
+          "pool_apr": "7439.349930",
+          "il": "-0.49472310586690949436214537541",
+          "fee_apr": "7452.611267"
+        }
+      },
+      "nft_id": 4073779,
+      "underlying_value": "969.4157452896645489",
+      "token1": "0x9d5c1c400dc828a3409f9c209b83ff51a65d2a0e",
+      "token0": "0x4200000000000000000000000000000000000006",
+      "real_owner": "0x2286d031c57fa42e3cb31d724d0e07dfac7d8eb0",
+      "exited": false,
+      "tick_upper": 128400,
+      "tokens": {
+        "0x9d5c1c400dc828a3409f9c209b83ff51a65d2a0e": {
+          "address": "0x9d5c1c400dc828a3409f9c209b83ff51a65d2a0e",
+          "decimals": 18,
+          "symbol": "TAIRO"
+        },
+        "0x4200000000000000000000000000000000000006": {
+          "address": "0x4200000000000000000000000000000000000006",
+          "decimals": 18,
+          "symbol": "WETH"
+        }
+      },
+      "network": "base",
+      "exchange": "uniswapv3",
+      "fee_tier": "10000",
+      "autocompounding": null,
+      "tick_lower": 128200
+    },
+    {
+      "in_range": true,
+      "pool": "0xda6cd43693fb69f6048fee311347407506f9d196",
+      "age": 0.8722106481,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "89.297084311263007320034517780",
+          "roi": "17.30086294",
+          "apr": "7240.011328",
+          "pool_pnl": "89.300817545662631026007249780",
+          "pool_roi": "17.30158624",
+          "pool_apr": "7240.366380",
+          "il": "-0.339956055812664141203302220",
+          "fee_apr": "7267.876900"
+        }
+      },
+      "nft_id": 4075213,
+      "underlying_value": "515.79868245951838088",
+      "token1": "0x9d5c1c400dc828a3409f9c209b83ff51a65d2a0e",
+      "token0": "0x4200000000000000000000000000000000000006",
+      "real_owner": "0xee28a8f82591be54c231f69149ab65d307c91653",
+      "exited": false,
+      "tick_upper": 128400,
+      "tokens": {
+        "0x9d5c1c400dc828a3409f9c209b83ff51a65d2a0e": {
+          "address": "0x9d5c1c400dc828a3409f9c209b83ff51a65d2a0e",
+          "decimals": 18,
+          "symbol": "TAIRO"
+        },
+        "0x4200000000000000000000000000000000000006": {
+          "address": "0x4200000000000000000000000000000000000006",
+          "decimals": 18,
+          "symbol": "WETH"
+        }
+      },
+      "network": "base",
+      "exchange": "uniswapv3",
+      "fee_tier": "10000",
+      "autocompounding": null,
+      "tick_lower": 128200
+    },
+    {
+      "in_range": true,
+      "pool": "0xda6cd43693fb69f6048fee311347407506f9d196",
+      "age": 0.7700115741,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "81.34646250002277099431582426198",
+          "roi": "13.49065058",
+          "apr": "6547.491417",
+          "pool_pnl": "81.56146191596573285858671266848",
+          "pool_roi": "13.52630648",
+          "pool_apr": "6566.163726",
+          "il": "-0.11841300589802501185059124840",
+          "fee_apr": "6574.327430"
+        }
+      },
+      "nft_id": 4075989,
+      "underlying_value": "602.65057296149017867938968",
+      "token1": "0x9d5c1c400dc828a3409f9c209b83ff51a65d2a0e",
+      "token0": "0x4200000000000000000000000000000000000006",
+      "real_owner": "0xb5af886e7cd45d0d2f432892a1a70689f113791a",
+      "exited": false,
+      "tick_upper": 128400,
+      "tokens": {
+        "0x9d5c1c400dc828a3409f9c209b83ff51a65d2a0e": {
+          "address": "0x9d5c1c400dc828a3409f9c209b83ff51a65d2a0e",
+          "decimals": 18,
+          "symbol": "TAIRO"
+        },
+        "0x4200000000000000000000000000000000000006": {
+          "address": "0x4200000000000000000000000000000000000006",
+          "decimals": 18,
+          "symbol": "WETH"
+        }
+      },
+      "network": "base",
+      "exchange": "uniswapv3",
+      "fee_tier": "10000",
+      "autocompounding": null,
+      "tick_lower": 128200
+    },
+    {
+      "in_range": true,
+      "pool": "0xda6cd43693fb69f6048fee311347407506f9d196",
+      "age": 0.7682523148,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "81.18012264407915197799103776542",
+          "roi": "13.46261421",
+          "apr": "6546.896169",
+          "pool_pnl": "81.39114815258274541962803298492",
+          "pool_roi": "13.49760990",
+          "pool_apr": "6565.254019",
+          "il": "-0.14663882935786752506742639012",
+          "fee_apr": "6575.740560"
+        }
+      },
+      "nft_id": 4075995,
+      "underlying_value": "602.64648776341671430",
+      "token1": "0x9d5c1c400dc828a3409f9c209b83ff51a65d2a0e",
+      "token0": "0x4200000000000000000000000000000000000006",
+      "real_owner": "0x77ffca186ba943749e0073abe7fc3dec08cbf054",
+      "exited": false,
+      "tick_upper": 128400,
+      "tokens": {
+        "0x9d5c1c400dc828a3409f9c209b83ff51a65d2a0e": {
+          "address": "0x9d5c1c400dc828a3409f9c209b83ff51a65d2a0e",
+          "decimals": 18,
+          "symbol": "TAIRO"
+        },
+        "0x4200000000000000000000000000000000000006": {
+          "address": "0x4200000000000000000000000000000000000006",
+          "decimals": 18,
+          "symbol": "WETH"
+        }
+      },
+      "network": "base",
+      "exchange": "uniswapv3",
+      "fee_tier": "10000",
+      "autocompounding": null,
+      "tick_lower": 128200
+    },
+    {
+      "in_range": false,
+      "pool": "0x254241a87a8ec8184f963a2eff709f2889f128e2",
+      "age": 571.4738542,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "62125.120851951882946993025530208",
+          "roi": "10116.70683",
+          "apr": "6464.902569",
+          "pool_pnl": "62129.069234770252886424852602208",
+          "pool_roi": "10117.34980",
+          "pool_apr": "6503.762394",
+          "il": "-2.48117164815224500000E-7",
+          "fee_apr": "6465.313445"
+        }
+      },
+      "nft_id": 98867,
+      "underlying_value": "610.1360407553241047",
+      "token1": "0xcfb038913d2f93409019e4258244564ad4357be9",
+      "token0": "0x4200000000000000000000000000000000000006",
+      "real_owner": "0x9e62635430fe7f0e105df4267152b727839dda65",
+      "exited": false,
+      "tick_upper": -4000,
+      "tokens": {
+        "0x4200000000000000000000000000000000000006": {
+          "address": "0x4200000000000000000000000000000000000006",
+          "decimals": 18,
+          "symbol": "WETH"
+        },
+        "0xcfb038913d2f93409019e4258244564ad4357be9": {
+          "address": "0xcfb038913d2f93409019e4258244564ad4357be9",
+          "decimals": 18,
+          "symbol": "GHZLI"
+        }
+      },
+      "network": "base",
+      "exchange": "uniswapv3",
+      "fee_tier": "10000",
+      "autocompounding": null,
+      "tick_lower": -887200
+    },
+    {
+      "in_range": true,
+      "pool": "0x65d5b99ba46b29005856ddb7d5c6675aab77b204",
+      "age": 0.9492013889,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "151.0949302295466096490391205569",
+          "roi": "16.24057485",
+          "apr": "6245.181070",
+          "pool_pnl": "151.1415944604476372040598972469",
+          "pool_roi": "16.24559060",
+          "pool_apr": "6247.291745",
+          "il": "-3.1049736625286916043950101273",
+          "fee_apr": "6375.447183"
+        }
+      },
+      "nft_id": 882382,
+      "underlying_value": "927.202931435832172044508095",
+      "token1": "0x924fa68a0fc644485b8df8abfa0a41c2e7744444",
+      "token0": "0x55d398326f99059ff775485246999027b3197955",
+      "real_owner": "0xa86dbc74f0683fa157a5b2d07eac7c94b475dfc3",
+      "exited": false,
+      "tick_upper": 14800,
+      "tokens": {
+        "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c": {
+          "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+          "decimals": 18,
+          "symbol": "WBNB"
+        },
+        "0x55d398326f99059ff775485246999027b3197955": {
+          "address": "0x55d398326f99059ff775485246999027b3197955",
+          "decimals": 18,
+          "symbol": "USDT"
+        },
+        "0x924fa68a0fc644485b8df8abfa0a41c2e7744444": {
+          "address": "0x924fa68a0fc644485b8df8abfa0a41c2e7744444",
+          "decimals": 18,
+          "symbol": "币安人生"
+        }
+      },
+      "network": "bnb",
+      "exchange": "uniswapv3",
+      "fee_tier": "10000",
+      "autocompounding": null,
+      "tick_lower": 8200
+    },
+    {
+      "in_range": true,
+      "pool": "0x2e066d83ad074b1a43cd14af5e08f2cf8a275021",
+      "age": 3.679305556,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "378.575783072285938318187666503",
+          "roi": "62.90836209",
+          "apr": "6240.729894",
+          "pool_pnl": "378.613480485805165244813783053",
+          "pool_roi": "62.91462631",
+          "pool_apr": "6241.742324",
+          "il": "-10.011080975007565823528306947",
+          "fee_apr": "6406.381567"
+        }
+      },
+      "nft_id": 864334,
+      "underlying_value": "591.740507632965745827257222",
+      "token1": "0xda7ad9dea9397cffddae2f8a052b82f1484252b3",
+      "token0": "0x55d398326f99059ff775485246999027b3197955",
+      "real_owner": "0xa66d5813e986bfc26678f76c8d53537548624080",
+      "exited": false,
+      "tick_upper": -11800,
+      "tokens": {
+        "0xda7ad9dea9397cffddae2f8a052b82f1484252b3": {
+          "address": "0xda7ad9dea9397cffddae2f8a052b82f1484252b3",
+          "decimals": 18,
+          "symbol": "RIVER"
+        },
+        "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c": {
+          "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+          "decimals": 18,
+          "symbol": "WBNB"
+        },
+        "0x55d398326f99059ff775485246999027b3197955": {
+          "address": "0x55d398326f99059ff775485246999027b3197955",
+          "decimals": 18,
+          "symbol": "USDT"
+        }
+      },
+      "network": "bnb",
+      "exchange": "uniswapv3",
+      "fee_tier": "10000",
+      "autocompounding": null,
+      "tick_lower": -16200
+    },
+    {
+      "in_range": false,
+      "pool": "0x6edcd420f7151c281599136b636c12df72298c9d",
+      "age": 4.888831019,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "573.5111738227701491243333743020",
+          "roi": "79.60787891",
+          "apr": "5943.640019",
+          "pool_pnl": "573.6211460539865543434836045120",
+          "pool_roi": "79.62314392",
+          "pool_apr": "5945.569498",
+          "il": "-66.2809922481155064946404166766",
+          "fee_apr": "6631.689374"
+        }
+      },
+      "nft_id": 856039,
+      "underlying_value": "654.0291518330789429",
+      "token1": "0xf3d5b4c34ed623478cc5141861776e6cf7ae3a1e",
+      "token0": "0x55d398326f99059ff775485246999027b3197955",
+      "real_owner": "0xcc1c812774a28820e364dbcccd205c2167e56cd9",
+      "exited": false,
+      "tick_upper": -220600,
+      "tokens": {
+        "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c": {
+          "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+          "decimals": 18,
+          "symbol": "WBNB"
+        },
+        "0xf3d5b4c34ed623478cc5141861776e6cf7ae3a1e": {
+          "address": "0xf3d5b4c34ed623478cc5141861776e6cf7ae3a1e",
+          "decimals": 8,
+          "symbol": "KGEN"
+        },
+        "0x55d398326f99059ff775485246999027b3197955": {
+          "address": "0x55d398326f99059ff775485246999027b3197955",
+          "decimals": 18,
+          "symbol": "USDT"
+        }
+      },
+      "network": "bnb",
+      "exchange": "uniswapv3",
+      "fee_tier": "10000",
+      "autocompounding": null,
+      "tick_lower": -222200
+    },
+    {
+      "in_range": true,
+      "pool": "0x2a216495584e406c39582d3ee583aeda937beba6",
+      "age": 29.29657407,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "25944.0303448388697423069177439899575868",
+          "roi": "436.0498923",
+          "apr": "5432.656061",
+          "pool_pnl": "25946.2778586246616950597234490899575868",
+          "pool_roi": "436.0876670",
+          "pool_apr": "5435.179810",
+          "il": "18449.7203286519498992353211490899575868",
+          "fee_apr": "1569.772242"
+        }
+      },
+      "nft_id": 1089189,
+      "underlying_value": "24397.25764565868129",
+      "token1": "0xf19308f923582a6f7c465e5ce7a9dc1bec6665b1",
+      "token0": "0xd536e7a9543cf9867a580b45cec7f748a1fe11ec",
+      "real_owner": "0xd1329a43078724d36ea2ca49ba1968612dfba890",
+      "exited": false,
+      "tick_upper": 120800,
+      "tokens": {
+        "0xd536e7a9543cf9867a580b45cec7f748a1fe11ec": {
+          "address": "0xd536e7a9543cf9867a580b45cec7f748a1fe11ec",
+          "decimals": 18,
+          "symbol": "ORX"
+        },
+        "0xf19308f923582a6f7c465e5ce7a9dc1bec6665b1": {
+          "address": "0xf19308f923582a6f7c465e5ce7a9dc1bec6665b1",
+          "decimals": 18,
+          "symbol": "TITANX"
+        },
+        "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2": {
+          "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+          "decimals": 18,
+          "symbol": "WETH"
+        }
+      },
+      "network": "mainnet",
+      "exchange": "uniswapv3",
+      "fee_tier": "10000",
+      "autocompounding": null,
+      "tick_lower": 113800
+    },
+    {
+      "in_range": true,
+      "pool": "0xa0ae03a23111f8f8171cd6f472b2ae6692e05c3f",
+      "age": 1.486967593,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "101.976123510108024242220694840794",
+          "roi": "18.42157949",
+          "apr": "5399.256307",
+          "pool_pnl": "101.995636423809540820933462744194",
+          "pool_roi": "18.42510442",
+          "pool_apr": "5400.354050",
+          "il": "0.556742971902684822157368321970",
+          "fee_apr": "5370.811973"
+        }
+      },
+      "nft_id": 4072969,
+      "underlying_value": "554.10606797398988182",
+      "token1": "0xd88611a629265c9af294ffdd2e7fa4546612273e",
+      "token0": "0x4200000000000000000000000000000000000006",
+      "real_owner": "0xb31d30ac7680bf9aa92f58a8b81970233e26bf06",
+      "exited": false,
+      "tick_upper": 138600,
+      "tokens": {
+        "0x4200000000000000000000000000000000000006": {
+          "address": "0x4200000000000000000000000000000000000006",
+          "decimals": 18,
+          "symbol": "WETH"
+        },
+        "0xd88611a629265c9af294ffdd2e7fa4546612273e": {
+          "address": "0xd88611a629265c9af294ffdd2e7fa4546612273e",
+          "decimals": 18,
+          "symbol": "MPRO"
+        }
+      },
+      "network": "base",
+      "exchange": "uniswapv3",
+      "fee_tier": "10000",
+      "autocompounding": null,
+      "tick_lower": 138400
+    },
+    {
+      "in_range": true,
+      "pool": "0x06d7874037e622d6ef42294cf32eb259806cb1c6",
+      "age": 0.6522453704,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "117.500433067855755032432138425185",
+          "roi": "9.457040727",
+          "apr": "5292.210602",
+          "pool_pnl": "117.512268919105871882360762425185",
+          "pool_roi": "9.457993337",
+          "pool_apr": "5292.794108",
+          "il": "-6.172087073452986563917774574815",
+          "fee_apr": "5570.734022"
+        }
+      },
+      "nft_id": 4076203,
+      "underlying_value": "1236.28120395635020218934994",
+      "token1": "0xd769d56f479e9e72a77bb1523e866a33098feec5",
+      "token0": "0x4200000000000000000000000000000000000006",
+      "real_owner": "0x74f7a517429c1d4b223fac5f505b800e766e8249",
+      "exited": false,
+      "tick_upper": 139400,
+      "tokens": {
+        "0x4200000000000000000000000000000000000006": {
+          "address": "0x4200000000000000000000000000000000000006",
+          "decimals": 18,
+          "symbol": "WETH"
+        },
+        "0xd769d56f479e9e72a77bb1523e866a33098feec5": {
+          "address": "0xd769d56f479e9e72a77bb1523e866a33098feec5",
+          "decimals": 18,
+          "symbol": "Base is for everyone"
+        }
+      },
+      "network": "base",
+      "exchange": "uniswapv3",
+      "fee_tier": "10000",
+      "autocompounding": null,
+      "tick_lower": 133800
+    },
+    {
+      "in_range": true,
+      "pool": "0x9d3673d64b73a80908d1fbb72d19eb14efeb19f4",
+      "age": 1.068715278,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "243.663014394263013554132857657384",
+          "roi": "15.20711723",
+          "apr": "5193.749865",
+          "pool_pnl": "243.706786063868825888285012469384",
+          "pool_roi": "15.20984903",
+          "pool_apr": "5194.785436",
+          "il": "-5.813952799787982245989764751654",
+          "fee_apr": "5318.609013"
+        }
+      },
+      "nft_id": 881720,
+      "underlying_value": "1596.4381662060966000",
+      "token1": "0x7bd8c371304cc038ff8dc0e54975a719f9aa4444",
+      "token0": "0x55d398326f99059ff775485246999027b3197955",
+      "real_owner": "0x76f083158b99b79c092d1f2b2d575800476e9b0f",
+      "exited": false,
+      "tick_upper": 62200,
+      "tokens": {
+        "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c": {
+          "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+          "decimals": 18,
+          "symbol": "WBNB"
+        },
+        "0x55d398326f99059ff775485246999027b3197955": {
+          "address": "0x55d398326f99059ff775485246999027b3197955",
+          "decimals": 18,
+          "symbol": "USDT"
+        },
+        "0x7bd8c371304cc038ff8dc0e54975a719f9aa4444": {
+          "address": "0x7bd8c371304cc038ff8dc0e54975a719f9aa4444",
+          "decimals": 18,
+          "symbol": "重生"
+        }
+      },
+      "network": "bnb",
+      "exchange": "uniswapv3",
+      "fee_tier": "10000",
+      "autocompounding": null,
+      "tick_lower": 48200
+    },
+    {
+      "in_range": false,
+      "pool": "0x2c8935e9d55df9e682d88e1b3194ee0d26f6a832",
+      "age": 5.906782407,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "635.2138809235482181482371060703",
+          "roi": "79.79333484",
+          "apr": "4930.699187",
+          "pool_pnl": "635.2721023303827601525379993103",
+          "pool_roi": "79.80064841",
+          "pool_apr": "4931.511786",
+          "il": "-168.3122897224643367729576126897",
+          "fee_apr": "6237.635901"
+        }
+      },
+      "nft_id": 848523,
+      "underlying_value": "627.70334919305236884",
+      "token1": "0x55d398326f99059ff775485246999027b3197955",
+      "token0": "0x0a8d6c86e1bce73fe4d0bd531e1a567306836ea5",
+      "real_owner": "0x80053389a87fac5ec1ed027beff06df792b2d25d",
+      "exited": false,
+      "tick_upper": 33600,
+      "tokens": {
+        "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c": {
+          "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+          "decimals": 18,
+          "symbol": "WBNB"
+        },
+        "0x0a8d6c86e1bce73fe4d0bd531e1a567306836ea5": {
+          "address": "0x0a8d6c86e1bce73fe4d0bd531e1a567306836ea5",
+          "decimals": 18,
+          "symbol": "COAI"
+        },
+        "0x55d398326f99059ff775485246999027b3197955": {
+          "address": "0x55d398326f99059ff775485246999027b3197955",
+          "decimals": 18,
+          "symbol": "USDT"
+        }
+      },
+      "network": "bnb",
+      "exchange": "uniswapv3",
+      "fee_tier": "3000",
+      "autocompounding": null,
+      "tick_lower": 29220
+    },
+    {
+      "in_range": false,
+      "pool": "0x2ae3d6096d8215ac2acddf30c60caa984ea5debe",
+      "age": 1.227638889,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "181.6625388009556990138862204138",
+          "roi": "7.976640648",
+          "apr": "4745.619340",
+          "pool_pnl": "181.677441056682501363837033912",
+          "pool_roi": "7.977294993",
+          "pool_apr": "4746.025391",
+          "il": "-4.547051187307862941765603020",
+          "fee_apr": "4864.792477"
+        }
+      },
+      "nft_id": 1021343,
+      "underlying_value": "2272.8696975672737427",
+      "token1": "0xdc6ff44d5d932cbd77b52e5612ba0529dc6226f1",
+      "token0": "0x4200000000000000000000000000000000000006",
+      "real_owner": "0x0141dc8db270c642191b686abdd2c6e33699ba14",
+      "exited": false,
+      "tick_upper": 80760,
+      "tokens": {
+        "0x4200000000000000000000000000000000000006": {
+          "address": "0x4200000000000000000000000000000000000006",
+          "decimals": 18,
+          "symbol": "WETH"
+        },
+        "0xdc6ff44d5d932cbd77b52e5612ba0529dc6226f1": {
+          "address": "0xdc6ff44d5d932cbd77b52e5612ba0529dc6226f1",
+          "decimals": 18,
+          "symbol": "WLD"
+        }
+      },
+      "network": "optimism",
+      "exchange": "uniswapv3",
+      "fee_tier": "3000",
+      "autocompounding": null,
+      "tick_lower": 79380
+    },
+    {
+      "in_range": true,
+      "pool": "0x688aa9136e2d48c4cd4f117a40029c6bc18506f6",
+      "age": 1.154386574,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "97.5688582914202862760420742767",
+          "roi": "11.44569372",
+          "apr": "4742.054542",
+          "pool_pnl": "97.7268823022171867760420742767",
+          "pool_roi": "11.46423134",
+          "pool_apr": "4750.354614",
+          "il": "-0.6837631035071358001388419798",
+          "fee_apr": "4782.967193"
+        }
+      },
+      "nft_id": 881339,
+      "underlying_value": "851.60858162572100938693934",
+      "token1": "0x55d398326f99059ff775485246999027b3197955",
+      "token0": "0x22b1458e780f8fa71e2f84502cee8b5a3cc731fa",
+      "real_owner": "0xcb0cb3099b016f2e08364b64ff9431a950239e36",
+      "exited": false,
+      "tick_upper": 7600,
+      "tokens": {
+        "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c": {
+          "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+          "decimals": 18,
+          "symbol": "WBNB"
+        },
+        "0x55d398326f99059ff775485246999027b3197955": {
+          "address": "0x55d398326f99059ff775485246999027b3197955",
+          "decimals": 18,
+          "symbol": "USDT"
+        },
+        "0x22b1458e780f8fa71e2f84502cee8b5a3cc731fa": {
+          "address": "0x22b1458e780f8fa71e2f84502cee8b5a3cc731fa",
+          "decimals": 18,
+          "symbol": "M"
+        }
+      },
+      "network": "bnb",
+      "exchange": "uniswapv3",
+      "fee_tier": "10000",
+      "autocompounding": null,
+      "tick_lower": 6800
+    },
+    {
+      "in_range": true,
+      "pool": "0x2e066d83ad074b1a43cd14af5e08f2cf8a275021",
+      "age": 3.446585648,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "601.085879752907642181620641399",
+          "roi": "40.38109544",
+          "apr": "4667.340982",
+          "pool_pnl": "601.159934638362625072974264587",
+          "pool_roi": "40.38607046",
+          "pool_apr": "4668.044265",
+          "il": "-21.045527511816346838694110751",
+          "fee_apr": "4831.331346"
+        }
+      },
+      "nft_id": 865875,
+      "underlying_value": "1467.41328977519909631",
+      "token1": "0xda7ad9dea9397cffddae2f8a052b82f1484252b3",
+      "token0": "0x55d398326f99059ff775485246999027b3197955",
+      "real_owner": "0x5378368f5b6cd5b595f82335f2a6ab462db7878c",
+      "exited": false,
+      "tick_upper": -11000,
+      "tokens": {
+        "0xda7ad9dea9397cffddae2f8a052b82f1484252b3": {
+          "address": "0xda7ad9dea9397cffddae2f8a052b82f1484252b3",
+          "decimals": 18,
+          "symbol": "RIVER"
+        },
+        "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c": {
+          "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+          "decimals": 18,
+          "symbol": "WBNB"
+        },
+        "0x55d398326f99059ff775485246999027b3197955": {
+          "address": "0x55d398326f99059ff775485246999027b3197955",
+          "decimals": 18,
+          "symbol": "USDT"
+        }
+      },
+      "network": "bnb",
+      "exchange": "uniswapv3",
+      "fee_tier": "10000",
+      "autocompounding": null,
+      "tick_lower": -15800
+    },
+    {
+      "in_range": true,
+      "pool": "0x75c5fbf77c1cd517544487aca4cc41e1ad95aced",
+      "age": 0.7287731481,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "1303.4180852577221424650767925256",
+          "roi": "8.764911955",
+          "apr": "4618.418189",
+          "pool_pnl": "1303.6887120270540036621129834956",
+          "pool_roi": "8.766731801",
+          "pool_apr": "4619.407769",
+          "il": "-368.4673498725580753994834962116",
+          "fee_apr": "5924.972241"
+        }
+      },
+      "nft_id": 885706,
+      "underlying_value": "14502.125437828859466",
+      "token1": "0x924fa68a0fc644485b8df8abfa0a41c2e7744444",
+      "token0": "0x55d398326f99059ff775485246999027b3197955",
+      "real_owner": "0x95d7bf2b99536aa3bbd6f76bf9d71a3731b4c046",
+      "exited": false,
+      "tick_upper": 12720,
+      "tokens": {
+        "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c": {
+          "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+          "decimals": 18,
+          "symbol": "WBNB"
+        },
+        "0x55d398326f99059ff775485246999027b3197955": {
+          "address": "0x55d398326f99059ff775485246999027b3197955",
+          "decimals": 18,
+          "symbol": "USDT"
+        },
+        "0x924fa68a0fc644485b8df8abfa0a41c2e7744444": {
+          "address": "0x924fa68a0fc644485b8df8abfa0a41c2e7744444",
+          "decimals": 18,
+          "symbol": "币安人生"
+        }
+      },
+      "network": "bnb",
+      "exchange": "uniswapv3",
+      "fee_tier": "3000",
+      "autocompounding": null,
+      "tick_lower": 8580
+    },
+    {
+      "in_range": true,
+      "pool": "0xdad8bccfc4b5fd68e26da0ac34cee693f2b442b9",
+      "age": 2.117025463,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "552.9521642328530317004296929550",
+          "roi": "26.24215577",
+          "apr": "4527.373137",
+          "pool_pnl": "557.2564005718787389667294872550",
+          "pool_roi": "26.44642740",
+          "pool_apr": "4569.007203",
+          "il": "-13.7176373555550267623528123013",
+          "fee_apr": "4674.929747"
+        }
+      },
+      "nft_id": 1110977,
+      "underlying_value": "2089.0922256802590418311199",
+      "token1": "0xfa1c09fc8b491b6a4d3ff53a10cad29381b3f949",
+      "token0": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "real_owner": "0xfebb27451296f94e8b2e26ad0fef098dafb760c0",
+      "exited": false,
+      "tick_upper": 300600,
+      "tokens": {
+        "0xfa1c09fc8b491b6a4d3ff53a10cad29381b3f949": {
+          "address": "0xfa1c09fc8b491b6a4d3ff53a10cad29381b3f949",
+          "decimals": 18,
+          "symbol": "FF"
+        },
+        "0xdac17f958d2ee523a2206206994597c13d831ec7": {
+          "address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+          "decimals": 6,
+          "symbol": "USDT"
+        },
+        "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2": {
+          "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+          "decimals": 18,
+          "symbol": "WETH"
+        }
+      },
+      "network": "mainnet",
+      "exchange": "uniswapv3",
+      "fee_tier": "10000",
+      "autocompounding": null,
+      "tick_lower": 292600
+    },
+    {
+      "in_range": true,
+      "pool": "0x4610464356ba6bba15eec558619d84b72fea260f",
+      "age": 1.466099537,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "117.5463723874535763422904114477",
+          "roi": "17.90778418",
+          "apr": "4458.320230",
+          "pool_pnl": "117.6009237883252608476665279977",
+          "pool_roi": "17.91609489",
+          "pool_apr": "4460.759985",
+          "il": "-2.6458389190240755917072170023",
+          "fee_apr": "4560.741125"
+        }
+      },
+      "nft_id": 879134,
+      "underlying_value": "653.69780627101853850",
+      "token1": "0x55d398326f99059ff775485246999027b3197955",
+      "token0": "0x0a8d6c86e1bce73fe4d0bd531e1a567306836ea5",
+      "real_owner": "0xd05247c692f14b15b7e401e0427bf3eb052638cf",
+      "exited": false,
+      "tick_upper": 20800,
+      "tokens": {
+        "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c": {
+          "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+          "decimals": 18,
+          "symbol": "WBNB"
+        },
+        "0x0a8d6c86e1bce73fe4d0bd531e1a567306836ea5": {
+          "address": "0x0a8d6c86e1bce73fe4d0bd531e1a567306836ea5",
+          "decimals": 18,
+          "symbol": "COAI"
+        },
+        "0x55d398326f99059ff775485246999027b3197955": {
+          "address": "0x55d398326f99059ff775485246999027b3197955",
+          "decimals": 18,
+          "symbol": "USDT"
+        }
+      },
+      "network": "bnb",
+      "exchange": "uniswapv3",
+      "fee_tier": "10000",
+      "autocompounding": null,
+      "tick_lower": 14600
+    },
+    {
+      "in_range": true,
+      "pool": "0xaa133749abd544e6351ce227c1b12fb143f159d1",
+      "age": 7.778402778,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "1716.89988266351224776198584515402",
+          "roi": "95.00443920",
+          "apr": "4458.174971",
+          "pool_pnl": "1716.97861863128416740463219256002",
+          "pool_roi": "95.00879605",
+          "pool_apr": "4458.463066",
+          "il": "-21.53234346979478101061048686028",
+          "fee_apr": "4514.291215"
+        }
+      },
+      "nft_id": 835794,
+      "underlying_value": "1785.5675083262711868",
+      "token1": "0x55d398326f99059ff775485246999027b3197955",
+      "token0": "0x1b379a79c91a540b2bcd612b4d713f31de1b80cc",
+      "real_owner": "0x21d8966a1164899cc7ddf4331a429f34e7b5d17c",
+      "exited": false,
+      "tick_upper": -28400,
+      "tokens": {
+        "0x1b379a79c91a540b2bcd612b4d713f31de1b80cc": {
+          "address": "0x1b379a79c91a540b2bcd612b4d713f31de1b80cc",
+          "decimals": 18,
+          "symbol": "NAORIS"
+        },
+        "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c": {
+          "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+          "decimals": 18,
+          "symbol": "WBNB"
+        },
+        "0x55d398326f99059ff775485246999027b3197955": {
+          "address": "0x55d398326f99059ff775485246999027b3197955",
+          "decimals": 18,
+          "symbol": "USDT"
+        }
+      },
+      "network": "bnb",
+      "exchange": "uniswapv3",
+      "fee_tier": "10000",
+      "autocompounding": null,
+      "tick_lower": -31200
+    },
+    {
+      "in_range": true,
+      "pool": "0x4dde7562fcb4834f2bddf815d1d90b9cca5f5150",
+      "age": 1.071319444,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "599.24628190593704654524114683200",
+          "roi": "10.72853992",
+          "apr": "4456.806835",
+          "pool_pnl": "599.29553254148351678680217483200",
+          "pool_roi": "10.72942168",
+          "pool_apr": "4457.203084",
+          "il": "-113.35340104519288815723162393200",
+          "fee_apr": "5300.222519"
+        }
+      },
+      "nft_id": 881708,
+      "underlying_value": "5472.131691259084876",
+      "token1": "0x55d398326f99059ff775485246999027b3197955",
+      "token0": "0x3ac8e2c113d5d7824ac6ebe82a3c60b1b9d64444",
+      "real_owner": "0x585a51176d3f69e8b318b78a5fecb12ca3a58d6c",
+      "exited": false,
+      "tick_upper": -36200,
+      "tokens": {
+        "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c": {
+          "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+          "decimals": 18,
+          "symbol": "WBNB"
+        },
+        "0x3ac8e2c113d5d7824ac6ebe82a3c60b1b9d64444": {
+          "address": "0x3ac8e2c113d5d7824ac6ebe82a3c60b1b9d64444",
+          "decimals": 18,
+          "symbol": "客服小何"
+        },
+        "0x55d398326f99059ff775485246999027b3197955": {
+          "address": "0x55d398326f99059ff775485246999027b3197955",
+          "decimals": 18,
+          "symbol": "USDT"
+        }
+      },
+      "network": "bnb",
+      "exchange": "uniswapv3",
+      "fee_tier": "10000",
+      "autocompounding": null,
+      "tick_lower": -46000
+    },
+    {
+      "in_range": true,
+      "pool": "0xedc625b74537ee3a10874f53d170e9c17a906b9c",
+      "age": 0.5246412037,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "87.9287004494712825388998694185",
+          "roi": "6.404700507",
+          "apr": "4455.836995",
+          "pool_pnl": "87.9836511096520206740625334185",
+          "pool_roi": "6.408703097",
+          "pool_apr": "4458.800120",
+          "il": "-14.0963598149067765751594105815",
+          "fee_apr": "5172.962716"
+        }
+      },
+      "nft_id": 4076737,
+      "underlying_value": "1358.72631824679138732",
+      "token1": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+      "token0": "0x1111111111166b7fe7bd91427724b487980afc69",
+      "real_owner": "0xb708e250699bab6aba0db28e8803cf5f41b8bf77",
+      "exited": false,
+      "tick_upper": -298620,
+      "tokens": {
+        "0x1111111111166b7fe7bd91427724b487980afc69": {
+          "address": "0x1111111111166b7fe7bd91427724b487980afc69",
+          "decimals": 18,
+          "symbol": "ZORA"
+        },
+        "0x4200000000000000000000000000000000000006": {
+          "address": "0x4200000000000000000000000000000000000006",
+          "decimals": 18,
+          "symbol": "WETH"
+        },
+        "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913": {
+          "address": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+          "decimals": 6,
+          "symbol": "USDC"
+        }
+      },
+      "network": "base",
+      "exchange": "uniswapv3",
+      "fee_tier": "3000",
+      "autocompounding": null,
+      "tick_lower": -299880
+    },
+    {
+      "in_range": true,
+      "pool": "0x2a216495584e406c39582d3ee583aeda937beba6",
+      "age": 9.11369213,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "4274.6659436742190205281969906712762512",
+          "roi": "76.57529296",
+          "apr": "4233.285054",
+          "pool_pnl": "4281.2493886840404211932526626712762512",
+          "pool_roi": "76.69322714",
+          "pool_apr": "4244.427318",
+          "il": "1537.8482026727574509154589357789148840",
+          "fee_apr": "2716.843699"
+        }
+      },
+      "nft_id": 1104905,
+      "underlying_value": "7113.5691520670101222625896",
+      "token1": "0xf19308f923582a6f7c465e5ce7a9dc1bec6665b1",
+      "token0": "0xd536e7a9543cf9867a580b45cec7f748a1fe11ec",
+      "real_owner": "0xbd1943f50978f02fc875440c5e1f912aec71879b",
+      "exited": false,
+      "tick_upper": 117600,
+      "tokens": {
+        "0xd536e7a9543cf9867a580b45cec7f748a1fe11ec": {
+          "address": "0xd536e7a9543cf9867a580b45cec7f748a1fe11ec",
+          "decimals": 18,
+          "symbol": "ORX"
+        },
+        "0xf19308f923582a6f7c465e5ce7a9dc1bec6665b1": {
+          "address": "0xf19308f923582a6f7c465e5ce7a9dc1bec6665b1",
+          "decimals": 18,
+          "symbol": "TITANX"
+        },
+        "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2": {
+          "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+          "decimals": 18,
+          "symbol": "WETH"
+        }
+      },
+      "network": "mainnet",
+      "exchange": "uniswapv3",
+      "fee_tier": "10000",
+      "autocompounding": null,
+      "tick_lower": 111000
+    },
+    {
+      "in_range": true,
+      "pool": "0x720651de0fe574916fe9846004f3ad7f7e7d4ac4",
+      "age": 0.6547222222,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "1451.8583421954738569219983",
+          "roi": "7.488119012",
+          "apr": "4174.538983",
+          "pool_pnl": "1451.8613441509420649203073",
+          "pool_roi": "7.488134495",
+          "pool_apr": "4174.548263",
+          "il": "1445.6741721592136302792753",
+          "fee_apr": "17.79002119"
+        }
+      },
+      "nft_id": 4076322,
+      "underlying_value": "20834.496853446873557459458",
+      "token1": "0xcbb7c0000ab88b473b1f5afd9ef808440eed33bf",
+      "token0": "0x236aa50979d5f3de3bd1eeb40e81137f22ab794b",
+      "real_owner": "0x7e6bee8157aceb2cbaaa74868f99a369f9e5d4c1",
+      "exited": false,
+      "tick_upper": -230291,
+      "tokens": {
+        "0x236aa50979d5f3de3bd1eeb40e81137f22ab794b": {
+          "address": "0x236aa50979d5f3de3bd1eeb40e81137f22ab794b",
+          "decimals": 18,
+          "symbol": "tBTC"
+        },
+        "0x4200000000000000000000000000000000000006": {
+          "address": "0x4200000000000000000000000000000000000006",
+          "decimals": 18,
+          "symbol": "WETH"
+        },
+        "0xcbb7c0000ab88b473b1f5afd9ef808440eed33bf": {
+          "address": "0xcbb7c0000ab88b473b1f5afd9ef808440eed33bf",
+          "decimals": 8,
+          "symbol": "cbBTC"
+        }
+      },
+      "network": "base",
+      "exchange": "uniswapv3",
+      "fee_tier": "100",
+      "autocompounding": null,
+      "tick_lower": -230292
+    },
+    {
+      "in_range": true,
+      "pool": "0x88d9319f61874436aa2acd76dfc08c3992a71531",
+      "age": 0.67375,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "587.64772882666923189280343589820393676",
+          "roi": "7.531850751",
+          "apr": "4080.336315",
+          "pool_pnl": "587.65145528949647621493366223494393676",
+          "pool_roi": "7.531898513",
+          "pool_apr": "4080.362553",
+          "il": "-0.10939834081933287799410312344207440",
+          "fee_apr": "4081.121797"
+        }
+      },
+      "nft_id": 4076189,
+      "underlying_value": "7802.055933659180667122",
+      "token1": "0xdc3ce83ad0b276abbdde152802c9911ef3d1edf5",
+      "token0": "0x4200000000000000000000000000000000000006",
+      "real_owner": "0x33e2eda238edcf470309b8c6d228986a1204c8f9",
+      "exited": false,
+      "tick_upper": 246400,
+      "tokens": {
+        "0x4200000000000000000000000000000000000006": {
+          "address": "0x4200000000000000000000000000000000000006",
+          "decimals": 18,
+          "symbol": "WETH"
+        },
+        "0xdc3ce83ad0b276abbdde152802c9911ef3d1edf5": {
+          "address": "0xdc3ce83ad0b276abbdde152802c9911ef3d1edf5",
+          "decimals": 18,
+          "symbol": "FLOKI"
+        }
+      },
+      "network": "base",
+      "exchange": "uniswapv3",
+      "fee_tier": "10000",
+      "autocompounding": null,
+      "tick_lower": -887200
+    },
+    {
+      "in_range": false,
+      "pool": "0x3fdd9a4b3ca4a99e3dfe931e3973c2ac37b45be9",
+      "age": 305.2234722,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "34660.48970229578676070600159893333302",
+          "roi": "3405.211216",
+          "apr": "4072.587923",
+          "pool_pnl": "34661.06335904156118762351473312373302",
+          "pool_roi": "3405.267574",
+          "pool_apr": "4074.468934",
+          "il": "2.152590754372E-20",
+          "fee_apr": "4072.655327"
+        }
+      },
+      "nft_id": 1542750,
+      "underlying_value": "1017.2924170",
+      "token1": "0x4200000000000000000000000000000000000006",
+      "token0": "0x3e43cb385a6925986e7ea0f0dcdaec06673d4e10",
+      "real_owner": "0x0ea4e868cb049bd560335c3775dd330a18fd1428",
+      "exited": false,
+      "tick_upper": 887200,
+      "tokens": {
+        "0x4200000000000000000000000000000000000006": {
+          "address": "0x4200000000000000000000000000000000000006",
+          "decimals": 18,
+          "symbol": "WETH"
+        },
+        "0x3e43cb385a6925986e7ea0f0dcdaec06673d4e10": {
+          "address": "0x3e43cb385a6925986e7ea0f0dcdaec06673d4e10",
+          "decimals": 18,
+          "symbol": "AR"
+        }
+      },
+      "network": "base",
+      "exchange": "uniswapv3",
+      "fee_tier": "10000",
+      "autocompounding": null,
+      "tick_lower": -178200
+    },
+    {
+      "in_range": false,
+      "pool": "0x94687f50a6d6d01f63a60ba5b591e8163018b512",
+      "age": 0.808125,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "127.6837421454257573553756086074",
+          "roi": "4.675613776",
+          "apr": "4064.331576",
+          "pool_pnl": "127.6877692242254619733475406074",
+          "pool_roi": "4.675761243",
+          "pool_apr": "4064.465434",
+          "il": "-0.1006260639589865452867630522",
+          "fee_apr": "4067.662815"
+        }
+      },
+      "nft_id": 998813,
+      "underlying_value": "2730.7398573847726076",
+      "token1": "0xe71bdfe1df69284f00ee185cf0d95d0c7680c0d4",
+      "token0": "0x4200000000000000000000000000000000000006",
+      "real_owner": "0x65d45f98602363247a8df23bb18d3022e065b296",
+      "exited": false,
+      "tick_upper": 99540,
+      "tokens": {
+        "0x4200000000000000000000000000000000000006": {
+          "address": "0x4200000000000000000000000000000000000006",
+          "decimals": 18,
+          "symbol": "WETH"
+        },
+        "0xe71bdfe1df69284f00ee185cf0d95d0c7680c0d4": {
+          "address": "0xe71bdfe1df69284f00ee185cf0d95d0c7680c0d4",
+          "decimals": 18,
+          "symbol": "SETH"
+        }
+      },
+      "network": "optimism",
+      "exchange": "uniswapv3",
+      "fee_tier": "3000",
+      "autocompounding": null,
+      "tick_lower": 97320
+    },
+    {
+      "in_range": true,
+      "pool": "0x65d5b99ba46b29005856ddb7d5c6675aab77b204",
+      "age": 1.076643519,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "166.7859402633199252746221374956",
+          "roi": "11.86008107",
+          "apr": "4020.805504",
+          "pool_pnl": "166.8280548284935667278220574956",
+          "pool_roi": "11.86307582",
+          "pool_apr": "4021.899798",
+          "il": "-19.7829530689477096495709805056",
+          "fee_apr": "4498.739920"
+        }
+      },
+      "nft_id": 881655,
+      "underlying_value": "1386.4548665919599382",
+      "token1": "0x924fa68a0fc644485b8df8abfa0a41c2e7744444",
+      "token0": "0x55d398326f99059ff775485246999027b3197955",
+      "real_owner": "0x2b0c093b01ccac90e888a5bca19bd6b38ecc1101",
+      "exited": false,
+      "tick_upper": 18800,
+      "tokens": {
+        "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c": {
+          "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+          "decimals": 18,
+          "symbol": "WBNB"
+        },
+        "0x55d398326f99059ff775485246999027b3197955": {
+          "address": "0x55d398326f99059ff775485246999027b3197955",
+          "decimals": 18,
+          "symbol": "USDT"
+        },
+        "0x924fa68a0fc644485b8df8abfa0a41c2e7744444": {
+          "address": "0x924fa68a0fc644485b8df8abfa0a41c2e7744444",
+          "decimals": 18,
+          "symbol": "币安人生"
+        }
+      },
+      "network": "bnb",
+      "exchange": "uniswapv3",
+      "fee_tier": "10000",
+      "autocompounding": null,
+      "tick_lower": 6000
+    },
+    {
+      "in_range": true,
+      "pool": "0xd5dccfefcdb384fc0c41f0df7fbfa0be67cc913a",
+      "age": 3.960787037,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "399.45467330660601270841139679564",
+          "roi": "32.88868478",
+          "apr": "3969.562246",
+          "pool_pnl": "403.27872570666973020841139679564",
+          "pool_roi": "33.20353416",
+          "pool_apr": "4009.253601",
+          "il": "-13.68978434402850929840127707844",
+          "fee_apr": "4143.605184"
+        }
+      },
+      "nft_id": 862100,
+      "underlying_value": "1197.051829009381923922901619",
+      "token1": "0xb035723d62e0e2ea7499d76355c9d560f13ba404",
+      "token0": "0x55d398326f99059ff775485246999027b3197955",
+      "real_owner": "0x4cc48f2c8d65f56e9e12f3802a97fe82f58a2ee2",
+      "exited": false,
+      "tick_upper": 38800,
+      "tokens": {
+        "0xb035723d62e0e2ea7499d76355c9d560f13ba404": {
+          "address": "0xb035723d62e0e2ea7499d76355c9d560f13ba404",
+          "decimals": 18,
+          "symbol": "OIK"
+        },
+        "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c": {
+          "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+          "decimals": 18,
+          "symbol": "WBNB"
+        },
+        "0x55d398326f99059ff775485246999027b3197955": {
+          "address": "0x55d398326f99059ff775485246999027b3197955",
+          "decimals": 18,
+          "symbol": "USDT"
+        }
+      },
+      "network": "bnb",
+      "exchange": "uniswapv3",
+      "fee_tier": "10000",
+      "autocompounding": null,
+      "tick_lower": 36200
+    },
+    {
+      "in_range": true,
+      "pool": "0x2e066d83ad074b1a43cd14af5e08f2cf8a275021",
+      "age": 2.739699074,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "267.9743491646101013374616386686",
+          "roi": "27.77534963",
+          "apr": "3700.442751",
+          "pool_pnl": "268.0295239173251660299616386686",
+          "pool_roi": "27.78106845",
+          "pool_apr": "3701.380932",
+          "il": "-3.4488856464069965870519865419",
+          "fee_apr": "3748.830124"
+        }
+      },
+      "nft_id": 871427,
+      "underlying_value": "961.28793222044367017",
+      "token1": "0xda7ad9dea9397cffddae2f8a052b82f1484252b3",
+      "token0": "0x55d398326f99059ff775485246999027b3197955",
+      "real_owner": "0x5be24df48e4ff86a254a8935b10d7bce8d6de0f6",
+      "exited": false,
+      "tick_upper": -12200,
+      "tokens": {
+        "0xda7ad9dea9397cffddae2f8a052b82f1484252b3": {
+          "address": "0xda7ad9dea9397cffddae2f8a052b82f1484252b3",
+          "decimals": 18,
+          "symbol": "RIVER"
+        },
+        "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c": {
+          "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+          "decimals": 18,
+          "symbol": "WBNB"
+        },
+        "0x55d398326f99059ff775485246999027b3197955": {
+          "address": "0x55d398326f99059ff775485246999027b3197955",
+          "decimals": 18,
+          "symbol": "USDT"
+        }
+      },
+      "network": "bnb",
+      "exchange": "uniswapv3",
+      "fee_tier": "10000",
+      "autocompounding": null,
+      "tick_lower": -16200
+    },
+    {
+      "in_range": true,
+      "pool": "0x2e066d83ad074b1a43cd14af5e08f2cf8a275021",
+      "age": 3.477511574,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "234.8636001139662523734945768904",
+          "roi": "35.17786338",
+          "apr": "3692.440901",
+          "pool_pnl": "234.9504582442785511734945768904",
+          "pool_roi": "35.19087299",
+          "pool_apr": "3694.118518",
+          "il": "-14.9241296119101963355177469145",
+          "fee_apr": "3928.438242"
+        }
+      },
+      "nft_id": 865658,
+      "underlying_value": "652.63501902735757089",
+      "token1": "0xda7ad9dea9397cffddae2f8a052b82f1484252b3",
+      "token0": "0x55d398326f99059ff775485246999027b3197955",
+      "real_owner": "0xc68240048cb968a36bfecac39d3170945d67e1e8",
+      "exited": false,
+      "tick_upper": -9000,
+      "tokens": {
+        "0xda7ad9dea9397cffddae2f8a052b82f1484252b3": {
+          "address": "0xda7ad9dea9397cffddae2f8a052b82f1484252b3",
+          "decimals": 18,
+          "symbol": "RIVER"
+        },
+        "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c": {
+          "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+          "decimals": 18,
+          "symbol": "WBNB"
+        },
+        "0x55d398326f99059ff775485246999027b3197955": {
+          "address": "0x55d398326f99059ff775485246999027b3197955",
+          "decimals": 18,
+          "symbol": "USDT"
+        }
+      },
+      "network": "bnb",
+      "exchange": "uniswapv3",
+      "fee_tier": "10000",
+      "autocompounding": null,
+      "tick_lower": -15400
+    },
+    {
+      "in_range": true,
+      "pool": "0x2e066d83ad074b1a43cd14af5e08f2cf8a275021",
+      "age": 2.739027778,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "1158.472359635956930779172517131",
+          "roi": "27.69232382",
+          "apr": "3690.257276",
+          "pool_pnl": "1158.540936136175077445596169725",
+          "pool_roi": "27.69396309",
+          "pool_apr": "3690.529286",
+          "il": "-16.310297771747102782110286309",
+          "fee_apr": "3742.431382"
+        }
+      },
+      "nft_id": 871433,
+      "underlying_value": "4166.9910990173183827336056",
+      "token1": "0xda7ad9dea9397cffddae2f8a052b82f1484252b3",
+      "token0": "0x55d398326f99059ff775485246999027b3197955",
+      "real_owner": "0x5be24df48e4ff86a254a8935b10d7bce8d6de0f6",
+      "exited": false,
+      "tick_upper": -12200,
+      "tokens": {
+        "0xda7ad9dea9397cffddae2f8a052b82f1484252b3": {
+          "address": "0xda7ad9dea9397cffddae2f8a052b82f1484252b3",
+          "decimals": 18,
+          "symbol": "RIVER"
+        },
+        "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c": {
+          "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+          "decimals": 18,
+          "symbol": "WBNB"
+        },
+        "0x55d398326f99059ff775485246999027b3197955": {
+          "address": "0x55d398326f99059ff775485246999027b3197955",
+          "decimals": 18,
+          "symbol": "USDT"
+        }
+      },
+      "network": "bnb",
+      "exchange": "uniswapv3",
+      "fee_tier": "10000",
+      "autocompounding": null,
+      "tick_lower": -16200
+    },
+    {
+      "in_range": false,
+      "pool": "0x4dde7562fcb4834f2bddf815d1d90b9cca5f5150",
+      "age": 12.81400463,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "11853.46869650678529721196946262200",
+          "roi": "119.9328397",
+          "apr": "3448.476016",
+          "pool_pnl": "11855.60351113424239715549310886200",
+          "pool_roi": "119.9544397",
+          "pool_apr": "3449.168730",
+          "il": "-0.00000774946556198951732673700",
+          "fee_apr": "3449.097088"
+        }
+      },
+      "nft_id": 806232,
+      "underlying_value": "9881.28720114418400",
+      "token1": "0x55d398326f99059ff775485246999027b3197955",
+      "token0": "0x3ac8e2c113d5d7824ac6ebe82a3c60b1b9d64444",
+      "real_owner": "0x2fbe3ce14116e9c6bc8162e0ae7befede6ecda9a",
+      "exited": false,
+      "tick_upper": -28200,
+      "tokens": {
+        "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c": {
+          "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+          "decimals": 18,
+          "symbol": "WBNB"
+        },
+        "0x3ac8e2c113d5d7824ac6ebe82a3c60b1b9d64444": {
+          "address": "0x3ac8e2c113d5d7824ac6ebe82a3c60b1b9d64444",
+          "decimals": 18,
+          "symbol": "客服小何"
+        },
+        "0x55d398326f99059ff775485246999027b3197955": {
+          "address": "0x55d398326f99059ff775485246999027b3197955",
+          "decimals": 18,
+          "symbol": "USDT"
+        }
+      },
+      "network": "bnb",
+      "exchange": "uniswapv3",
+      "fee_tier": "10000",
+      "autocompounding": null,
+      "tick_lower": -38400
+    },
+    {
+      "in_range": true,
+      "pool": "0xfaad4e108e73e36852944886fe8428cebab3cec8",
+      "age": 2.098506944,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "215.53462667571393656751504395150",
+          "roi": "18.10617171",
+          "apr": "3439.295954",
+          "pool_pnl": "215.66791447536913556966549057150",
+          "pool_roi": "18.11736867",
+          "pool_apr": "3441.753985",
+          "il": "-7.97144156397193552733587719616",
+          "fee_apr": "3568.623493"
+        }
+      },
+      "nft_id": 875401,
+      "underlying_value": "1182.288414344567527228704857",
+      "token1": "0x55d398326f99059ff775485246999027b3197955",
+      "token0": "0x02e75d28a8aa2a0033b8cf866fcf0bb0e1ee4444",
+      "real_owner": "0x5ca2af41aedb62a7dd7e94581b729bfe4fdad75f",
+      "exited": false,
+      "tick_upper": -34600,
+      "tokens": {
+        "0x02e75d28a8aa2a0033b8cf866fcf0bb0e1ee4444": {
+          "address": "0x02e75d28a8aa2a0033b8cf866fcf0bb0e1ee4444",
+          "decimals": 18,
+          "symbol": "PALU"
+        },
+        "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c": {
+          "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+          "decimals": 18,
+          "symbol": "WBNB"
+        },
+        "0x55d398326f99059ff775485246999027b3197955": {
+          "address": "0x55d398326f99059ff775485246999027b3197955",
+          "decimals": 18,
+          "symbol": "USDT"
+        }
+      },
+      "network": "bnb",
+      "exchange": "uniswapv3",
+      "fee_tier": "10000",
+      "autocompounding": null,
+      "tick_lower": -41800
+    },
+    {
+      "in_range": true,
+      "pool": "0xc7e3ca54c37f9fc884b588f395e6b60666308f28",
+      "age": 1.619502315,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "77.5671922093032184631388664537",
+          "roi": "14.25304278",
+          "apr": "3399.309195",
+          "pool_pnl": "77.7345819527418739695902063137",
+          "pool_roi": "14.28380080",
+          "pool_apr": "3406.973070",
+          "il": "-1.7865065171643087082666563774",
+          "fee_apr": "3484.936860"
+        }
+      },
+      "nft_id": 878418,
+      "underlying_value": "542.261071736094391361606476",
+      "token1": "0x7ec43cf65f1663f820427c62a5780b8f2e25593a",
+      "token0": "0x55d398326f99059ff775485246999027b3197955",
+      "real_owner": "0xcb0cb3099b016f2e08364b64ff9431a950239e36",
+      "exited": false,
+      "tick_upper": 18000,
+      "tokens": {
+        "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c": {
+          "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+          "decimals": 18,
+          "symbol": "WBNB"
+        },
+        "0x7ec43cf65f1663f820427c62a5780b8f2e25593a": {
+          "address": "0x7ec43cf65f1663f820427c62a5780b8f2e25593a",
+          "decimals": 18,
+          "symbol": "LAB"
+        },
+        "0x55d398326f99059ff775485246999027b3197955": {
+          "address": "0x55d398326f99059ff775485246999027b3197955",
+          "decimals": 18,
+          "symbol": "USDT"
+        }
+      },
+      "network": "bnb",
+      "exchange": "uniswapv3",
+      "fee_tier": "10000",
+      "autocompounding": null,
+      "tick_lower": 15200
+    },
+    {
+      "in_range": true,
+      "pool": "0xa62ad78825e3a55a77823f00fe0050f567c1e4ee",
+      "age": 1.943819444,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "282.9799182656892395742135630948",
+          "roi": "17.99519070",
+          "apr": "3385.915081",
+          "pool_pnl": "283.0341906711783436",
+          "pool_roi": "17.99864198",
+          "pool_apr": "3386.634348",
+          "il": "-0.3932312004328494",
+          "fee_apr": "3391.269557"
+        }
+      },
+      "nft_id": 5009946,
+      "underlying_value": "1572.0833073116493356",
+      "token1": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+      "token0": "0x2f2a2543b76a4166549f7aab2e75bef0aefc5b0f",
+      "real_owner": "0x78501b5d80f23c61a4f3a144213322caac6cbaf2",
+      "exited": false,
+      "tick_upper": 70140,
+      "tokens": {
+        "0x2f2a2543b76a4166549f7aab2e75bef0aefc5b0f": {
+          "address": "0x2f2a2543b76a4166549f7aab2e75bef0aefc5b0f",
+          "decimals": 8,
+          "symbol": "WBTC"
+        },
+        "0x82af49447d8a07e3bd95bd0d56f35241523fbab1": {
+          "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+          "decimals": 18,
+          "symbol": "WETH"
+        },
+        "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8": {
+          "address": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+          "decimals": 6,
+          "symbol": "USDC"
+        }
+      },
+      "network": "arbitrum",
+      "exchange": "uniswapv3",
+      "fee_tier": "3000",
+      "autocompounding": null,
+      "tick_lower": 69120
+    },
+    {
+      "in_range": true,
+      "pool": "0x4dde7562fcb4834f2bddf815d1d90b9cca5f5150",
+      "age": 12.41719907,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "3502.46337928577081606632955322200",
+          "roi": "114.9720934",
+          "apr": "3380.942439",
+          "pool_pnl": "3503.76193838095352166807923965800",
+          "pool_roi": "115.0147200",
+          "pool_apr": "3382.266401",
+          "il": "-27.58370259022093526955570985700",
+          "fee_apr": "3408.822607"
+        }
+      },
+      "nft_id": 808122,
+      "underlying_value": "3017.4773165765088058974700",
+      "token1": "0x55d398326f99059ff775485246999027b3197955",
+      "token0": "0x3ac8e2c113d5d7824ac6ebe82a3c60b1b9d64444",
+      "real_owner": "0x4c6a5e3c06773436a1be8d116ada51958cb9ab43",
+      "exited": false,
+      "tick_upper": -24000,
+      "tokens": {
+        "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c": {
+          "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+          "decimals": 18,
+          "symbol": "WBNB"
+        },
+        "0x3ac8e2c113d5d7824ac6ebe82a3c60b1b9d64444": {
+          "address": "0x3ac8e2c113d5d7824ac6ebe82a3c60b1b9d64444",
+          "decimals": 18,
+          "symbol": "客服小何"
+        },
+        "0x55d398326f99059ff775485246999027b3197955": {
+          "address": "0x55d398326f99059ff775485246999027b3197955",
+          "decimals": 18,
+          "symbol": "USDT"
+        }
+      },
+      "network": "bnb",
+      "exchange": "uniswapv3",
+      "fee_tier": "10000",
+      "autocompounding": null,
+      "tick_lower": -43600
+    },
+    {
+      "in_range": false,
+      "pool": "0x75c5fbf77c1cd517544487aca4cc41e1ad95aced",
+      "age": 0.8780787037,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "1484.8790487224669549006757811916",
+          "roi": "7.454686564",
+          "apr": "3312.219660",
+          "pool_pnl": "1485.0008814850958560135030863796",
+          "pool_roi": "7.455298214",
+          "pool_apr": "3312.505043",
+          "il": "-1166.8608173931125507159541899484",
+          "fee_apr": "5915.329242"
+        }
+      },
+      "nft_id": 882817,
+      "underlying_value": "18751.749490928454272",
+      "token1": "0x924fa68a0fc644485b8df8abfa0a41c2e7744444",
+      "token0": "0x55d398326f99059ff775485246999027b3197955",
+      "real_owner": "0x2fbe3ce14116e9c6bc8162e0ae7befede6ecda9a",
+      "exited": false,
+      "tick_upper": 10500,
+      "tokens": {
+        "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c": {
+          "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+          "decimals": 18,
+          "symbol": "WBNB"
+        },
+        "0x55d398326f99059ff775485246999027b3197955": {
+          "address": "0x55d398326f99059ff775485246999027b3197955",
+          "decimals": 18,
+          "symbol": "USDT"
+        },
+        "0x924fa68a0fc644485b8df8abfa0a41c2e7744444": {
+          "address": "0x924fa68a0fc644485b8df8abfa0a41c2e7744444",
+          "decimals": 18,
+          "symbol": "币安人生"
+        }
+      },
+      "network": "bnb",
+      "exchange": "uniswapv3",
+      "fee_tier": "3000",
+      "autocompounding": null,
+      "tick_lower": 6120
+    },
+    {
+      "in_range": false,
+      "pool": "0x2e066d83ad074b1a43cd14af5e08f2cf8a275021",
+      "age": 2.643969907,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "384.129168060390452276092293201",
+          "roi": "23.92663335",
+          "apr": "3309.183451",
+          "pool_pnl": "384.259565126845688778244988013",
+          "pool_roi": "23.93475552",
+          "pool_apr": "3310.459881",
+          "il": "-6.961340710170534243621882979",
+          "fee_apr": "3370.277123"
+        }
+      },
+      "nft_id": 871989,
+      "underlying_value": "1598.354220507609544",
+      "token1": "0xda7ad9dea9397cffddae2f8a052b82f1484252b3",
+      "token0": "0x55d398326f99059ff775485246999027b3197955",
+      "real_owner": "0x61cbce9fca24ce58776d09d4716e12ddb907fb78",
+      "exited": false,
+      "tick_upper": -11000,
+      "tokens": {
+        "0xda7ad9dea9397cffddae2f8a052b82f1484252b3": {
+          "address": "0xda7ad9dea9397cffddae2f8a052b82f1484252b3",
+          "decimals": 18,
+          "symbol": "RIVER"
+        },
+        "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c": {
+          "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+          "decimals": 18,
+          "symbol": "WBNB"
+        },
+        "0x55d398326f99059ff775485246999027b3197955": {
+          "address": "0x55d398326f99059ff775485246999027b3197955",
+          "decimals": 18,
+          "symbol": "USDT"
+        }
+      },
+      "network": "bnb",
+      "exchange": "uniswapv3",
+      "fee_tier": "10000",
+      "autocompounding": null,
+      "tick_lower": -15000
+    },
+    {
+      "in_range": false,
+      "pool": "0x81965714e2a1ec25fb8bcb3de60a11fe6bca929a",
+      "age": 4.908981481,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "2074.251572628538458343129441876",
+          "roi": "43.71350624",
+          "apr": "3279.933679",
+          "pool_pnl": "2074.377263419778330143129441876",
+          "pool_roi": "43.71615509",
+          "pool_apr": "3280.206401",
+          "il": "-17.703612087860850528246000380",
+          "fee_apr": "3308.126465"
+        }
+      },
+      "nft_id": 855865,
+      "underlying_value": "4727.2752449219396",
+      "token1": "0xf3d5b4c34ed623478cc5141861776e6cf7ae3a1e",
+      "token0": "0x55d398326f99059ff775485246999027b3197955",
+      "real_owner": "0x95e45e525fce14eec216c538e1120f2470bae0ac",
+      "exited": false,
+      "tick_upper": -222480,
+      "tokens": {
+        "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c": {
+          "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+          "decimals": 18,
+          "symbol": "WBNB"
+        },
+        "0xf3d5b4c34ed623478cc5141861776e6cf7ae3a1e": {
+          "address": "0xf3d5b4c34ed623478cc5141861776e6cf7ae3a1e",
+          "decimals": 8,
+          "symbol": "KGEN"
+        },
+        "0x55d398326f99059ff775485246999027b3197955": {
+          "address": "0x55d398326f99059ff775485246999027b3197955",
+          "decimals": 18,
+          "symbol": "USDT"
+        }
+      },
+      "network": "bnb",
+      "exchange": "uniswapv3",
+      "fee_tier": "3000",
+      "autocompounding": null,
+      "tick_lower": -226980
+    },
+    {
+      "in_range": true,
+      "pool": "0x2e066d83ad074b1a43cd14af5e08f2cf8a275021",
+      "age": 2.878391204,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "203.8543515031665210161130401317",
+          "roi": "25.65889141",
+          "apr": "3253.725674",
+          "pool_pnl": "204.0128914598687250161130401317",
+          "pool_roi": "25.67884663",
+          "pool_apr": "3256.906060",
+          "il": "-2.8606282040603788898573738683",
+          "fee_apr": "3301.914712"
+        }
+      },
+      "nft_id": 869927,
+      "underlying_value": "791.459238106950211967257222",
+      "token1": "0xda7ad9dea9397cffddae2f8a052b82f1484252b3",
+      "token0": "0x55d398326f99059ff775485246999027b3197955",
+      "real_owner": "0x8eed1420aa86991ed245c76c714ff959a0537c4a",
+      "exited": false,
+      "tick_upper": -9400,
+      "tokens": {
+        "0xda7ad9dea9397cffddae2f8a052b82f1484252b3": {
+          "address": "0xda7ad9dea9397cffddae2f8a052b82f1484252b3",
+          "decimals": 18,
+          "symbol": "RIVER"
+        },
+        "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c": {
+          "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+          "decimals": 18,
+          "symbol": "WBNB"
+        },
+        "0x55d398326f99059ff775485246999027b3197955": {
+          "address": "0x55d398326f99059ff775485246999027b3197955",
+          "decimals": 18,
+          "symbol": "USDT"
+        }
+      },
+      "network": "bnb",
+      "exchange": "uniswapv3",
+      "fee_tier": "10000",
+      "autocompounding": null,
+      "tick_lower": -17800
+    },
+    {
+      "in_range": true,
+      "pool": "0xd19393e02c3cc60c21a89b5e85656ff1122ebd51",
+      "age": 1.422847222,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "446.98536010760299076480441137138",
+          "roi": "12.57082364",
+          "apr": "3225.399008",
+          "pool_pnl": "448.05391881758744695685901879138",
+          "pool_roi": "12.60087533",
+          "pool_apr": "3233.447704",
+          "il": "-3.10762948311448428039131872762",
+          "fee_apr": "3255.533940"
+        }
+      },
+      "nft_id": 1111483,
+      "underlying_value": "3551.5602756207825506936742",
+      "token1": "0xcab84bc21f9092167fcfe0ea60f5ce053ab39a1e",
+      "token0": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "real_owner": "0xc5c1774de9b07b9f0900fb7d957d4d817e6f90df",
+      "exited": false,
+      "tick_upper": 121400,
+      "tokens": {
+        "0xcab84bc21f9092167fcfe0ea60f5ce053ab39a1e": {
+          "address": "0xcab84bc21f9092167fcfe0ea60f5ce053ab39a1e",
+          "decimals": 18,
+          "symbol": "Block"
+        },
+        "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2": {
+          "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+          "decimals": 18,
+          "symbol": "WETH"
+        }
+      },
+      "network": "mainnet",
+      "exchange": "uniswapv3",
+      "fee_tier": "10000",
+      "autocompounding": null,
+      "tick_lower": 120400
+    },
+    {
+      "in_range": true,
+      "pool": "0xfaad4e108e73e36852944886fe8428cebab3cec8",
+      "age": 0.905787037,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "39.86375594014922039184615324490",
+          "roi": "7.859945161",
+          "apr": "3167.369661",
+          "pool_pnl": "39.94072051069688519399659986490",
+          "pool_roi": "7.875120281",
+          "pool_apr": "3173.966497",
+          "il": "-2.57002830891611036596992853510",
+          "fee_apr": "3377.686144"
+        }
+      },
+      "nft_id": 882663,
+      "underlying_value": "504.52901312675403951",
+      "token1": "0x55d398326f99059ff775485246999027b3197955",
+      "token0": "0x02e75d28a8aa2a0033b8cf866fcf0bb0e1ee4444",
+      "real_owner": "0x5185e8a3b58022352046b67b9ee72fc0515b063b",
+      "exited": false,
+      "tick_upper": -35400,
+      "tokens": {
+        "0x02e75d28a8aa2a0033b8cf866fcf0bb0e1ee4444": {
+          "address": "0x02e75d28a8aa2a0033b8cf866fcf0bb0e1ee4444",
+          "decimals": 18,
+          "symbol": "PALU"
+        },
+        "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c": {
+          "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+          "decimals": 18,
+          "symbol": "WBNB"
+        },
+        "0x55d398326f99059ff775485246999027b3197955": {
+          "address": "0x55d398326f99059ff775485246999027b3197955",
+          "decimals": 18,
+          "symbol": "USDT"
+        }
+      },
+      "network": "bnb",
+      "exchange": "uniswapv3",
+      "fee_tier": "10000",
+      "autocompounding": null,
+      "tick_lower": -41400
+    },
+    {
+      "in_range": false,
+      "pool": "0x4e91834bdba4e965618e768769e0223ded3d9693",
+      "age": 14.02355324,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "2928.62775427627347762374766889900",
+          "roi": "121.2174693",
+          "apr": "3155.147729",
+          "pool_pnl": "2928.86965462960385113449990199900",
+          "pool_roi": "121.2274817",
+          "pool_apr": "3155.581243",
+          "il": "-334.43425226533933989104089298080",
+          "fee_apr": "3515.710010"
+        }
+      },
+      "nft_id": 798497,
+      "underlying_value": "2081.3351454984636550523620",
+      "token1": "0x73b84f7e3901f39fc29f3704a03126d317ab4444",
+      "token0": "0x55d398326f99059ff775485246999027b3197955",
+      "real_owner": "0x80053389a87fac5ec1ed027beff06df792b2d25d",
+      "exited": false,
+      "tick_upper": 40000,
+      "tokens": {
+        "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c": {
+          "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+          "decimals": 18,
+          "symbol": "WBNB"
+        },
+        "0x55d398326f99059ff775485246999027b3197955": {
+          "address": "0x55d398326f99059ff775485246999027b3197955",
+          "decimals": 18,
+          "symbol": "USDT"
+        },
+        "0x73b84f7e3901f39fc29f3704a03126d317ab4444": {
+          "address": "0x73b84f7e3901f39fc29f3704a03126d317ab4444",
+          "decimals": 18,
+          "symbol": "PUP"
+        }
+      },
+      "network": "bnb",
+      "exchange": "uniswapv3",
+      "fee_tier": "10000",
+      "autocompounding": null,
+      "tick_lower": 33800
+    },
+    {
+      "in_range": true,
+      "pool": "0xfaad4e108e73e36852944886fe8428cebab3cec8",
+      "age": 1.453912037,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "168.09695378958670763392949833540",
+          "roi": "8.382728380",
+          "apr": "3117.509988",
+          "pool_pnl": "168.19339069068526789773469833540",
+          "pool_roi": "8.387537535",
+          "pool_apr": "3119.375452",
+          "il": "-2.45589618774261982278089944896",
+          "fee_apr": "3164.845311"
+        }
+      },
+      "nft_id": 879248,
+      "underlying_value": "2002.7250201167225523",
+      "token1": "0x55d398326f99059ff775485246999027b3197955",
+      "token0": "0x02e75d28a8aa2a0033b8cf866fcf0bb0e1ee4444",
+      "real_owner": "0xf164478c595903065903e0810ef212af631b31d8",
+      "exited": false,
+      "tick_upper": -29400,
+      "tokens": {
+        "0x02e75d28a8aa2a0033b8cf866fcf0bb0e1ee4444": {
+          "address": "0x02e75d28a8aa2a0033b8cf866fcf0bb0e1ee4444",
+          "decimals": 18,
+          "symbol": "PALU"
+        },
+        "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c": {
+          "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+          "decimals": 18,
+          "symbol": "WBNB"
+        },
+        "0x55d398326f99059ff775485246999027b3197955": {
+          "address": "0x55d398326f99059ff775485246999027b3197955",
+          "decimals": 18,
+          "symbol": "USDT"
+        }
+      },
+      "network": "bnb",
+      "exchange": "uniswapv3",
+      "fee_tier": "10000",
+      "autocompounding": null,
+      "tick_lower": -40200
+    },
+    {
+      "in_range": true,
+      "pool": "0x2e066d83ad074b1a43cd14af5e08f2cf8a275021",
+      "age": 2.611180556,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "112.7153340928842139620873092131",
+          "roi": "22.26590218",
+          "apr": "3112.406103",
+          "pool_pnl": "112.7828354295403729620873092131",
+          "pool_roi": "22.27923647",
+          "pool_apr": "3114.685337",
+          "il": "-2.6490670807855783466292372869",
+          "fee_apr": "3187.418648"
+        }
+      },
+      "nft_id": 872158,
+      "underlying_value": "503.50740202376547533",
+      "token1": "0xda7ad9dea9397cffddae2f8a052b82f1484252b3",
+      "token0": "0x55d398326f99059ff775485246999027b3197955",
+      "real_owner": "0x444ed6b8df1e67e5727765097f3bef69ace15485",
+      "exited": false,
+      "tick_upper": -12400,
+      "tokens": {
+        "0xda7ad9dea9397cffddae2f8a052b82f1484252b3": {
+          "address": "0xda7ad9dea9397cffddae2f8a052b82f1484252b3",
+          "decimals": 18,
+          "symbol": "RIVER"
+        },
+        "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c": {
+          "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+          "decimals": 18,
+          "symbol": "WBNB"
+        },
+        "0x55d398326f99059ff775485246999027b3197955": {
+          "address": "0x55d398326f99059ff775485246999027b3197955",
+          "decimals": 18,
+          "symbol": "USDT"
+        }
+      },
+      "network": "bnb",
+      "exchange": "uniswapv3",
+      "fee_tier": "10000",
+      "autocompounding": null,
+      "tick_lower": -16600
+    },
+    {
+      "in_range": true,
+      "pool": "0xdb1fdb5cb366ef7a3dc45dfd286134e56dd0a789",
+      "age": 0.7713773148,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "319.628538591446701338209149823642196",
+          "roi": "6.497734411",
+          "apr": "3085.747550",
+          "pool_pnl": "337.427813687890701040012764022142196",
+          "pool_roi": "6.859576200",
+          "pool_apr": "3257.598794",
+          "il": "-111.583779200946211099865013918796108",
+          "fee_apr": "4334.833269"
+        }
+      },
+      "nft_id": 4075727,
+      "underlying_value": "4789.6936327990537889",
+      "token1": "0x4200000000000000000000000000000000000006",
+      "token0": "0x2b2c0078d250f88694cefd4720bb045fce68d76a",
+      "real_owner": "0xb1900f41d78d330a2a35c6771b3a6088a1b51309",
+      "exited": false,
+      "tick_upper": 887200,
+      "tokens": {
+        "0x2b2c0078d250f88694cefd4720bb045fce68d76a": {
+          "address": "0x2b2c0078d250f88694cefd4720bb045fce68d76a",
+          "decimals": 18,
+          "symbol": "BASE上建设的"
+        },
+        "0x4200000000000000000000000000000000000006": {
+          "address": "0x4200000000000000000000000000000000000006",
+          "decimals": 18,
+          "symbol": "WETH"
+        }
+      },
+      "network": "base",
+      "exchange": "uniswapv3",
+      "fee_tier": "10000",
+      "autocompounding": null,
+      "tick_lower": -208200
+    },
+    {
+      "in_range": true,
+      "pool": "0x2e066d83ad074b1a43cd14af5e08f2cf8a275021",
+      "age": 2.748935185,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "1975.5862905339253582431207644770",
+          "roi": "22.05368446",
+          "apr": "3060.226346",
+          "pool_pnl": "1975.762568253995602250117022616",
+          "pool_roi": "22.05565227",
+          "pool_apr": "3060.541240",
+          "il": "-19.585157988014502304626281932",
+          "fee_apr": "3090.837243"
+        }
+      },
+      "nft_id": 871360,
+      "underlying_value": "8938.316721544848827",
+      "token1": "0xda7ad9dea9397cffddae2f8a052b82f1484252b3",
+      "token0": "0x55d398326f99059ff775485246999027b3197955",
+      "real_owner": "0x83ebe392824c046be3c7942299bfbb8163759ee9",
+      "exited": false,
+      "tick_upper": -11200,
+      "tokens": {
+        "0xda7ad9dea9397cffddae2f8a052b82f1484252b3": {
+          "address": "0xda7ad9dea9397cffddae2f8a052b82f1484252b3",
+          "decimals": 18,
+          "symbol": "RIVER"
+        },
+        "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c": {
+          "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+          "decimals": 18,
+          "symbol": "WBNB"
+        },
+        "0x55d398326f99059ff775485246999027b3197955": {
+          "address": "0x55d398326f99059ff775485246999027b3197955",
+          "decimals": 18,
+          "symbol": "USDT"
+        }
+      },
+      "network": "bnb",
+      "exchange": "uniswapv3",
+      "fee_tier": "10000",
+      "autocompounding": null,
+      "tick_lower": -16200
+    },
+    {
+      "in_range": true,
+      "pool": "0xaa133749abd544e6351ce227c1b12fb143f159d1",
+      "age": 7.763946759,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "509.01696473490768786249094631946",
+          "roi": "65.03764337",
+          "apr": "3057.698056",
+          "pool_pnl": "509.08856365439779282935994631946",
+          "pool_roi": "65.04679164",
+          "pool_apr": "3058.270732",
+          "il": "-3.91583091424155193231773445230",
+          "fee_apr": "3081.650807"
+        }
+      },
+      "nft_id": 835910,
+      "underlying_value": "778.662337794380601572",
+      "token1": "0x55d398326f99059ff775485246999027b3197955",
+      "token0": "0x1b379a79c91a540b2bcd612b4d713f31de1b80cc",
+      "real_owner": "0x21d8966a1164899cc7ddf4331a429f34e7b5d17c",
+      "exited": false,
+      "tick_upper": -26400,
+      "tokens": {
+        "0x1b379a79c91a540b2bcd612b4d713f31de1b80cc": {
+          "address": "0x1b379a79c91a540b2bcd612b4d713f31de1b80cc",
+          "decimals": 18,
+          "symbol": "NAORIS"
+        },
+        "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c": {
+          "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+          "decimals": 18,
+          "symbol": "WBNB"
+        },
+        "0x55d398326f99059ff775485246999027b3197955": {
+          "address": "0x55d398326f99059ff775485246999027b3197955",
+          "decimals": 18,
+          "symbol": "USDT"
+        }
+      },
+      "network": "bnb",
+      "exchange": "uniswapv3",
+      "fee_tier": "10000",
+      "autocompounding": null,
+      "tick_lower": -30800
+    },
+    {
+      "in_range": false,
+      "pool": "0xd060f7b148122c5b91086587e507f8d9c089649f",
+      "age": 10.36326389,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "1488.174387573380708255736316094120",
+          "roi": "86.27131040",
+          "apr": "3056.128651",
+          "pool_pnl": "1489.384337246958901877263264214120",
+          "pool_roi": "86.34145268",
+          "pool_apr": "3059.583988",
+          "il": "1.43332097909072701468534E-7",
+          "fee_apr": "3058.613415"
+        }
+      },
+      "nft_id": 819727,
+      "underlying_value": "1723.783423987206910",
+      "token1": "0x55d398326f99059ff775485246999027b3197955",
+      "token0": "0x4444b1e4de34df52cf91e30cc7c0336ee03d7c1b",
+      "real_owner": "0x2fbe3ce14116e9c6bc8162e0ae7befede6ecda9a",
+      "exited": false,
+      "tick_upper": -42000,
+      "tokens": {
+        "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c": {
+          "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+          "decimals": 18,
+          "symbol": "WBNB"
+        },
+        "0x55d398326f99059ff775485246999027b3197955": {
+          "address": "0x55d398326f99059ff775485246999027b3197955",
+          "decimals": 18,
+          "symbol": "USDT"
+        },
+        "0x4444b1e4de34df52cf91e30cc7c0336ee03d7c1b": {
+          "address": "0x4444b1e4de34df52cf91e30cc7c0336ee03d7c1b",
+          "decimals": 18,
+          "symbol": "meme rush"
+        }
+      },
+      "network": "bnb",
+      "exchange": "uniswapv3",
+      "fee_tier": "10000",
+      "autocompounding": null,
+      "tick_lower": -51200
+    },
+    {
+      "in_range": true,
+      "pool": "0x13eb9425d0726d5d36d005f152df14ba205b7498",
+      "age": 3.954594907,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "142.83972859856544641257720936772",
+          "roi": "27.33700731",
+          "apr": "2993.228891",
+          "pool_pnl": "143.01330361785604242332944246772",
+          "pool_roi": "27.37022651",
+          "pool_apr": "2997.604281",
+          "il": "-0.31055044696706304662797288882",
+          "fee_apr": "3003.373815"
+        }
+      },
+      "nft_id": 862167,
+      "underlying_value": "522.03001434088029528",
+      "token1": "0xad8c787992428cd158e451aab109f724b6bc36de",
+      "token0": "0x55d398326f99059ff775485246999027b3197955",
+      "real_owner": "0x4cc48f2c8d65f56e9e12f3802a97fe82f58a2ee2",
+      "exited": false,
+      "tick_upper": 26820,
+      "tokens": {
+        "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c": {
+          "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+          "decimals": 18,
+          "symbol": "WBNB"
+        },
+        "0x55d398326f99059ff775485246999027b3197955": {
+          "address": "0x55d398326f99059ff775485246999027b3197955",
+          "decimals": 18,
+          "symbol": "USDT"
+        },
+        "0xad8c787992428cd158e451aab109f724b6bc36de": {
+          "address": "0xad8c787992428cd158e451aab109f724b6bc36de",
+          "decimals": 18,
+          "symbol": "ASP"
+        }
+      },
+      "network": "bnb",
+      "exchange": "uniswapv3",
+      "fee_tier": "3000",
+      "autocompounding": null,
+      "tick_lower": 24420
+    },
+    {
+      "in_range": true,
+      "pool": "0xfaad4e108e73e36852944886fe8428cebab3cec8",
+      "age": 1.801608796,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "1140.62540176504518529658818290344",
+          "roi": "13.98916776",
+          "apr": "2834.162254",
+          "pool_pnl": "1140.66158747398815793378793290344",
+          "pool_roi": "13.98961156",
+          "pool_apr": "2834.261741",
+          "il": "-3.93756855342367532143037976568",
+          "fee_apr": "2844.036017"
+        }
+      },
+      "nft_id": 877239,
+      "underlying_value": "8149.6592645182322048",
+      "token1": "0x55d398326f99059ff775485246999027b3197955",
+      "token0": "0x02e75d28a8aa2a0033b8cf866fcf0bb0e1ee4444",
+      "real_owner": "0x21d8966a1164899cc7ddf4331a429f34e7b5d17c",
+      "exited": false,
+      "tick_upper": -29000,
+      "tokens": {
+        "0x02e75d28a8aa2a0033b8cf866fcf0bb0e1ee4444": {
+          "address": "0x02e75d28a8aa2a0033b8cf866fcf0bb0e1ee4444",
+          "decimals": 18,
+          "symbol": "PALU"
+        },
+        "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c": {
+          "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+          "decimals": 18,
+          "symbol": "WBNB"
+        },
+        "0x55d398326f99059ff775485246999027b3197955": {
+          "address": "0x55d398326f99059ff775485246999027b3197955",
+          "decimals": 18,
+          "symbol": "USDT"
+        }
+      },
+      "network": "bnb",
+      "exchange": "uniswapv3",
+      "fee_tier": "10000",
+      "autocompounding": null,
+      "tick_lower": -39600
+    },
+    {
+      "in_range": true,
+      "pool": "0xedc625b74537ee3a10874f53d170e9c17a906b9c",
+      "age": 0.5120023148,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "43.4078273855867340702295811436",
+          "roi": "3.957103191",
+          "apr": "2820.969014",
+          "pool_pnl": "43.4918219765014425881823011436",
+          "pool_roi": "3.964760226",
+          "pool_apr": "2826.644054",
+          "il": "-1.6793064281406951529598298564",
+          "fee_apr": "2935.561653"
+        }
+      },
+      "nft_id": 4076776,
+      "underlying_value": "1095.1964012789551682",
+      "token1": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+      "token0": "0x1111111111166b7fe7bd91427724b487980afc69",
+      "real_owner": "0xfd8ff9754290ca2bbdde23f3f3e9c9fbd69839d9",
+      "exited": false,
+      "tick_upper": -298260,
+      "tokens": {
+        "0x1111111111166b7fe7bd91427724b487980afc69": {
+          "address": "0x1111111111166b7fe7bd91427724b487980afc69",
+          "decimals": 18,
+          "symbol": "ZORA"
+        },
+        "0x4200000000000000000000000000000000000006": {
+          "address": "0x4200000000000000000000000000000000000006",
+          "decimals": 18,
+          "symbol": "WETH"
+        },
+        "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913": {
+          "address": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+          "decimals": 6,
+          "symbol": "USDC"
+        }
+      },
+      "network": "base",
+      "exchange": "uniswapv3",
+      "fee_tier": "3000",
+      "autocompounding": null,
+      "tick_lower": -300420
+    },
+    {
+      "in_range": true,
+      "pool": "0xf7932a224761fb8df2db546dd0e587e60439b4b4",
+      "age": 13.26899306,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "18711.656438839312550138575087772",
+          "roi": "98.10965802",
+          "apr": "2818.198848",
+          "pool_pnl": "18712.349585788786853727839037080",
+          "pool_roi": "98.11329235",
+          "pool_apr": "2818.335691",
+          "il": "-16.177435292957237640005803306",
+          "fee_apr": "2820.739757"
+        }
+      },
+      "nft_id": 803145,
+      "underlying_value": "19055.315395182940249168028",
+      "token1": "0x55d398326f99059ff775485246999027b3197955",
+      "token0": "0x20d6015660b3fe52e6690a889b5c51f69902ce0e",
+      "real_owner": "0x21d8966a1164899cc7ddf4331a429f34e7b5d17c",
+      "exited": false,
+      "tick_upper": 51000,
+      "tokens": {
+        "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c": {
+          "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+          "decimals": 18,
+          "symbol": "WBNB"
+        },
+        "0x20d6015660b3fe52e6690a889b5c51f69902ce0e": {
+          "address": "0x20d6015660b3fe52e6690a889b5c51f69902ce0e",
+          "decimals": 18,
+          "symbol": "GIGGLE"
+        },
+        "0x55d398326f99059ff775485246999027b3197955": {
+          "address": "0x55d398326f99059ff775485246999027b3197955",
+          "decimals": 18,
+          "symbol": "USDT"
+        }
+      },
+      "network": "bnb",
+      "exchange": "uniswapv3",
+      "fee_tier": "10000",
+      "autocompounding": null,
+      "tick_lower": 43000
+    },
+    {
+      "in_range": true,
+      "pool": "0x2f92b371aef58f0abe9c10c06423de083405991f2839638914a1031e91d9a723",
+      "age": 13.32844907,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "5233.26418677092",
+          "roi": "101.640170538381",
+          "apr": "2783.44828362966",
+          "pool_pnl": "5237.29273266419",
+          "pool_roi": "101.718412736166",
+          "pool_apr": "2787.77219660602",
+          "il": "5144.19530128425",
+          "fee_apr": "49.5163011720061"
+        }
+      },
+      "nft_id": 79703,
+      "underlying_value": "10288.9815981397",
+      "token1": "0xcbb7c0000ab88b473b1f5afd9ef808440eed33bf",
+      "token0": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
+      "real_owner": "0x1c34695d3e542c05c0b7e1aad2f4a76837a456fa",
+      "exited": false,
+      "tick_upper": 2,
+      "tokens": {
+        "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599": {
+          "address": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
+          "decimals": 8,
+          "symbol": "WBTC",
+          "name": "Wrapped BTC",
+          "prices": {
+            "usd": 108541.4674,
+            "token1": 1.0001954949669642,
+            "token0": 1,
+            "eth": 27.888335956452572
+          },
+          "is_native": false,
+          "network": "mainnet",
+          "price": 108541.4674
+        },
+        "0xcbb7c0000ab88b473b1f5afd9ef808440eed33bf": {
+          "address": "0xcbb7c0000ab88b473b1f5afd9ef808440eed33bf",
+          "decimals": 8,
+          "symbol": "cbBTC",
+          "name": "Coinbase Wrapped BTC",
+          "prices": {
+            "usd": 108520.2472,
+            "token1": 1,
+            "token0": 0.9998045432438478,
+            "eth": 27.8828837036502
+          },
+          "is_native": false,
+          "network": "mainnet",
+          "price": 108520.2472
+        }
+      },
+      "network": "mainnet",
+      "exchange": "uniswapv4",
+      "fee_tier": "100",
+      "autocompounding": false,
+      "tick_lower": -2
+    },
+    {
+      "in_range": true,
+      "pool": "0x3f2ff4d42377c6faabfe6b98a28a569e9bb3f593",
+      "age": 7.409143519,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "1624.360608847157149469507409315126730",
+          "roi": "56.03404849",
+          "apr": "2760.506522",
+          "pool_pnl": "1624.514406737942630871611469315126730",
+          "pool_roi": "56.03935392",
+          "pool_apr": "2760.838601",
+          "il": "-269.903510826662872299858420346511958",
+          "fee_apr": "3219.453235"
+        }
+      },
+      "nft_id": 4046265,
+      "underlying_value": "2628.8240901733371277",
+      "token1": "0x4200000000000000000000000000000000000006",
+      "token0": "0x0907420df3192eb6939e69b4f38e3b199c9cda8d",
+      "real_owner": "0x25c9c4b56e820e0dea438b145284f02d9ca9bd52",
+      "exited": false,
+      "tick_upper": 887200,
+      "tokens": {
+        "0x0907420df3192eb6939e69b4f38e3b199c9cda8d": {
+          "address": "0x0907420df3192eb6939e69b4f38e3b199c9cda8d",
+          "decimals": 18,
+          "symbol": "G-NUSMAS"
+        },
+        "0x4200000000000000000000000000000000000006": {
+          "address": "0x4200000000000000000000000000000000000006",
+          "decimals": 18,
+          "symbol": "WETH"
+        }
+      },
+      "network": "base",
+      "exchange": "uniswapv3",
+      "fee_tier": "10000",
+      "autocompounding": null,
+      "tick_lower": -217400
+    },
+    {
+      "in_range": true,
+      "pool": "0xa0ae03a23111f8f8171cd6f472b2ae6692e05c3f",
+      "age": 0.741087963,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "54.964455345410742745359904850548",
+          "roi": "5.593828119",
+          "apr": "2756.366682",
+          "pool_pnl": "54.985673647380421107953697512148",
+          "pool_roi": "5.595987542",
+          "pool_apr": "2757.465383",
+          "il": "-3.003867861302577075174625958287",
+          "fee_apr": "2908.069207"
+        }
+      },
+      "nft_id": 4075881,
+      "underlying_value": "979.5659798486254719",
+      "token1": "0xd88611a629265c9af294ffdd2e7fa4546612273e",
+      "token0": "0x4200000000000000000000000000000000000006",
+      "real_owner": "0xf954978c2cb5916c56124071b7208509efa11af2",
+      "exited": false,
+      "tick_upper": 138600,
+      "tokens": {
+        "0x4200000000000000000000000000000000000006": {
+          "address": "0x4200000000000000000000000000000000000006",
+          "decimals": 18,
+          "symbol": "WETH"
+        },
+        "0xd88611a629265c9af294ffdd2e7fa4546612273e": {
+          "address": "0xd88611a629265c9af294ffdd2e7fa4546612273e",
+          "decimals": 18,
+          "symbol": "MPRO"
+        }
+      },
+      "network": "base",
+      "exchange": "uniswapv3",
+      "fee_tier": "10000",
+      "autocompounding": null,
+      "tick_lower": 138400
+    },
+    {
+      "in_range": true,
+      "pool": "0xc7e3ca54c37f9fc884b588f395e6b60666308f28",
+      "age": 2.741342593,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "708.9471660073375987398934633480",
+          "roi": "20.43479413",
+          "apr": "2720.836070",
+          "pool_pnl": "709.0382559412741242906065487540",
+          "pool_roi": "20.43741972",
+          "pool_apr": "2721.241073",
+          "il": "-134.6322712834417777446199532600",
+          "fee_apr": "3237.884727"
+        }
+      },
+      "nft_id": 871425,
+      "underlying_value": "3334.5906021628613480",
+      "token1": "0x7ec43cf65f1663f820427c62a5780b8f2e25593a",
+      "token0": "0x55d398326f99059ff775485246999027b3197955",
+      "real_owner": "0xe5661c3ad2a9716415aebf37a8e6ec263451ca8d",
+      "exited": false,
+      "tick_upper": 20000,
+      "tokens": {
+        "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c": {
+          "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+          "decimals": 18,
+          "symbol": "WBNB"
+        },
+        "0x7ec43cf65f1663f820427c62a5780b8f2e25593a": {
+          "address": "0x7ec43cf65f1663f820427c62a5780b8f2e25593a",
+          "decimals": 18,
+          "symbol": "LAB"
+        },
+        "0x55d398326f99059ff775485246999027b3197955": {
+          "address": "0x55d398326f99059ff775485246999027b3197955",
+          "decimals": 18,
+          "symbol": "USDT"
+        }
+      },
+      "network": "bnb",
+      "exchange": "uniswapv3",
+      "fee_tier": "10000",
+      "autocompounding": null,
+      "tick_lower": 15200
+    },
+    {
+      "in_range": true,
+      "pool": "0x20b84e421f2458e69306eac9aa0248375a062e53",
+      "age": 1.813356481,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "147.567440107892810768618413115054551",
+          "roi": "13.45423503",
+          "apr": "2708.124869",
+          "pool_pnl": "147.578688965382242687287037115054551",
+          "pool_roi": "13.45526063",
+          "pool_apr": "2708.359084",
+          "il": "-11.005670069571095189656130884945449",
+          "fee_apr": "2910.304918"
+        }
+      },
+      "nft_id": 4071883,
+      "underlying_value": "1085.79341451047821438",
+      "token1": "0xe0cc881e977006488d694148223eadb5ef207275",
+      "token0": "0x4200000000000000000000000000000000000006",
+      "real_owner": "0xa7356af46c3169310e34d7f1c4dbbf3cb92a0c7e",
+      "exited": false,
+      "tick_upper": 218400,
+      "tokens": {
+        "0xe0cc881e977006488d694148223eadb5ef207275": {
+          "address": "0xe0cc881e977006488d694148223eadb5ef207275",
+          "decimals": 18,
+          "symbol": "BURD"
+        },
+        "0x4200000000000000000000000000000000000006": {
+          "address": "0x4200000000000000000000000000000000000006",
+          "decimals": 18,
+          "symbol": "WETH"
+        }
+      },
+      "network": "base",
+      "exchange": "uniswapv3",
+      "fee_tier": "10000",
+      "autocompounding": null,
+      "tick_lower": 138600
+    },
+    {
+      "in_range": true,
+      "pool": "0x61b28915ae086f6adbb9b0e4c3af96b0341188e4",
+      "age": 3.35650463,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "193.5805497244850498561254500126",
+          "roi": "19.96084745",
+          "apr": "2705.376545",
+          "pool_pnl": "193.7018563028960465944483140126",
+          "pool_roi": "19.97335585",
+          "pool_apr": "2707.225920",
+          "il": "-0.1754243613082077782092617616",
+          "fee_apr": "2709.523495"
+        }
+      },
+      "nft_id": 4067352,
+      "underlying_value": "969.50452721373764832",
+      "token1": "0xe0969ec84456b7e4d3dd2181fb5265edbb63f7bd",
+      "token0": "0x4200000000000000000000000000000000000006",
+      "real_owner": "0x61cbce9fca24ce58776d09d4716e12ddb907fb78",
+      "exited": false,
+      "tick_upper": 98800,
+      "tokens": {
+        "0x4200000000000000000000000000000000000006": {
+          "address": "0x4200000000000000000000000000000000000006",
+          "decimals": 18,
+          "symbol": "WETH"
+        },
+        "0xe0969ec84456b7e4d3dd2181fb5265edbb63f7bd": {
+          "address": "0xe0969ec84456b7e4d3dd2181fb5265edbb63f7bd",
+          "decimals": 18,
+          "symbol": "FLK"
+        }
+      },
+      "network": "base",
+      "exchange": "uniswapv3",
+      "fee_tier": "10000",
+      "autocompounding": null,
+      "tick_lower": 95800
+    },
+    {
+      "in_range": true,
+      "pool": "0x0171ee6b90341693903fa288e5314589cd775564",
+      "age": 5.283888889,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "260.440363283008205788162042638684",
+          "roi": "39.01287740",
+          "apr": "2694.963590",
+          "pool_pnl": "260.479386386028933358086712638684",
+          "pool_roi": "39.01872290",
+          "pool_apr": "2695.489385",
+          "il": "-0.907466952504023443079687350080",
+          "fee_apr": "2704.757602"
+        }
+      },
+      "nft_id": 853443,
+      "underlying_value": "666.62888663711559943461033",
+      "token1": "0x83330d159c9a4b09e6717feefef7a634b70d216a",
+      "token0": "0x55d398326f99059ff775485246999027b3197955",
+      "real_owner": "0xab50dc3271f3d05487f6e6c23f2a9bec574ce877",
+      "exited": false,
+      "tick_upper": 68400,
+      "tokens": {
+        "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c": {
+          "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+          "decimals": 18,
+          "symbol": "WBNB"
+        },
+        "0x83330d159c9a4b09e6717feefef7a634b70d216a": {
+          "address": "0x83330d159c9a4b09e6717feefef7a634b70d216a",
+          "decimals": 18,
+          "symbol": "MTP"
+        },
+        "0x55d398326f99059ff775485246999027b3197955": {
+          "address": "0x55d398326f99059ff775485246999027b3197955",
+          "decimals": 18,
+          "symbol": "USDT"
+        }
+      },
+      "network": "bnb",
+      "exchange": "uniswapv3",
+      "fee_tier": "10000",
+      "autocompounding": null,
+      "tick_lower": 58800
+    },
+    {
+      "in_range": true,
+      "pool": "0xfaad4e108e73e36852944886fe8428cebab3cec8",
+      "age": 1.130787037,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "169.84907766785878297398829018592",
+          "roi": "8.309330688",
+          "apr": "2682.178391",
+          "pool_pnl": "169.97966841176037182671020574992",
+          "pool_roi": "8.315719429",
+          "pool_apr": "2684.352949",
+          "il": "-8.47102942916232250311992876768",
+          "fee_apr": "2818.011215"
+        }
+      },
+      "nft_id": 881487,
+      "underlying_value": "2035.4749010529954904",
+      "token1": "0x55d398326f99059ff775485246999027b3197955",
+      "token0": "0x02e75d28a8aa2a0033b8cf866fcf0bb0e1ee4444",
+      "real_owner": "0xd78faafb764569ea360a244a1a2cfa2664b85f27",
+      "exited": false,
+      "tick_upper": -32000,
+      "tokens": {
+        "0x02e75d28a8aa2a0033b8cf866fcf0bb0e1ee4444": {
+          "address": "0x02e75d28a8aa2a0033b8cf866fcf0bb0e1ee4444",
+          "decimals": 18,
+          "symbol": "PALU"
+        },
+        "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c": {
+          "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+          "decimals": 18,
+          "symbol": "WBNB"
+        },
+        "0x55d398326f99059ff775485246999027b3197955": {
+          "address": "0x55d398326f99059ff775485246999027b3197955",
+          "decimals": 18,
+          "symbol": "USDT"
+        }
+      },
+      "network": "bnb",
+      "exchange": "uniswapv3",
+      "fee_tier": "10000",
+      "autocompounding": null,
+      "tick_lower": -44000
+    },
+    {
+      "in_range": false,
+      "pool": "0x81965714e2a1ec25fb8bcb3de60a11fe6bca929a",
+      "age": 2.295648148,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "115.8750764825373088671232845042",
+          "roi": "16.82998684",
+          "apr": "2676.111088",
+          "pool_pnl": "115.9659189818516098671232845042",
+          "pool_roi": "16.84318103",
+          "pool_apr": "2678.360070",
+          "il": "-17.8200338736028220834662480971",
+          "fee_apr": "3089.759099"
+        }
+      },
+      "nft_id": 873932,
+      "underlying_value": "670.5927901862110395",
+      "token1": "0xf3d5b4c34ed623478cc5141861776e6cf7ae3a1e",
+      "token0": "0x55d398326f99059ff775485246999027b3197955",
+      "real_owner": "0x26982a9a87b9758cd0de61bdcd093cc410bef112",
+      "exited": false,
+      "tick_upper": -217500,
+      "tokens": {
+        "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c": {
+          "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+          "decimals": 18,
+          "symbol": "WBNB"
+        },
+        "0xf3d5b4c34ed623478cc5141861776e6cf7ae3a1e": {
+          "address": "0xf3d5b4c34ed623478cc5141861776e6cf7ae3a1e",
+          "decimals": 8,
+          "symbol": "KGEN"
+        },
+        "0x55d398326f99059ff775485246999027b3197955": {
+          "address": "0x55d398326f99059ff775485246999027b3197955",
+          "decimals": 18,
+          "symbol": "USDT"
+        }
+      },
+      "network": "bnb",
+      "exchange": "uniswapv3",
+      "fee_tier": "3000",
+      "autocompounding": null,
+      "tick_lower": -223980
+    },
+    {
+      "in_range": true,
+      "pool": "0x81965714e2a1ec25fb8bcb3de60a11fe6bca929a",
+      "age": 0.8571875,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "1236.501732437230860250183965192",
+          "roi": "6.174894160",
+          "apr": "2629.338818",
+          "pool_pnl": "1236.578692299289895950183965192",
+          "pool_roi": "6.175278486",
+          "pool_apr": "2629.512576",
+          "il": "-184.030912291531588701855234808",
+          "fee_apr": "3020.831982"
+        }
+      },
+      "nft_id": 882943,
+      "underlying_value": "19840.554905123886164415986",
+      "token1": "0xf3d5b4c34ed623478cc5141861776e6cf7ae3a1e",
+      "token0": "0x55d398326f99059ff775485246999027b3197955",
+      "real_owner": "0x049c48d6e1619cc9aad5005aa3508a33b4f4a114",
+      "exited": false,
+      "tick_upper": -216120,
+      "tokens": {
+        "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c": {
+          "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+          "decimals": 18,
+          "symbol": "WBNB"
+        },
+        "0xf3d5b4c34ed623478cc5141861776e6cf7ae3a1e": {
+          "address": "0xf3d5b4c34ed623478cc5141861776e6cf7ae3a1e",
+          "decimals": 8,
+          "symbol": "KGEN"
+        },
+        "0x55d398326f99059ff775485246999027b3197955": {
+          "address": "0x55d398326f99059ff775485246999027b3197955",
+          "decimals": 18,
+          "symbol": "USDT"
+        }
+      },
+      "network": "bnb",
+      "exchange": "uniswapv3",
+      "fee_tier": "3000",
+      "autocompounding": null,
+      "tick_lower": -218760
+    },
+    {
+      "in_range": true,
+      "pool": "0xc7e3ca54c37f9fc884b588f395e6b60666308f28",
+      "age": 2.794409722,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "300.0582515803276061093441483020",
+          "roi": "19.75018603",
+          "apr": "2580.015881",
+          "pool_pnl": "300.3026148395465267093441483020",
+          "pool_roi": "19.76627031",
+          "pool_apr": "2582.244552",
+          "il": "-7.7640996469344994884767858620",
+          "fee_apr": "2648.875715"
+        }
+      },
+      "nft_id": 870927,
+      "underlying_value": "1511.2595132071193036",
+      "token1": "0x7ec43cf65f1663f820427c62a5780b8f2e25593a",
+      "token0": "0x55d398326f99059ff775485246999027b3197955",
+      "real_owner": "0x520b4082c36f3d98b66889d7eba4cafc37cd6dcb",
+      "exited": false,
+      "tick_upper": 20400,
+      "tokens": {
+        "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c": {
+          "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+          "decimals": 18,
+          "symbol": "WBNB"
+        },
+        "0x7ec43cf65f1663f820427c62a5780b8f2e25593a": {
+          "address": "0x7ec43cf65f1663f820427c62a5780b8f2e25593a",
+          "decimals": 18,
+          "symbol": "LAB"
+        },
+        "0x55d398326f99059ff775485246999027b3197955": {
+          "address": "0x55d398326f99059ff775485246999027b3197955",
+          "decimals": 18,
+          "symbol": "USDT"
+        }
+      },
+      "network": "bnb",
+      "exchange": "uniswapv3",
+      "fee_tier": "10000",
+      "autocompounding": null,
+      "tick_lower": 13800
+    },
+    {
+      "in_range": false,
+      "pool": "0x877c9c4f891b5f19dca325b4f4201ce51d97deb4",
+      "age": 7.119837963,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "391.2648494436933621562766912133",
+          "roi": "49.31722889",
+          "apr": "2528.406590",
+          "pool_pnl": "391.3441089740505436038699645933",
+          "pool_roi": "49.32721921",
+          "pool_apr": "2529.022989",
+          "il": "-7.2846626315929460379485155774",
+          "fee_apr": "2575.993255"
+        }
+      },
+      "nft_id": 840398,
+      "underlying_value": "785.9994891077021576",
+      "token1": "0x5ba9bfffb868859064c33d4f995a0828b2b1d2d3",
+      "token0": "0x55d398326f99059ff775485246999027b3197955",
+      "real_owner": "0x5378368f5b6cd5b595f82335f2a6ab462db7878c",
+      "exited": false,
+      "tick_upper": -140400,
+      "tokens": {
+        "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c": {
+          "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+          "decimals": 18,
+          "symbol": "WBNB"
+        },
+        "0x5ba9bfffb868859064c33d4f995a0828b2b1d2d3": {
+          "address": "0x5ba9bfffb868859064c33d4f995a0828b2b1d2d3",
+          "decimals": 6,
+          "symbol": "XLAB"
+        },
+        "0x55d398326f99059ff775485246999027b3197955": {
+          "address": "0x55d398326f99059ff775485246999027b3197955",
+          "decimals": 18,
+          "symbol": "USDT"
+        }
+      },
+      "network": "bnb",
+      "exchange": "uniswapv3",
+      "fee_tier": "10000",
+      "autocompounding": null,
+      "tick_lower": -149000
+    },
+    {
+      "in_range": true,
+      "pool": "0x81965714e2a1ec25fb8bcb3de60a11fe6bca929a",
+      "age": 0.6976157407,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "25.0109014534246902196785481364",
+          "roi": "4.626000432",
+          "apr": "2503.122119",
+          "pool_pnl": "25.0774836891954612196785481364",
+          "pool_roi": "4.638315440",
+          "pool_apr": "2510.101316",
+          "il": "-0.0971084869255418655778096636",
+          "fee_apr": "2519.504490"
+        }
+      },
+      "nft_id": 886120,
+      "underlying_value": "540.49560712273585099",
+      "token1": "0xf3d5b4c34ed623478cc5141861776e6cf7ae3a1e",
+      "token0": "0x55d398326f99059ff775485246999027b3197955",
+      "real_owner": "0xf2108dfe3a1cdf4e9f33b299d3ae7e5199b86950",
+      "exited": false,
+      "tick_upper": -216180,
+      "tokens": {
+        "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c": {
+          "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+          "decimals": 18,
+          "symbol": "WBNB"
+        },
+        "0xf3d5b4c34ed623478cc5141861776e6cf7ae3a1e": {
+          "address": "0xf3d5b4c34ed623478cc5141861776e6cf7ae3a1e",
+          "decimals": 8,
+          "symbol": "KGEN"
+        },
+        "0x55d398326f99059ff775485246999027b3197955": {
+          "address": "0x55d398326f99059ff775485246999027b3197955",
+          "decimals": 18,
+          "symbol": "USDT"
+        }
+      },
+      "network": "bnb",
+      "exchange": "uniswapv3",
+      "fee_tier": "3000",
+      "autocompounding": null,
+      "tick_lower": -219240
+    },
+    {
+      "in_range": true,
+      "pool": "0x1ca7c26b0abcf530d2cf8089ab0e055e59f327d1",
+      "age": 0.715462963,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "33.25391371314911471067911440659",
+          "roi": "4.884589369",
+          "apr": "2491.918118",
+          "pool_pnl": "33.30597741930872447067911440659",
+          "pool_roi": "4.892236885",
+          "pool_apr": "2496.010452",
+          "il": "-3.49083411219357315267816259341",
+          "fee_apr": "2757.409012"
+        }
+      },
+      "nft_id": 885923,
+      "underlying_value": "677.249512713146106144508095",
+      "token1": "0x6261963ebe9ff014aad10ecc3b0238d4d04e8353",
+      "token0": "0x55d398326f99059ff775485246999027b3197955",
+      "real_owner": "0xef628669196277859db27272de06076cdbe970b3",
+      "exited": false,
+      "tick_upper": 30000,
+      "tokens": {
+        "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c": {
+          "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+          "decimals": 18,
+          "symbol": "WBNB"
+        },
+        "0x55d398326f99059ff775485246999027b3197955": {
+          "address": "0x55d398326f99059ff775485246999027b3197955",
+          "decimals": 18,
+          "symbol": "USDT"
+        },
+        "0x6261963ebe9ff014aad10ecc3b0238d4d04e8353": {
+          "address": "0x6261963ebe9ff014aad10ecc3b0238d4d04e8353",
+          "decimals": 18,
+          "symbol": "HANA"
+        }
+      },
+      "network": "bnb",
+      "exchange": "uniswapv3",
+      "fee_tier": "10000",
+      "autocompounding": null,
+      "tick_lower": 27200
+    },
+    {
+      "in_range": true,
+      "pool": "0xedc625b74537ee3a10874f53d170e9c17a906b9c",
+      "age": 0.5152083333,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "41.8930135401762458521533085597",
+          "roi": "3.498819917",
+          "apr": "2478.818280",
+          "pool_pnl": "41.9971430419811896954030205597",
+          "pool_roi": "3.507516602",
+          "pool_apr": "2485.120729",
+          "il": "-2.9379617861483107217610610187",
+          "fee_apr": "2658.819452"
+        }
+      },
+      "nft_id": 4076764,
+      "underlying_value": "1194.30485821370758114381877",
+      "token1": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+      "token0": "0x1111111111166b7fe7bd91427724b487980afc69",
+      "real_owner": "0xe49b34e12669ac21218475d3cb8e33adf44ba2ea",
+      "exited": false,
+      "tick_upper": -297900,
+      "tokens": {
+        "0x1111111111166b7fe7bd91427724b487980afc69": {
+          "address": "0x1111111111166b7fe7bd91427724b487980afc69",
+          "decimals": 18,
+          "symbol": "ZORA"
+        },
+        "0x4200000000000000000000000000000000000006": {
+          "address": "0x4200000000000000000000000000000000000006",
+          "decimals": 18,
+          "symbol": "WETH"
+        },
+        "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913": {
+          "address": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+          "decimals": 6,
+          "symbol": "USDC"
+        }
+      },
+      "network": "base",
+      "exchange": "uniswapv3",
+      "fee_tier": "3000",
+      "autocompounding": null,
+      "tick_lower": -300300
+    },
+    {
+      "in_range": true,
+      "pool": "0x27fd021326d14869fb04d99ba5795dc2d7c9c1ca",
+      "age": 0.9671875,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "37.8891113369471803514779546010",
+          "roi": "6.332515128",
+          "apr": "2475.207203",
+          "pool_pnl": "37.9150508625313984011658687961",
+          "pool_roi": "6.336850475",
+          "pool_apr": "2476.986394",
+          "il": "-1.7989996402368790129141191968",
+          "fee_apr": "2594.426218"
+        }
+      },
+      "nft_id": 2730201,
+      "underlying_value": "596.50148520398074415",
+      "token1": "0x6a8ec2d9bfbdd20a7f5a4e89d640f7e7ceba4499",
+      "token0": "0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270",
+      "real_owner": "0x33e070462f8128554f02b3ee660c7e3d62364a26",
+      "exited": false,
+      "tick_upper": -31600,
+      "tokens": {
+        "0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270": {
+          "address": "0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270",
+          "decimals": 18,
+          "symbol": "WMATIC"
+        },
+        "0x6a8ec2d9bfbdd20a7f5a4e89d640f7e7ceba4499": {
+          "address": "0x6a8ec2d9bfbdd20a7f5a4e89d640f7e7ceba4499",
+          "decimals": 18,
+          "symbol": "MSQ"
+        }
+      },
+      "network": "polygon",
+      "exchange": "uniswapv3",
+      "fee_tier": "10000",
+      "autocompounding": null,
+      "tick_lower": -33400
+    },
+    {
+      "in_range": false,
+      "pool": "0xade9bcd4b968ee26bed102dd43a55f6a8c2416df",
+      "age": 0.9810185185,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "728.0210398661044533481930129477016",
+          "roi": "6.636141774",
+          "apr": "2469.058130",
+          "pool_pnl": "728.0311609357217529617512042579016",
+          "pool_roi": "6.636234031",
+          "pool_apr": "2469.094733",
+          "il": "621.1002102014007455866313002579016",
+          "fee_apr": "362.6526141"
+        }
+      },
+      "nft_id": 4074971,
+      "underlying_value": "11591.6369014927602374405872",
+      "token1": "0x6921b130d297cc43754afba22e5eac0fbf8db75b",
+      "token0": "0x4200000000000000000000000000000000000006",
+      "real_owner": "0xb2822087c19947b1ef130469769ddcab6a363ae9",
+      "exited": false,
+      "tick_upper": 164400,
+      "tokens": {
+        "0x6921b130d297cc43754afba22e5eac0fbf8db75b": {
+          "address": "0x6921b130d297cc43754afba22e5eac0fbf8db75b",
+          "decimals": 18,
+          "symbol": "doginme"
+        },
+        "0x4200000000000000000000000000000000000006": {
+          "address": "0x4200000000000000000000000000000000000006",
+          "decimals": 18,
+          "symbol": "WETH"
+        }
+      },
+      "network": "base",
+      "exchange": "uniswapv3",
+      "fee_tier": "10000",
+      "autocompounding": null,
+      "tick_lower": 163200
+    },
+    {
+      "in_range": true,
+      "pool": "0x61b28915ae086f6adbb9b0e4c3af96b0341188e4",
+      "age": 6.79525463,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "527.91795883716169428935842384212",
+          "roi": "41.41185030",
+          "apr": "2453.086016",
+          "pool_pnl": "528.3514457614283220761180732448",
+          "pool_roi": "41.44585462",
+          "pool_apr": "2455.277396",
+          "il": "-16.8822109087925084549991473760",
+          "fee_apr": "2533.547185"
+        }
+      },
+      "nft_id": 4053017,
+      "underlying_value": "1257.48355666738961536",
+      "token1": "0xe0969ec84456b7e4d3dd2181fb5265edbb63f7bd",
+      "token0": "0x4200000000000000000000000000000000000006",
+      "real_owner": "0x424e9cc4c00ad160c3f36b5471514a6c36a8d73e",
+      "exited": false,
+      "tick_upper": 99000,
+      "tokens": {
+        "0x4200000000000000000000000000000000000006": {
+          "address": "0x4200000000000000000000000000000000000006",
+          "decimals": 18,
+          "symbol": "WETH"
+        },
+        "0xe0969ec84456b7e4d3dd2181fb5265edbb63f7bd": {
+          "address": "0xe0969ec84456b7e4d3dd2181fb5265edbb63f7bd",
+          "decimals": 18,
+          "symbol": "FLK"
+        }
+      },
+      "network": "base",
+      "exchange": "uniswapv3",
+      "fee_tier": "10000",
+      "autocompounding": null,
+      "tick_lower": 80000
+    },
+    {
+      "in_range": true,
+      "pool": "0x85144212383a34479f3b0abe6f6f9ee69240fb55",
+      "age": 4.101111111,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "748.5322066718678044481960715542378",
+          "roi": "27.31329215",
+          "apr": "2430.890402",
+          "pool_pnl": "748.5743441659263360481960715542378",
+          "pool_roi": "27.31482971",
+          "pool_apr": "2431.064624",
+          "il": "-0.0002114704587474456179284457622",
+          "fee_apr": "2431.027932"
+        }
+      },
+      "nft_id": 860750,
+      "underlying_value": "2740.4995181515406986",
+      "token1": "0xda67fbf4e6fa4bb78f62533b7264e1b13295fdf3",
+      "token0": "0x55d398326f99059ff775485246999027b3197955",
+      "real_owner": "0x80053389a87fac5ec1ed027beff06df792b2d25d",
+      "exited": false,
+      "tick_upper": 83400,
+      "tokens": {
+        "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c": {
+          "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+          "decimals": 18,
+          "symbol": "WBNB"
+        },
+        "0x55d398326f99059ff775485246999027b3197955": {
+          "address": "0x55d398326f99059ff775485246999027b3197955",
+          "decimals": 18,
+          "symbol": "USDT"
+        },
+        "0xda67fbf4e6fa4bb78f62533b7264e1b13295fdf3": {
+          "address": "0xda67fbf4e6fa4bb78f62533b7264e1b13295fdf3",
+          "decimals": 18,
+          "symbol": "CELB"
+        }
+      },
+      "network": "bnb",
+      "exchange": "uniswapv3",
+      "fee_tier": "10000",
+      "autocompounding": null,
+      "tick_lower": 82200
+    },
+    {
+      "in_range": true,
+      "pool": "0x4dde7562fcb4834f2bddf815d1d90b9cca5f5150",
+      "age": 12.01826389,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "1183.40812213391982853565324444400",
+          "roi": "79.61440533",
+          "apr": "2419.496766",
+          "pool_pnl": "1184.43118603415075830746912369200",
+          "pool_roi": "79.68323250",
+          "pool_apr": "2421.681857",
+          "il": "-33.68379588981343858674410088100",
+          "fee_apr": "2490.455494"
+        }
+      },
+      "nft_id": 810941,
+      "underlying_value": "1451.7177604637439558",
+      "token1": "0x55d398326f99059ff775485246999027b3197955",
+      "token0": "0x3ac8e2c113d5d7824ac6ebe82a3c60b1b9d64444",
+      "real_owner": "0x4c6a5e3c06773436a1be8d116ada51958cb9ab43",
+      "exited": false,
+      "tick_upper": -28200,
+      "tokens": {
+        "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c": {
+          "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+          "decimals": 18,
+          "symbol": "WBNB"
+        },
+        "0x3ac8e2c113d5d7824ac6ebe82a3c60b1b9d64444": {
+          "address": "0x3ac8e2c113d5d7824ac6ebe82a3c60b1b9d64444",
+          "decimals": 18,
+          "symbol": "客服小何"
+        },
+        "0x55d398326f99059ff775485246999027b3197955": {
+          "address": "0x55d398326f99059ff775485246999027b3197955",
+          "decimals": 18,
+          "symbol": "USDT"
+        }
+      },
+      "network": "bnb",
+      "exchange": "uniswapv3",
+      "fee_tier": "10000",
+      "autocompounding": null,
+      "tick_lower": -51600
+    },
+    {
+      "in_range": true,
+      "pool": "0xfaad4e108e73e36852944886fe8428cebab3cec8",
+      "age": 3.276574074,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "1002.17499908705466788141880321120",
+          "roi": "19.54167681",
+          "apr": "2409.367407",
+          "pool_pnl": "1002.35016645129558325781532915120",
+          "pool_roi": "19.54509244",
+          "pool_apr": "2409.833061",
+          "il": "-58.92271718528883575111100196672",
+          "fee_apr": "2551.446901"
+        }
+      },
+      "nft_id": 867048,
+      "underlying_value": "5069.3003017160945488343328",
+      "token1": "0x55d398326f99059ff775485246999027b3197955",
+      "token0": "0x02e75d28a8aa2a0033b8cf866fcf0bb0e1ee4444",
+      "real_owner": "0xd78faafb764569ea360a244a1a2cfa2664b85f27",
+      "exited": false,
+      "tick_upper": -33400,
+      "tokens": {
+        "0x02e75d28a8aa2a0033b8cf866fcf0bb0e1ee4444": {
+          "address": "0x02e75d28a8aa2a0033b8cf866fcf0bb0e1ee4444",
+          "decimals": 18,
+          "symbol": "PALU"
+        },
+        "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c": {
+          "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+          "decimals": 18,
+          "symbol": "WBNB"
+        },
+        "0x55d398326f99059ff775485246999027b3197955": {
+          "address": "0x55d398326f99059ff775485246999027b3197955",
+          "decimals": 18,
+          "symbol": "USDT"
+        }
+      },
+      "network": "bnb",
+      "exchange": "uniswapv3",
+      "fee_tier": "10000",
+      "autocompounding": null,
+      "tick_lower": -41400
+    },
+    {
+      "in_range": true,
+      "pool": "0xc7e3ca54c37f9fc884b588f395e6b60666308f28",
+      "age": 2.571805556,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "436.9984693219046690533163256910",
+          "roi": "16.95597400",
+          "apr": "2406.477489",
+          "pool_pnl": "437.0815832540748800560071942060",
+          "pool_roi": "16.95919891",
+          "pool_apr": "2406.988825",
+          "il": "-20.4609276467558518533419319200",
+          "fee_apr": "2519.610090"
+        }
+      },
+      "nft_id": 872374,
+      "underlying_value": "2556.7096697424250239584014",
+      "token1": "0x7ec43cf65f1663f820427c62a5780b8f2e25593a",
+      "token0": "0x55d398326f99059ff775485246999027b3197955",
+      "real_owner": "0x4769e26baddb670f2ad4996f912f57086f5fcea0",
+      "exited": false,
+      "tick_upper": 20600,
+      "tokens": {
+        "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c": {
+          "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+          "decimals": 18,
+          "symbol": "WBNB"
+        },
+        "0x7ec43cf65f1663f820427c62a5780b8f2e25593a": {
+          "address": "0x7ec43cf65f1663f820427c62a5780b8f2e25593a",
+          "decimals": 18,
+          "symbol": "LAB"
+        },
+        "0x55d398326f99059ff775485246999027b3197955": {
+          "address": "0x55d398326f99059ff775485246999027b3197955",
+          "decimals": 18,
+          "symbol": "USDT"
+        }
+      },
+      "network": "bnb",
+      "exchange": "uniswapv3",
+      "fee_tier": "10000",
+      "autocompounding": null,
+      "tick_lower": 14400
+    },
+    {
+      "in_range": true,
+      "pool": "0x489feafb0988912f62887f459e37524e1a4f17f1",
+      "age": 3.75056713,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "699.553672734306490812501920141552",
+          "roi": "20.70330091",
+          "apr": "2404.703118",
+          "pool_pnl": "699.704751923802757914116441250552",
+          "pool_roi": "20.70777210",
+          "pool_apr": "2405.298100",
+          "il": "-51.124263675611717307050769332615",
+          "fee_apr": "2580.961183"
+        }
+      },
+      "nft_id": 863886,
+      "underlying_value": "3327.6721776367858986",
+      "token1": "0x799a290f9cc4085a0ce5b42b5f2c30193a7a872b",
+      "token0": "0x55d398326f99059ff775485246999027b3197955",
+      "real_owner": "0x83ebe392824c046be3c7942299bfbb8163759ee9",
+      "exited": false,
+      "tick_upper": 54400,
+      "tokens": {
+        "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c": {
+          "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+          "decimals": 18,
+          "symbol": "WBNB"
+        },
+        "0x799a290f9cc4085a0ce5b42b5f2c30193a7a872b": {
+          "address": "0x799a290f9cc4085a0ce5b42b5f2c30193a7a872b",
+          "decimals": 18,
+          "symbol": "ELDE"
+        },
+        "0x55d398326f99059ff775485246999027b3197955": {
+          "address": "0x55d398326f99059ff775485246999027b3197955",
+          "decimals": 18,
+          "symbol": "USDT"
+        }
+      },
+      "network": "bnb",
+      "exchange": "uniswapv3",
+      "fee_tier": "10000",
+      "autocompounding": null,
+      "tick_lower": 48200
+    },
+    {
+      "in_range": true,
+      "pool": "0x59a0be5dd05a4fe07b81f150643227ac8b44695f",
+      "age": 0.8418171296,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "66.3383488789565082559364893719",
+          "roi": "4.602311863",
+          "apr": "2381.789787",
+          "pool_pnl": "66.6425306652876156669459014524",
+          "pool_roi": "4.623414882",
+          "pool_apr": "2393.020256",
+          "il": "-9.3480735558499162753121760086",
+          "fee_apr": "2728.341120"
+        }
+      },
+      "nft_id": 4075436,
+      "underlying_value": "1431.76133974625913840007896",
+      "token1": "0xa66b448f97cbf58d12f00711c02bac2d9eac6f7f",
+      "token0": "0x4200000000000000000000000000000000000006",
+      "real_owner": "0x49a8799753d95542859e03e98482cd0ad507311c",
+      "exited": false,
+      "tick_upper": 95800,
+      "tokens": {
+        "0xa66b448f97cbf58d12f00711c02bac2d9eac6f7f": {
+          "address": "0xa66b448f97cbf58d12f00711c02bac2d9eac6f7f",
+          "decimals": 18,
+          "symbol": "OPENX"
+        },
+        "0x4200000000000000000000000000000000000006": {
+          "address": "0x4200000000000000000000000000000000000006",
+          "decimals": 18,
+          "symbol": "WETH"
+        }
+      },
+      "network": "base",
+      "exchange": "uniswapv3",
+      "fee_tier": "10000",
+      "autocompounding": null,
+      "tick_lower": 93600
+    },
+    {
+      "in_range": true,
+      "pool": "0xc7e3ca54c37f9fc884b588f395e6b60666308f28",
+      "age": 2.292326389,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "639.9282791532943088995861350200",
+          "roi": "14.93275910",
+          "apr": "2377.702458",
+          "pool_pnl": "639.9660176624791274878083890200",
+          "pool_roi": "14.93363973",
+          "pool_apr": "2377.857939",
+          "il": "-2.9583141945707403293477230080",
+          "fee_apr": "2388.834521"
+        }
+      },
+      "nft_id": 873969,
+      "underlying_value": "4282.4027462964113351474198",
+      "token1": "0x7ec43cf65f1663f820427c62a5780b8f2e25593a",
+      "token0": "0x55d398326f99059ff775485246999027b3197955",
+      "real_owner": "0x585a51176d3f69e8b318b78a5fecb12ca3a58d6c",
+      "exited": false,
+      "tick_upper": 19000,
+      "tokens": {
+        "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c": {
+          "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+          "decimals": 18,
+          "symbol": "WBNB"
+        },
+        "0x7ec43cf65f1663f820427c62a5780b8f2e25593a": {
+          "address": "0x7ec43cf65f1663f820427c62a5780b8f2e25593a",
+          "decimals": 18,
+          "symbol": "LAB"
+        },
+        "0x55d398326f99059ff775485246999027b3197955": {
+          "address": "0x55d398326f99059ff775485246999027b3197955",
+          "decimals": 18,
+          "symbol": "USDT"
+        }
+      },
+      "network": "bnb",
+      "exchange": "uniswapv3",
+      "fee_tier": "10000",
+      "autocompounding": null,
+      "tick_lower": 13600
+    },
+    {
+      "in_range": true,
+      "pool": "0xb0b8e0b46cfcf714223943377c0643521fd15340",
+      "age": 12.66060185,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "6626.381965675638078007350472331605484",
+          "roi": "82.28409368",
+          "apr": "2372.559991",
+          "pool_pnl": "6628.193754958571706591087842631605484",
+          "pool_roi": "82.30659185",
+          "pool_apr": "2373.399525",
+          "il": "-925.247147615969202799914729300510948",
+          "fee_apr": "2704.491195"
+        }
+      },
+      "nft_id": 807102,
+      "underlying_value": "7125.9944163327892252",
+      "token1": "0xffba1efde1f828eb2be0d382907b9cdc77966e53",
+      "token0": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+      "real_owner": "0xf41b875aab102c85e98f77a8f13c54342a9068f0",
+      "exited": false,
+      "tick_upper": 195400,
+      "tokens": {
+        "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c": {
+          "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+          "decimals": 18,
+          "symbol": "WBNB"
+        },
+        "0xffba1efde1f828eb2be0d382907b9cdc77966e53": {
+          "address": "0xffba1efde1f828eb2be0d382907b9cdc77966e53",
+          "decimals": 18,
+          "symbol": "DOUGH"
+        }
+      },
+      "network": "bnb",
+      "exchange": "uniswapv3",
+      "fee_tier": "10000",
+      "autocompounding": null,
+      "tick_lower": -604600
+    },
+    {
+      "in_range": true,
+      "pool": "0x4610464356ba6bba15eec558619d84b72fea260f",
+      "age": 1.763078704,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "177.075660139003841076389746956",
+          "roi": "11.44403620",
+          "apr": "2369.207159",
+          "pool_pnl": "177.109026436977461661277052144",
+          "pool_roi": "11.44619259",
+          "pool_apr": "2369.690235",
+          "il": "-7.137778547788322507822686316",
+          "fee_apr": "2465.154438"
+        }
+      },
+      "nft_id": 877533,
+      "underlying_value": "1540.1471007401547728",
+      "token1": "0x55d398326f99059ff775485246999027b3197955",
+      "token0": "0x0a8d6c86e1bce73fe4d0bd531e1a567306836ea5",
+      "real_owner": "0x6ab1414b51c4194b48a14654729e3a0d5012d9e3",
+      "exited": false,
+      "tick_upper": 26400,
+      "tokens": {
+        "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c": {
+          "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+          "decimals": 18,
+          "symbol": "WBNB"
+        },
+        "0x0a8d6c86e1bce73fe4d0bd531e1a567306836ea5": {
+          "address": "0x0a8d6c86e1bce73fe4d0bd531e1a567306836ea5",
+          "decimals": 18,
+          "symbol": "COAI"
+        },
+        "0x55d398326f99059ff775485246999027b3197955": {
+          "address": "0x55d398326f99059ff775485246999027b3197955",
+          "decimals": 18,
+          "symbol": "USDT"
+        }
+      },
+      "network": "bnb",
+      "exchange": "uniswapv3",
+      "fee_tier": "10000",
+      "autocompounding": null,
+      "tick_lower": 13800
+    },
+    {
+      "in_range": false,
+      "pool": "0xfaad4e108e73e36852944886fe8428cebab3cec8",
+      "age": 5.018576389,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "308.46552627720264577175006121882",
+          "roi": "32.38094829",
+          "apr": "2355.150831",
+          "pool_pnl": "308.53259841239521129179655685982",
+          "pool_roi": "32.38798914",
+          "pool_apr": "2355.737469",
+          "il": "-109.65680260570148510042343241814",
+          "fee_apr": "3192.898498"
+        }
+      },
+      "nft_id": 855019,
+      "underlying_value": "842.89037100311306765029984",
+      "token1": "0x55d398326f99059ff775485246999027b3197955",
+      "token0": "0x02e75d28a8aa2a0033b8cf866fcf0bb0e1ee4444",
+      "real_owner": "0x9389087aa7cf6425d7b09b787842c5ec3a7550b3",
+      "exited": false,
+      "tick_upper": -33800,
+      "tokens": {
+        "0x02e75d28a8aa2a0033b8cf866fcf0bb0e1ee4444": {
+          "address": "0x02e75d28a8aa2a0033b8cf866fcf0bb0e1ee4444",
+          "decimals": 18,
+          "symbol": "PALU"
+        },
+        "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c": {
+          "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+          "decimals": 18,
+          "symbol": "WBNB"
+        },
+        "0x55d398326f99059ff775485246999027b3197955": {
+          "address": "0x55d398326f99059ff775485246999027b3197955",
+          "decimals": 18,
+          "symbol": "USDT"
+        }
+      },
+      "network": "bnb",
+      "exchange": "uniswapv3",
+      "fee_tier": "10000",
+      "autocompounding": null,
+      "tick_lower": -38000
+    },
+    {
+      "in_range": true,
+      "pool": "0x9da07a2ddc18cc293df572717ce5d70c2c2841fa",
+      "age": 0.9434143519,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "34.52975520209168354689905374920",
+          "roi": "5.817491677",
+          "apr": "2347.242406",
+          "pool_pnl": "34.58460492367072754689905374920",
+          "pool_roi": "5.826732628",
+          "pool_apr": "2351.126174",
+          "il": "-5.66503583273807446758622408025",
+          "fee_apr": "2736.065260"
+        }
+      },
+      "nft_id": 882425,
+      "underlying_value": "587.83068779332344033824125",
+      "token1": "0xcd1679f117e81defc4f0009311ddc23fc1ae4a5e",
+      "token0": "0x55d398326f99059ff775485246999027b3197955",
+      "real_owner": "0x7f990bce9d9044d0b4313e082a03a62f625eb1fe",
+      "exited": false,
+      "tick_upper": 33000,
+      "tokens": {
+        "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c": {
+          "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+          "decimals": 18,
+          "symbol": "WBNB"
+        },
+        "0x55d398326f99059ff775485246999027b3197955": {
+          "address": "0x55d398326f99059ff775485246999027b3197955",
+          "decimals": 18,
+          "symbol": "USDT"
+        },
+        "0xcd1679f117e81defc4f0009311ddc23fc1ae4a5e": {
+          "address": "0xcd1679f117e81defc4f0009311ddc23fc1ae4a5e",
+          "decimals": 18,
+          "symbol": "MAIGA"
+        }
+      },
+      "network": "bnb",
+      "exchange": "uniswapv3",
+      "fee_tier": "10000",
+      "autocompounding": null,
+      "tick_lower": 30000
+    },
+    {
+      "in_range": true,
+      "pool": "0x0171ee6b90341693903fa288e5314589cd775564",
+      "age": 3.913518519,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "237.958167120592097478506687520522",
+          "roi": "24.93645826",
+          "apr": "2326.705005",
+          "pool_pnl": "238.028636234867352980657134140522",
+          "pool_roi": "24.94384296",
+          "pool_apr": "2327.499538",
+          "il": "-9.385872402146142084149060079120",
+          "fee_apr": "2419.167128"
+        }
+      },
+      "nft_id": 862521,
+      "underlying_value": "944.80173582948475362",
+      "token1": "0x83330d159c9a4b09e6717feefef7a634b70d216a",
+      "token0": "0x55d398326f99059ff775485246999027b3197955",
+      "real_owner": "0xf061e759846c50ea81e4e832fcebf6b3e20cd0ae",
+      "exited": false,
+      "tick_upper": 69000,
+      "tokens": {
+        "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c": {
+          "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+          "decimals": 18,
+          "symbol": "WBNB"
+        },
+        "0x83330d159c9a4b09e6717feefef7a634b70d216a": {
+          "address": "0x83330d159c9a4b09e6717feefef7a634b70d216a",
+          "decimals": 18,
+          "symbol": "MTP"
+        },
+        "0x55d398326f99059ff775485246999027b3197955": {
+          "address": "0x55d398326f99059ff775485246999027b3197955",
+          "decimals": 18,
+          "symbol": "USDT"
+        }
+      },
+      "network": "bnb",
+      "exchange": "uniswapv3",
+      "fee_tier": "10000",
+      "autocompounding": null,
+      "tick_lower": 62800
+    },
+    {
+      "in_range": true,
+      "pool": "0x98f7781b7eb8180613251f5d6f4429b843084e7b",
+      "age": 2.031053241,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "73.2686531729346357166009355037",
+          "roi": "12.86998956",
+          "apr": "2321.285166",
+          "pool_pnl": "73.4852188458289617166009355037",
+          "pool_roi": "12.90803036",
+          "pool_apr": "2328.705028",
+          "il": "-3.7483216639424850790607836507",
+          "fee_apr": "2446.900059"
+        }
+      },
+      "nft_id": 875835,
+      "underlying_value": "565.33357885922091434",
+      "token1": "0x55d398326f99059ff775485246999027b3197955",
+      "token0": "0x302dfaf2cdbe51a18d97186a7384e87cf599877d",
+      "real_owner": "0x392508c93d065d0833bd5dc3e6cf79d249d507d8",
+      "exited": false,
+      "tick_upper": -19400,
+      "tokens": {
+        "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c": {
+          "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+          "decimals": 18,
+          "symbol": "WBNB"
+        },
+        "0x55d398326f99059ff775485246999027b3197955": {
+          "address": "0x55d398326f99059ff775485246999027b3197955",
+          "decimals": 18,
+          "symbol": "USDT"
+        },
+        "0x302dfaf2cdbe51a18d97186a7384e87cf599877d": {
+          "address": "0x302dfaf2cdbe51a18d97186a7384e87cf599877d",
+          "decimals": 18,
+          "symbol": "LYN"
+        }
+      },
+      "network": "bnb",
+      "exchange": "uniswapv3",
+      "fee_tier": "10000",
+      "autocompounding": null,
+      "tick_lower": -21000
+    },
+    {
+      "in_range": true,
+      "pool": "0x81965714e2a1ec25fb8bcb3de60a11fe6bca929a",
+      "age": 0.5073842593,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "20.3490133834263707031384826767",
+          "roi": "3.173001001",
+          "apr": "2297.895850",
+          "pool_pnl": "21.5580417292548452031384826767",
+          "pool_roi": "3.361523564",
+          "pool_apr": "2438.052316",
+          "il": "-3.7204040392267793765602790233",
+          "fee_apr": "2854.548009"
+        }
+      },
+      "nft_id": 887261,
+      "underlying_value": "636.38815226499056663",
+      "token1": "0xf3d5b4c34ed623478cc5141861776e6cf7ae3a1e",
+      "token0": "0x55d398326f99059ff775485246999027b3197955",
+      "real_owner": "0x385f596ab313167501c55b08b9b6cba7421b88b9",
+      "exited": false,
+      "tick_upper": -216060,
+      "tokens": {
+        "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c": {
+          "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+          "decimals": 18,
+          "symbol": "WBNB"
+        },
+        "0xf3d5b4c34ed623478cc5141861776e6cf7ae3a1e": {
+          "address": "0xf3d5b4c34ed623478cc5141861776e6cf7ae3a1e",
+          "decimals": 8,
+          "symbol": "KGEN"
+        },
+        "0x55d398326f99059ff775485246999027b3197955": {
+          "address": "0x55d398326f99059ff775485246999027b3197955",
+          "decimals": 18,
+          "symbol": "USDT"
+        }
+      },
+      "network": "bnb",
+      "exchange": "uniswapv3",
+      "fee_tier": "3000",
+      "autocompounding": null,
+      "tick_lower": -218940
+    },
+    {
+      "in_range": true,
+      "pool": "0x22c22858c24655d92f9df87bb08dd9a44add2f71",
+      "age": 0.6735763889,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "163.887083628822476008167091183270251",
+          "roi": "4.216007680",
+          "apr": "2287.704517",
+          "pool_pnl": "169.316985795390033706638409667270251",
+          "pool_roi": "4.355692325",
+          "pool_apr": "2363.579806",
+          "il": "-8.116424533652205739893090580312331",
+          "fee_apr": "2476.798082"
+        }
+      },
+      "nft_id": 4076171,
+      "underlying_value": "3873.71138446634779426",
+      "token1": "0x4200000000000000000000000000000000000006",
+      "token0": "0x1cd81e726c6a8b2933c0d9f1dcc8e504b72cdf0b",
+      "real_owner": "0xb1900f41d78d330a2a35c6771b3a6088a1b51309",
+      "exited": false,
+      "tick_upper": 887200,
+      "tokens": {
+        "0x4200000000000000000000000000000000000006": {
+          "address": "0x4200000000000000000000000000000000000006",
+          "decimals": 18,
+          "symbol": "WETH"
+        },
+        "0x1cd81e726c6a8b2933c0d9f1dcc8e504b72cdf0b": {
+          "address": "0x1cd81e726c6a8b2933c0d9f1dcc8e504b72cdf0b",
+          "decimals": 18,
+          "symbol": "KOB"
+        }
+      },
+      "network": "base",
+      "exchange": "uniswapv3",
+      "fee_tier": "10000",
+      "autocompounding": null,
+      "tick_lower": -208200
+    },
+    {
+      "in_range": true,
+      "pool": "0x214e06aeefe6733483895b4376b41a1e7fca9f69",
+      "age": 0.8694097222,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "232.794326095550182507531578369441449",
+          "roi": "5.402238448",
+          "apr": "2272.088355",
+          "pool_pnl": "240.866146243467394767342174713541449",
+          "pool_roi": "5.589553568",
+          "pool_apr": "2351.038586",
+          "il": "-37.734967388168917639881542084887411",
+          "fee_apr": "2719.165697"
+        }
+      },
+      "nft_id": 4075319,
+      "underlying_value": "4263.41296161183108236",
+      "token1": "0x4200000000000000000000000000000000000006",
+      "token0": "0x350b75c2639efa705043bd83b222806de26784eb",
+      "real_owner": "0xb1900f41d78d330a2a35c6771b3a6088a1b51309",
+      "exited": false,
+      "tick_upper": 887200,
+      "tokens": {
+        "0x4200000000000000000000000000000000000006": {
+          "address": "0x4200000000000000000000000000000000000006",
+          "decimals": 18,
+          "symbol": "WETH"
+        },
+        "0x350b75c2639efa705043bd83b222806de26784eb": {
+          "address": "0x350b75c2639efa705043bd83b222806de26784eb",
+          "decimals": 18,
+          "symbol": "狂三"
+        }
+      },
+      "network": "base",
+      "exchange": "uniswapv3",
+      "fee_tier": "10000",
+      "autocompounding": null,
+      "tick_lower": -208200
+    },
+    {
+      "in_range": true,
+      "pool": "0xfaad4e108e73e36852944886fe8428cebab3cec8",
+      "age": 0.6655902778,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "34.05287293048749297410548810996",
+          "roi": "4.014743804",
+          "apr": "2270.086613",
+          "pool_pnl": "34.09841406942266120402959486996",
+          "pool_roi": "4.020112984",
+          "pool_apr": "2273.194652",
+          "il": "-16.15220917078537893706563011826",
+          "fee_apr": "3349.886729"
+        }
+      },
+      "nft_id": 886321,
+      "underlying_value": "831.99766613645205863",
+      "token1": "0x55d398326f99059ff775485246999027b3197955",
+      "token0": "0x02e75d28a8aa2a0033b8cf866fcf0bb0e1ee4444",
+      "real_owner": "0xa86dbc74f0683fa157a5b2d07eac7c94b475dfc3",
+      "exited": false,
+      "tick_upper": -35600,
+      "tokens": {
+        "0x02e75d28a8aa2a0033b8cf866fcf0bb0e1ee4444": {
+          "address": "0x02e75d28a8aa2a0033b8cf866fcf0bb0e1ee4444",
+          "decimals": 18,
+          "symbol": "PALU"
+        },
+        "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c": {
+          "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+          "decimals": 18,
+          "symbol": "WBNB"
+        },
+        "0x55d398326f99059ff775485246999027b3197955": {
+          "address": "0x55d398326f99059ff775485246999027b3197955",
+          "decimals": 18,
+          "symbol": "USDT"
+        }
+      },
+      "network": "bnb",
+      "exchange": "uniswapv3",
+      "fee_tier": "10000",
+      "autocompounding": null,
+      "tick_lower": -40000
+    },
+    {
+      "in_range": true,
+      "pool": "0x81965714e2a1ec25fb8bcb3de60a11fe6bca929a",
+      "age": 2.635185185,
+      "has_withdrawn": false,
+      "performance": {
+        "hodl": {
+          "pnl": "158.7554555143991307740701638220",
+          "roi": "14.45185772",
+          "apr": "2240.976950",
+          "pool_pnl": "158.8827329770349262740701638220",
+          "pool_roi": "14.46344407",
+          "pool_apr": "2242.928020",
+          "il": "-1.2260730509453663144106759338",
+          "fee_apr": "2260.080719"
+        }
+      },
+      "nft_id": 872035,
+      "underlying_value": "1097.1590936452024873",
+      "token1": "0xf3d5b4c34ed623478cc5141861776e6cf7ae3a1e",
+      "token0": "0x55d398326f99059ff775485246999027b3197955",
+      "real_owner": "0x61cbce9fca24ce58776d09d4716e12ddb907fb78",
+      "exited": false,
+      "tick_upper": -215100,
+      "tokens": {
+        "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c": {
+          "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+          "decimals": 18,
+          "symbol": "WBNB"
+        },
+        "0xf3d5b4c34ed623478cc5141861776e6cf7ae3a1e": {
+          "address": "0xf3d5b4c34ed623478cc5141861776e6cf7ae3a1e",
+          "decimals": 8,
+          "symbol": "KGEN"
+        },
+        "0x55d398326f99059ff775485246999027b3197955": {
+          "address": "0x55d398326f99059ff775485246999027b3197955",
+          "decimals": 18,
+          "symbol": "USDT"
+        }
+      },
+      "network": "bnb",
+      "exchange": "uniswapv3",
+      "fee_tier": "3000",
+      "autocompounding": null,
+      "tick_lower": -219540
+    }
+  ]
+}
