@@ -1,6 +1,7 @@
 import axios from 'axios';
+import envManager from './env';
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:8000';
+const API_BASE_URL = envManager.getApiBaseUrl();
 
 const apiClient = axios.create({
   baseURL: API_BASE_URL,
@@ -8,6 +9,31 @@ const apiClient = axios.create({
     'Content-Type': 'application/json',
   },
 });
+
+// Add request/response interceptors for logging in debug mode
+if (envManager.isDebug()) {
+  apiClient.interceptors.request.use(
+    (config) => {
+      envManager.log(`API Request: ${config.method?.toUpperCase()} ${config.url}`);
+      return config;
+    },
+    (error) => {
+      envManager.log(`API Request Error: ${error.message}`, 'error');
+      return Promise.reject(error);
+    }
+  );
+
+  apiClient.interceptors.response.use(
+    (response) => {
+      envManager.log(`API Response: ${response.status} ${response.config.url}`);
+      return response;
+    },
+    (error) => {
+      envManager.log(`API Response Error: ${error.message}`, 'error');
+      return Promise.reject(error);
+    }
+  );
+}
 
 export interface AnalysisRequest {
   [key: string]: any;
@@ -18,42 +44,11 @@ export interface AnalysisResponse {
   error?: string;
 }
 
-export interface ChatRequest {
-  message: string;
-}
-
-export interface ChatResponse {
-  response?: string;
-  error?: string;
-}
-
 export const api = {
   // Health check
   health: async () => {
     const response = await apiClient.get('/health');
     return response.data;
-  },
-
-  // Chat completion (streaming by default)
-  chat: async (message: string, stream: boolean = true): Promise<ChatResponse> => {
-    if (stream) {
-      const response = await apiClient.post('/chat/stream', message);
-      return response.data;
-    } else {
-      const response = await apiClient.post('/chat', message);
-      return response.data;
-    }
-  },
-
-  // General analysis (streaming by default)
-  analyze: async (data: AnalysisRequest, stream: boolean = true): Promise<AnalysisResponse> => {
-    if (stream) {
-      const response = await apiClient.post('/analyze', data, { params: { stream: true } });
-      return response.data;
-    } else {
-      const response = await apiClient.post('/analyze', data, { params: { stream: false } });
-      return response.data;
-    }
   },
 
   // Position analysis (streaming by default)
@@ -63,17 +58,6 @@ export const api = {
       return response.data;
     } else {
       const response = await apiClient.post('/analyze/position', data, { params: { stream: false } });
-      return response.data;
-    }
-  },
-
-  // Position plans analysis (streaming by default)
-  findPositionPlans: async (data: AnalysisRequest, stream: boolean = true): Promise<AnalysisResponse> => {
-    if (stream) {
-      const response = await apiClient.post('/analyze/position-plans', data, { params: { stream: true } });
-      return response.data;
-    } else {
-      const response = await apiClient.post('/analyze/position-plans', data, { params: { stream: false } });
       return response.data;
     }
   },
@@ -90,35 +74,8 @@ export const api = {
   },
 
   // Streaming methods for real-time updates
-  streamChat: async (message: string) => {
-    const response = await fetch(`${API_BASE_URL}/chat/stream`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(message),
-    });
-    return response;
-  },
-
-  streamAnalyze: async (data: AnalysisRequest) => {
-    const response = await fetch(`${API_BASE_URL}/analyze/stream`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(data),
-    });
-    return response;
-  },
-
   streamAnalyzePosition: async (data: AnalysisRequest) => {
-    const response = await fetch(`${API_BASE_URL}/analyze/position/stream`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(data),
-    });
-    return response;
-  },
-
-  streamFindPositionPlans: async (data: AnalysisRequest) => {
-    const response = await fetch(`${API_BASE_URL}/analyze/position-plans/stream`, {
+    const response = await fetch(`${API_BASE_URL}/analyze/position`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data),
@@ -127,7 +84,7 @@ export const api = {
   },
 
   streamAnalyzeTopEarning: async (data: AnalysisRequest) => {
-    const response = await fetch(`${API_BASE_URL}/analyze/top-earning/stream`, {
+    const response = await fetch(`${API_BASE_URL}/analyze/top-earning`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data),

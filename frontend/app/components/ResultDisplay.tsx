@@ -68,30 +68,18 @@ export default function ResultDisplay({ content, isLoading = false, title, type 
   }
 
   return (
-    <div className={`glass-effect rounded-xl p-6 border ${getTypeStyles()} fade-in slide-up`}>
-      <div className="flex items-center justify-between mb-4">
-        <div className="flex items-center gap-3">
-          <div className="w-8 h-8 rounded-full bg-gradient-to-r from-primary-500 to-secondary-500 flex items-center justify-center text-white text-sm font-semibold">
-            {getTypeIcon()}
-          </div>
-          <h3 className="text-lg font-semibold text-gray-800">{title || 'Result'}</h3>
+    <div className="bg-black border border-gray-600 rounded-lg p-4">
+      <div className="flex items-center gap-2 mb-3">
+        <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+        <h3 className="text-sm font-bold text-green-400">{title || 'OUTPUT'}</h3>
+        <div className="ml-auto flex items-center gap-2">
+          <button
+            onClick={copyToClipboard}
+            className="text-xs text-gray-400 hover:text-green-400 transition-colors"
+          >
+            {copied ? 'COPIED' : 'COPY'}
+          </button>
         </div>
-        <button
-          onClick={copyToClipboard}
-          className="flex items-center gap-2 px-3 py-2 text-sm text-gray-600 hover:text-gray-800 hover:bg-gray-100 rounded-lg transition-colors"
-        >
-          {copied ? (
-            <>
-              <Check className="w-4 h-4 text-green-600" />
-              <span className="text-green-600">Copied!</span>
-            </>
-          ) : (
-            <>
-              <Copy className="w-4 h-4" />
-              <span>Copy</span>
-            </>
-          )}
-        </button>
       </div>
       
       <div className="prose prose-sm max-w-none">
@@ -112,31 +100,31 @@ export default function ResultDisplay({ content, isLoading = false, title, type 
                   {String(children).replace(/\n$/, '')}
                 </SyntaxHighlighter>
               ) : (
-                <code className="bg-gray-100 text-gray-800 px-2 py-1 rounded text-sm font-mono" {...props}>
+                <code className="bg-gray-800 text-green-400 px-1 py-0.5 rounded text-sm font-mono" {...props}>
                   {children}
                 </code>
               );
             },
             h1: ({ children }) => (
-              <h1 className="text-2xl font-bold text-gray-900 mb-4 mt-6 first:mt-0">{children}</h1>
+              <h1 className="text-green-400 font-bold text-lg mb-2">{children}</h1>
             ),
             h2: ({ children }) => (
-              <h2 className="text-xl font-semibold text-gray-900 mb-3 mt-5">{children}</h2>
+              <h2 className="text-green-400 font-bold text-base mb-2">{children}</h2>
             ),
             h3: ({ children }) => (
-              <h3 className="text-lg font-semibold text-gray-800 mb-2 mt-4">{children}</h3>
+              <h3 className="text-green-400 font-bold text-sm mb-2">{children}</h3>
             ),
             p: ({ children }) => (
-              <p className="text-gray-700 leading-relaxed mb-3">{children}</p>
+              <p className="text-gray-300 text-sm mb-2 leading-relaxed">{children}</p>
             ),
             ul: ({ children }) => (
-              <ul className="list-disc list-inside text-gray-700 mb-4 space-y-1">{children}</ul>
+              <ul className="text-gray-300 text-sm mb-2 ml-4">{children}</ul>
             ),
             ol: ({ children }) => (
-              <ol className="list-decimal list-inside text-gray-700 mb-4 space-y-1">{children}</ol>
+              <ol className="text-gray-300 text-sm mb-2 ml-4">{children}</ol>
             ),
             li: ({ children }) => (
-              <li className="text-gray-700">{children}</li>
+              <li className="text-gray-300 text-sm mb-1">{children}</li>
             ),
             blockquote: ({ children }) => (
               <blockquote className="border-l-4 border-primary-500 pl-4 italic text-gray-600 my-4">
@@ -145,26 +133,26 @@ export default function ResultDisplay({ content, isLoading = false, title, type 
             ),
             table: ({ children }) => (
               <div className="overflow-x-auto my-4">
-                <table className="min-w-full border border-gray-200 rounded-lg">
+                <table className="min-w-full border border-gray-700 rounded-lg text-gray-300">
                   {children}
                 </table>
               </div>
             ),
             th: ({ children }) => (
-              <th className="bg-gray-50 px-4 py-2 text-left text-sm font-semibold text-gray-900 border-b border-gray-200">
+              <th className="bg-gray-800 px-4 py-2 text-left text-sm font-semibold text-green-400 border-b border-gray-700">
                 {children}
               </th>
             ),
             td: ({ children }) => (
-              <td className="px-4 py-2 text-sm text-gray-700 border-b border-gray-200">
+              <td className="px-4 py-2 text-sm text-gray-300 border-b border-gray-700">
                 {children}
               </td>
             ),
             strong: ({ children }) => (
-              <strong className="font-semibold text-gray-900">{children}</strong>
+              <strong className="font-semibold text-green-400">{children}</strong>
             ),
             em: ({ children }) => (
-              <em className="italic text-gray-600">{children}</em>
+              <em className="italic text-gray-400">{children}</em>
             ),
           }}
         >
