@@ -45,6 +45,9 @@ export interface AnalysisResponse {
 }
 
 export const api = {
+  // Get base URL
+  getBaseUrl: () => API_BASE_URL,
+
   // Health check
   health: async () => {
     const response = await apiClient.get('/health');
