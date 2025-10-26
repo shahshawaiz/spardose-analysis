@@ -15,6 +15,8 @@ export default function PositionRecommendations() {
   const [weightApr, setWeightApr] = useState('0.4');
   const [weightRoi, setWeightRoi] = useState('0.4');
   const [weightVolume, setWeightVolume] = useState('0.2');
+  const [ageFrom, setAgeFrom] = useState('0.1');
+  const [ageTo, setAgeTo] = useState('1');
   const [response, setResponse] = useState('');
   const [responseData, setResponseData] = useState<any>(null);
   const [loading, setLoading] = useState(false);
@@ -93,6 +95,8 @@ export default function PositionRecommendations() {
         weight_apr: weightApr,
         weight_roi: weightRoi,
         weight_volume: weightVolume,
+        age_from: ageFrom,
+        age_to: ageTo,
       });
 
       const response = await fetch(`${api.getBaseUrl()}/positions/recommendations?${params}`);
@@ -111,7 +115,7 @@ export default function PositionRecommendations() {
     }
   };
 
-  const handleAnalyze = async () => {
+  const handleAnalyze = async (positionIndex?: number) => {
     if (!responseData || !responseData.positions || responseData.positions.length === 0) {
       setLlmAnalysis('ERROR: No position data available to analyze');
       return;
@@ -121,13 +125,28 @@ export default function PositionRecommendations() {
     setLlmAnalysis('');
     
     try {
-      const analysisPayload = {
-        positions: responseData.positions,
-        network: responseData.network || network,
-        exchange: responseData.exchange || exchange,
-        token0: responseData.token0 || token1,
-        token1: responseData.token1 || token2,
-      };
+      let analysisPayload;
+      
+      // If positionIndex is provided, analyze only that position
+      if (positionIndex !== undefined) {
+        const position = responseData.positions[positionIndex];
+        analysisPayload = {
+          position: position, // Single position
+          network: responseData.network || network,
+          exchange: responseData.exchange || exchange,
+          token0: responseData.token0 || token1,
+          token1: responseData.token1 || token2,
+        };
+      } else {
+        // Analyze all positions
+        analysisPayload = {
+          positions: responseData.positions,
+          network: responseData.network || network,
+          exchange: responseData.exchange || exchange,
+          token0: responseData.token0 || token1,
+          token1: responseData.token1 || token2,
+        };
+      }
 
       const response = await fetch(`${api.getBaseUrl()}/positions/recommendations/analyze`, {
         method: 'POST',
@@ -399,21 +418,40 @@ export default function PositionRecommendations() {
             </div>
           </div>
 
-          <div className="grid grid-cols-4 gap-4">
+          {/* Age Filter */}
+          <div className="grid grid-cols-2 gap-4">
             <div>
               <label className="block text-xs font-bold text-green-400 mb-2">
-                LIMIT
+                AGE FROM (days)
               </label>
               <input
                 type="number"
-                value={limit}
-                onChange={(e) => setLimit(e.target.value)}
+                value={ageFrom}
+                onChange={(e) => setAgeFrom(e.target.value)}
                 className="w-full p-2 border border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent bg-black text-green-400 text-sm"
-                min="1"
-                max="100"
+                step="0.1"
+                min="0"
                 disabled={loading}
               />
             </div>
+            <div>
+              <label className="block text-xs font-bold text-green-400 mb-2">
+                AGE TO (days)
+              </label>
+              <input
+                type="number"
+                value={ageTo}
+                onChange={(e) => setAgeTo(e.target.value)}
+                className="w-full p-2 border border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent bg-black text-green-400 text-sm"
+                step="0.1"
+                min="0"
+                disabled={loading}
+              />
+            </div>
+          </div>
+
+          {/* Weight Config */}
+          <div className="grid grid-cols-3 gap-4">
             <div>
               <label className="block text-xs text-gray-400 mb-1">APR Weight</label>
               <input
@@ -496,7 +534,7 @@ export default function PositionRecommendations() {
                 <div className="flex items-center gap-2">
                   <button
                     type="button"
-                    onClick={handleAnalyze}
+                    onClick={() => handleAnalyze()}
                     disabled={analyzing}
                     className="flex items-center gap-2 px-3 py-2 text-xs bg-green-600 hover:bg-green-700 text-white rounded transition-colors disabled:opacity-50"
                   >
@@ -592,6 +630,18 @@ export default function PositionRecommendations() {
                                     )}
                                   </div>
                                 </div>
+                              </div>
+                              <div className="mt-4 pt-3 border-t border-gray-700">
+                                <button
+                                  onClick={(e) => {
+                                    e.stopPropagation();
+                                    handleAnalyze(index);
+                                  }}
+                                  disabled={analyzing}
+                                  className="w-full px-3 py-2 text-xs bg-yellow-600 hover:bg-yellow-700 text-white rounded transition-colors disabled:opacity-50"
+                                >
+                                  {analyzing ? 'ANALYZING...' : '🔍 AI ANALYZE THIS POSITION'}
+                                </button>
                               </div>
                             </td>
                           </tr>

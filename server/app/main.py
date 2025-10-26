@@ -127,6 +127,8 @@ async def get_position_recommendations(
     weight_volume: float = Query(
         0.2, description="Weight for volume in scoring (default: 0.2)"
     ),
+    age_from: float = Query(0.1, description="Min age in days (default: 0.1)"),
+    age_to: float = Query(1.0, description="Max age in days (default: 1.0)"),
 ):
     """
     Get position recommendations from Revert API with weighted scoring
@@ -164,6 +166,8 @@ async def get_position_recommendations(
             "exchange": exchange,
             "page": 1,
             "token1": token2.lower(),  # Convert to lowercase
+            "age-from": age_from,
+            "age-to": age_to,
         }
 
         # Fetch positions
@@ -338,24 +342,45 @@ async def analyze_positions(data: dict, stream: bool = Query(False)):
     - stream: Whether to stream the response
     """
     try:
-        positions = data.get("positions", [])
-        network = data.get("network", "unknown")
-        exchange = data.get("exchange", "unknown")
-        token0 = data.get("token0", "")
-        token1 = data.get("token1", "")
+        # Check if it's a single position or array
+        if "position" in data:
+            # Single position analysis
+            position = data.get("position")
+            network = data.get("network", "unknown")
+            exchange = data.get("exchange", "unknown")
+            token0 = data.get("token0", "")
+            token1 = data.get("token1", "")
 
-        if not positions:
-            return {"error": "No positions provided"}
+            if not position:
+                return {"error": "No position provided"}
 
-        # Prepare analysis data
-        analysis_data = {
-            "network": network,
-            "exchange": exchange,
-            "token0": token0,
-            "token1": token1,
-            "total_positions": len(positions),
-            "positions": positions[:10],  # Top 10 only
-        }
+            analysis_data = {
+                "network": network,
+                "exchange": exchange,
+                "token0": token0,
+                "token1": token1,
+                "position": position,
+            }
+        else:
+            # Multiple positions analysis
+            positions = data.get("positions", [])
+            network = data.get("network", "unknown")
+            exchange = data.get("exchange", "unknown")
+            token0 = data.get("token0", "")
+            token1 = data.get("token1", "")
+
+            if not positions:
+                return {"error": "No positions provided"}
+
+            # Prepare analysis data
+            analysis_data = {
+                "network": network,
+                "exchange": exchange,
+                "token0": token0,
+                "token1": token1,
+                "total_positions": len(positions),
+                "positions": positions[:10],  # Top 10 only
+            }
 
         if stream:
 
