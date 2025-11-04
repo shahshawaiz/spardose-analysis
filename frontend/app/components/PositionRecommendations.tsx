@@ -21,9 +21,12 @@ export default function PositionRecommendations() {
   const [responseData, setResponseData] = useState<any>(null);
   const [loading, setLoading] = useState(false);
   const [copied, setCopied] = useState(false);
-  const [expandedRow, setExpandedRow] = useState<number | null>(null);
+  const [expandedRow, setExpandedRow] = useState<string | null>(null);
+  const [activeRanking, setActiveRanking] = useState<string>('aggregated_ranking');
   const [llmAnalysis, setLlmAnalysis] = useState('');
   const [analyzing, setAnalyzing] = useState(false);
+  const [positionAnalysis, setPositionAnalysis] = useState<{[key: number]: string}>({});
+  const [positionAnalyzing, setPositionAnalyzing] = useState<{[key: number]: boolean}>({});
 
   // Get available tokens for the selected network
   const availableTokens = useMemo(() => {
@@ -116,58 +119,118 @@ export default function PositionRecommendations() {
   };
 
   const handleAnalyze = async (positionIndex?: number) => {
-    if (!responseData || !responseData.positions || responseData.positions.length === 0) {
-      setLlmAnalysis('ERROR: No position data available to analyze');
+    // Get positions from active ranking or fallback
+    const positions = responseData?.rankings?.[activeRanking]?.positions || 
+                      responseData?.position_recommendations || 
+                      responseData?.positions || [];
+    
+    if (!responseData || positions.length === 0) {
+      if (positionIndex !== undefined) {
+        setPositionAnalysis(prev => ({...prev, [positionIndex]: 'ERROR: No position data available to analyze'}));
+      } else {
+        setLlmAnalysis('ERROR: No position data available to analyze');
+      }
       return;
     }
 
-    setAnalyzing(true);
-    setLlmAnalysis('');
-    
-    try {
-      let analysisPayload;
+    // If analyzing specific position
+    if (positionIndex !== undefined) {
+      setPositionAnalyzing(prev => ({...prev, [positionIndex]: true}));
       
-      // If positionIndex is provided, analyze only that position
-      if (positionIndex !== undefined) {
-        const position = responseData.positions[positionIndex];
-        analysisPayload = {
-          position: position, // Single position
+      try {
+        const position = positions[positionIndex];
+        const analysisPayload = {
+          position: position,
           network: responseData.network || network,
           exchange: responseData.exchange || exchange,
           token0: responseData.token0 || token1,
           token1: responseData.token1 || token2,
         };
-      } else {
-        // Analyze all positions
-        analysisPayload = {
-          positions: responseData.positions,
+
+        let fullAnalysis = '';
+        
+        const response = await fetch(`${api.getBaseUrl()}/positions/recommendations/analyze?stream=true`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(analysisPayload),
+        });
+
+        if (!response.ok) {
+          throw new Error('Failed to analyze position');
+        }
+
+        const reader = response.body?.getReader();
+        const decoder = new TextDecoder();
+
+        if (reader) {
+          while (true) {
+            const { done, value } = await reader.read();
+            if (done) break;
+
+            const chunk = decoder.decode(value);
+            const lines = chunk.split('\n');
+
+            for (const line of lines) {
+              if (line.startsWith('data: ')) {
+                const data = line.slice(6);
+                try {
+                  const parsed = JSON.parse(data);
+                  if (parsed.content) {
+                    fullAnalysis += parsed.content;
+                    setPositionAnalysis(prev => ({...prev, [positionIndex]: fullAnalysis}));
+                  } else if (parsed.error) {
+                    setPositionAnalysis(prev => ({...prev, [positionIndex]: `ERROR: ${parsed.error}`}));
+                  }
+                } catch (e) {
+                  // Ignore parsing errors
+                }
+              }
+            }
+          }
+        }
+      } catch (error) {
+        console.error('LLM Analysis Error:', error);
+        setPositionAnalysis(prev => ({...prev, [positionIndex]: `ERROR: ${(error as Error).message}`}));
+      } finally {
+        setPositionAnalyzing(prev => ({...prev, [positionIndex]: false}));
+      }
+    } else {
+      // Analyze all positions
+      setAnalyzing(true);
+      setLlmAnalysis('');
+      
+      try {
+        const analysisPayload = {
+          positions: positions,
           network: responseData.network || network,
           exchange: responseData.exchange || exchange,
           token0: responseData.token0 || token1,
           token1: responseData.token1 || token2,
         };
-      }
 
-      const response = await fetch(`${api.getBaseUrl()}/positions/recommendations/analyze`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(analysisPayload),
-      });
+        const response = await fetch(`${api.getBaseUrl()}/positions/recommendations/analyze`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(analysisPayload),
+        });
 
-      const data = await response.json();
-      
-      if (data.error) {
-        setLlmAnalysis(`ERROR: ${data.error}`);
-      } else {
-        setLlmAnalysis(data.result);
+        const data = await response.json();
+        
+        if (data.error) {
+          setLlmAnalysis(`ERROR: ${data.error}`);
+        } else {
+          setLlmAnalysis(data.result);
+        }
+      } catch (error) {
+        console.error('LLM Analysis Error:', error);
+        setLlmAnalysis(`ERROR: ${(error as Error).message}`);
+      } finally {
+        setAnalyzing(false);
       }
-    } catch (error) {
-      console.error('LLM Analysis Error:', error);
-      setLlmAnalysis(`ERROR: ${(error as Error).message}`);
-    } finally {
-      setAnalyzing(false);
     }
   };
 
@@ -178,11 +241,13 @@ export default function PositionRecommendations() {
     }
 
     // Check if data has the expected structure
-    const totalPositions = data.total_positions || (data.positions ? data.positions.length : 0);
+    const totalPositions = data.total_positions || 
+                          (data.position_recommendations ? data.position_recommendations.length : 0) ||
+                          (data.positions ? data.positions.length : 0);
     const networkName = data.network || 'Unknown';
     const exchangeName = data.exchange || 'Unknown';
     
-    let result = `FOUND ${totalPositions} UNISWAP POSITIONS\n`;
+    let result = `FOUND ${totalPositions} POSITIONS\n`;
     result += `NETWORK: ${networkName.toUpperCase()}\n`;
     result += `POOL: ${exchangeName.toUpperCase()}\n`;
     
@@ -193,11 +258,22 @@ export default function PositionRecommendations() {
       result += `  - Volume: ${(data.scoring_weights.volume * 100).toFixed(0)}%\n\n`;
     }
     
-    if (data.positions && data.positions.length > 0) {
-      result += 'TOP UNISWAP POSITIONS:\n';
+    if (data.rankings) {
+      result += `RANKING METHODS AVAILABLE:\n`;
+      Object.keys(data.rankings).forEach(key => {
+        const ranking = data.rankings[key];
+        result += `  - ${key}: ${ranking.description}\n`;
+        result += `    Positions: ${ranking.positions?.length || 0}\n`;
+      });
+      result += '\n';
+    }
+    
+    const positions = data.position_recommendations || data.positions || [];
+    if (positions.length > 0) {
+      result += 'TOP RECOMMENDED POSITIONS:\n';
       result += '='.repeat(80) + '\n\n';
       
-      data.positions.slice(0, 10).forEach((pos: any, index: number) => {
+      positions.slice(0, 10).forEach((pos: any, index: number) => {
         result += `${index + 1}. `;
         
         // Try to get position ID
@@ -216,12 +292,12 @@ export default function PositionRecommendations() {
         
         // APR
         if (pos.apr !== undefined && typeof pos.apr === 'number') {
-          result += `   APR: ${pos.apr.toFixed(2)}%\n`;
+          result += `   APR: ${(pos.apr * 100).toFixed(2)}%\n`;
         }
         
         // ROI
         if (pos.roi !== undefined && typeof pos.roi === 'number') {
-          result += `   ROI: ${pos.roi.toFixed(2)}%\n`;
+          result += `   ROI: ${(pos.roi * 100).toFixed(2)}%\n`;
         }
         
         // Fee tier
@@ -252,7 +328,7 @@ export default function PositionRecommendations() {
         result += '\n';
       });
     } else {
-      result += '\nNO POSITIONS FOUND\n';
+      result += '\nNO MATCHING POSITIONS FOUND\n';
       result += `Response: ${JSON.stringify(data, null, 2)}\n`;
     }
     
@@ -273,7 +349,7 @@ export default function PositionRecommendations() {
         <div className="space-y-4">
           {/* Popular Pairs Quick Select */}
           <div className="mb-6">
-            <div className="text-xs font-bold text-green-400 mb-3">POPULAR POOL PAIRS</div>
+            <div className="text-xs font-bold text-green-400 mb-3">QUICK SELECT POPULAR PAIRS</div>
             <div className="flex flex-wrap gap-2">
               {popularPairs.map((pair, idx) => {
                 const isActive = selectedToken1 === pair.token1 && selectedToken2 === pair.token2;
@@ -298,7 +374,7 @@ export default function PositionRecommendations() {
 
           {/* Pool Interface */}
           <div className="bg-black border border-gray-600 rounded-lg p-5">
-            <div className="text-xs font-bold text-green-400 mb-4">FIND UNISWAP POSITIONS</div>
+            <div className="text-xs font-bold text-green-400 mb-4">SEARCH FOR POSITIONS</div>
             
             {/* Token Display */}
             <div className="space-y-3 mb-4">
@@ -343,7 +419,7 @@ export default function PositionRecommendations() {
 
             {/* Custom Token Selection */}
             <div className="border-t border-gray-700 pt-4 space-y-3">
-              <div className="text-xs text-gray-400 mb-2">CUSTOM POOL SELECTION</div>
+              <div className="text-xs text-gray-400 mb-2">SELECT CUSTOM TOKEN PAIR</div>
               <div className="grid grid-cols-2 gap-3">
                 <select
                   value={selectedToken1}
@@ -376,7 +452,7 @@ export default function PositionRecommendations() {
           </div>
 
           {/* Network and Exchange */}
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
               <label className="block text-xs font-bold text-green-400 mb-2">
                 BLOCKCHAIN
@@ -418,8 +494,8 @@ export default function PositionRecommendations() {
             </div>
           </div>
 
-          {/* Age Filter */}
-          <div className="grid grid-cols-2 gap-4">
+              {/* Age Filter */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
               <label className="block text-xs font-bold text-green-400 mb-2">
                 AGE FROM (days)
@@ -450,10 +526,10 @@ export default function PositionRecommendations() {
             </div>
           </div>
 
-          {/* Weight Config */}
-          <div className="grid grid-cols-3 gap-4">
+          {/* Ranking Score Weights */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             <div>
-              <label className="block text-xs text-gray-400 mb-1">APR Weight</label>
+              <label className="block text-xs text-gray-400 mb-1">APR Ranking Score Weight</label>
               <input
                 type="number"
                 value={weightApr}
@@ -466,7 +542,7 @@ export default function PositionRecommendations() {
               />
             </div>
             <div>
-              <label className="block text-xs text-gray-400 mb-1">ROI Weight</label>
+              <label className="block text-xs text-gray-400 mb-1">ROI Ranking Score Weight</label>
               <input
                 type="number"
                 value={weightRoi}
@@ -479,7 +555,7 @@ export default function PositionRecommendations() {
               />
             </div>
             <div>
-              <label className="block text-xs text-gray-400 mb-1">Volume Weight</label>
+              <label className="block text-xs text-gray-400 mb-1">Volume Ranking Score Weight</label>
               <input
                 type="number"
                 value={weightVolume}
@@ -525,25 +601,378 @@ export default function PositionRecommendations() {
 
       {response && (
         <div className="mt-6 space-y-4">
-          {/* Structured Table View (if data exists) */}
-          {responseData && responseData.positions && responseData.positions.length > 0 && (
+          {/* Market Data Info */}
+          {responseData && responseData.market_data && (
+            <div className="border-t border-gray-700 pt-4">
+              <h3 className="text-sm font-bold text-green-400 mb-3">MARKET DATA</h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div className="bg-gray-800 border border-gray-700 rounded p-3">
+                  <div className="text-xs text-gray-400 mb-1">ETH Trend</div>
+                  <div className="text-sm font-bold text-green-400">
+                    {responseData.market_data.eth_trend?.trend?.toUpperCase() || 'N/A'}
+                  </div>
+                  <div className="text-xs text-gray-500 mt-1">
+                    24h: {responseData.market_data.eth_trend?.price_change_24h?.toFixed(2) || '0'}% | 
+                    7d: {responseData.market_data.eth_trend?.price_change_7d?.toFixed(2) || '0'}%
+                  </div>
+                </div>
+                <div className="bg-gray-800 border border-gray-700 rounded p-3">
+                  <div className="text-xs text-gray-400 mb-1">Token 1 Sentiment</div>
+                  <div className="text-sm font-bold text-green-400">
+                    {responseData.market_data.token1_sentiment?.sentiment?.toUpperCase() || 'N/A'}
+                  </div>
+                  <div className="text-xs text-gray-500 mt-1">
+                    Score: {(responseData.market_data.token1_sentiment?.score * 100 || 0).toFixed(1)}%
+                  </div>
+                </div>
+                <div className="bg-gray-800 border border-gray-700 rounded p-3">
+                  <div className="text-xs text-gray-400 mb-1">Token 2 Sentiment</div>
+                  <div className="text-sm font-bold text-green-400">
+                    {responseData.market_data.token2_sentiment?.sentiment?.toUpperCase() || 'N/A'}
+                  </div>
+                  <div className="text-xs text-gray-500 mt-1">
+                    Score: {(responseData.market_data.token2_sentiment?.score * 100 || 0).toFixed(1)}%
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* Primary Listing: Aggregated Ranking (Position Recommendations) */}
+          {responseData && responseData.rankings && responseData.rankings.aggregated_ranking && (
+            <div className="border-t border-gray-700 pt-4">
+              <div className="mb-4">
+                <h3 className="text-lg font-bold text-green-400 mb-2">
+                  🎯 Position Recommendations (Aggregated Ranking)
+                </h3>
+                <p className="text-xs text-gray-400 mb-3">
+                  {responseData.rankings.aggregated_ranking.description}
+                </p>
+                <p className="text-xs text-gray-500 mb-4">
+                  Combined ranking using equal weights (25% each) from all four scoring methods.
+                </p>
+              </div>
+              
+              {(() => {
+                const ranking = responseData.rankings.aggregated_ranking;
+                const positions = ranking.positions || [];
+                if (positions.length === 0) return null;
+                
+                return (
+                  <div className="border border-gray-700 rounded-lg p-4">
+                    <div className="overflow-x-auto">
+                      <table className="w-full text-xs font-mono min-w-[800px]">
+                        <thead className="bg-gray-800 text-green-400">
+                          <tr>
+                            <th className="px-3 py-2 text-left">#</th>
+                            <th className="px-3 py-2 text-left">Lower Tick</th>
+                            <th className="px-3 py-2 text-left">Upper Tick</th>
+                            <th className="px-3 py-2 text-left">Fee Tier</th>
+                            <th className="px-3 py-2 text-left">APR</th>
+                            <th className="px-3 py-2 text-left">ROI</th>
+                            <th className="px-3 py-2 text-left">TVL</th>
+                            <th className="px-3 py-2 text-left">Age</th>
+                            <th className="px-3 py-2 text-left">Weighted Score</th>
+                            <th className="px-3 py-2 text-left"></th>
+                          </tr>
+                        </thead>
+                        <tbody className="text-gray-400">
+                          {positions.slice(0, 10).map((pos: any, index: number) => {
+                            const uniqueKey = `aggregated-${pos.nft_id || index}`;
+                            const isExpanded = expandedRow === uniqueKey;
+                            
+                            return (
+                              <>
+                                <tr 
+                                  key={uniqueKey}
+                                  className="border-t border-gray-700 hover:bg-gray-800 cursor-pointer"
+                                  onClick={() => setExpandedRow(isExpanded ? null : uniqueKey)}
+                                >
+                                  <td className="px-3 py-2">{index + 1}</td>
+                                  <td className="px-3 py-2">{pos.tick_lower !== undefined ? pos.tick_lower.toString() : 'N/A'}</td>
+                                  <td className="px-3 py-2">{pos.tick_upper !== undefined ? pos.tick_upper.toString() : 'N/A'}</td>
+                                  <td className="px-3 py-2">{pos.fee_tier || 'N/A'}</td>
+                                  <td className="px-3 py-2 text-green-400">
+                                    {pos.apr !== undefined ? `${(pos.apr * 100).toFixed(2)}%` : 'N/A'}
+                                  </td>
+                                  <td className="px-3 py-2 text-green-400">
+                                    {pos.roi !== undefined ? `${(pos.roi * 100).toFixed(2)}%` : 'N/A'}
+                                  </td>
+                                  <td className="px-3 py-2">
+                                    {pos.underlying_value ? `$${parseFloat(pos.underlying_value.toString()).toLocaleString()}` : 'N/A'}
+                                  </td>
+                                  <td className="px-3 py-2">
+                                    {pos.age !== undefined ? `${parseFloat(pos.age.toString()).toFixed(1)}d` : 'N/A'}
+                                  </td>
+                                  <td className="px-3 py-2 text-yellow-400">
+                                    {pos.weighted_score !== undefined ? `${(pos.weighted_score * 100).toFixed(2)}%` : 'N/A'}
+                                  </td>
+                                  <td className="px-3 py-2">
+                                    {isExpanded ? (
+                                      <ChevronUp className="w-4 h-4 text-green-400" />
+                                    ) : (
+                                      <ChevronDown className="w-4 h-4 text-gray-500" />
+                                    )}
+                                  </td>
+                                </tr>
+                                {isExpanded && (
+                                  <tr className="bg-gray-800 border-t border-gray-700">
+                                    <td colSpan={10} className="px-3 py-4">
+                                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+                                        <div>
+                                          <div className="text-green-400 font-bold mb-2">SOURCE POSITION DETAILS</div>
+                                          <div className="space-y-1 text-gray-400">
+                                            <div><span className="text-gray-500">NFT ID:</span> {pos.nft_id || 'N/A'}</div>
+                                            <div><span className="text-gray-500">Network:</span> {pos.network || 'N/A'}</div>
+                                            <div><span className="text-gray-500">Exchange:</span> {pos.exchange || 'N/A'}</div>
+                                            <div className="mt-2 pt-2 border-t border-gray-700">
+                                              <div className="text-green-400 font-bold mb-1">POOL ADDRESS</div>
+                                              <div className="font-mono text-xs break-all">
+                                                {pos.pool || 'N/A'}
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div>
+                                          <div className="text-green-400 font-bold mb-2">POSITION PERFORMANCE & SCORES</div>
+                                          <div className="space-y-1 text-gray-400">
+                                            <div><span className="text-gray-500">Position Age:</span> {pos.age !== undefined ? `${parseFloat(pos.age.toString()).toFixed(1)} days` : 'N/A'}</div>
+                                            <div><span className="text-gray-500">Currently In Range:</span> {pos.in_range !== undefined ? (
+                                              <span className={pos.in_range ? 'text-green-400' : 'text-red-400'}>
+                                                {pos.in_range ? 'Yes ✓' : 'No ✗'}
+                                              </span>
+                                            ) : 'N/A'}</div>
+                                            <div className="pt-2 border-t border-gray-700 mt-2">
+                                              <div className="text-green-400 font-bold mb-1">ALL SCORES</div>
+                                              <div><span className="text-gray-500">Weighted Score:</span> {pos.weighted_score !== undefined ? `${(pos.weighted_score * 100).toFixed(2)}%` : 'N/A'}</div>
+                                              <div><span className="text-gray-500">Score 1 (Performance):</span> {pos.score_1 !== undefined ? `${(pos.score_1 * 100).toFixed(2)}%` : 'N/A'}</div>
+                                              <div><span className="text-gray-500">Score 2 (Age):</span> {pos.score_2 !== undefined ? `${(pos.score_2 * 100).toFixed(2)}%` : 'N/A'}</div>
+                                              <div><span className="text-gray-500">Score 3 (Sentiment):</span> {pos.score_3 !== undefined ? `${(pos.score_3 * 100).toFixed(2)}%` : 'N/A'}</div>
+                                              <div><span className="text-gray-500">Score 4 (ETH Signal):</span> {pos.score_4 !== undefined ? `${(pos.score_4 * 100).toFixed(2)}%` : 'N/A'}</div>
+                                            </div>
+                                            {pos.pnl !== undefined && (
+                                              <div className="mt-2"><span className="text-gray-500">Profit/Loss:</span> ${parseFloat(pos.pnl.toString()).toLocaleString()}</div>
+                                            )}
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div className="mt-4 pt-3 border-t border-gray-700">
+                                        <button
+                                          onClick={(e) => {
+                                            e.stopPropagation();
+                                            handleAnalyze(index);
+                                          }}
+                                          disabled={positionAnalyzing[index]}
+                                          className="w-full px-3 py-2 text-xs bg-yellow-600 hover:bg-yellow-700 text-white rounded transition-colors disabled:opacity-50"
+                                        >
+                                          {positionAnalyzing[index] ? 'ANALYZING...' : '🔍 AI ANALYZE THIS POSITION'}
+                                        </button>
+                                        {positionAnalysis[index] && (
+                                          <div className="mt-3 p-3 bg-gray-900 border border-yellow-600 rounded text-xs text-gray-300">
+                                            <div className="text-yellow-400 font-bold mb-2">AI ANALYSIS:</div>
+                                            <div className="whitespace-pre-wrap">{positionAnalysis[index]}</div>
+                                          </div>
+                                        )}
+                                      </div>
+                                    </td>
+                                  </tr>
+                                )}
+                              </>
+                            );
+                          })}
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                );
+              })()}
+            </div>
+          )}
+
+          {/* Individual Rankings (shown separately beneath main ranking) */}
+          {responseData && responseData.rankings && (
+            <div className="border-t border-gray-700 pt-6">
+              <div className="mb-4">
+                <h3 className="text-sm font-bold text-green-400 mb-3">INDIVIDUAL RANKING METHODS</h3>
+                <p className="text-xs text-gray-500 mb-4">
+                  View positions ranked by individual scoring methods for detailed analysis.
+                </p>
+              </div>
+              <div className="space-y-6">
+                {Object.entries(responseData.rankings)
+                  .filter(([key]) => key !== 'aggregated_ranking')
+                  .map(([key, ranking]: [string, any]) => {
+                    const positions = ranking.positions || [];
+                    if (positions.length === 0) return null;
+                    
+                    return (
+                      <div key={key} className="border border-gray-700 rounded-lg p-4">
+                        <div className="mb-4">
+                          <h4 className="text-sm font-bold text-green-400 mb-2">
+                            {key === 'score_1_ranking' && '📊 Performance Ranking (APR/ROI/Volume)'}
+                            {key === 'score_2_ranking' && '⏰ Age-Based Ranking'}
+                            {key === 'score_3_ranking' && '📈 Market Sentiment Ranking'}
+                            {key === 'score_4_ranking' && '💰 ETH Price Signal Ranking'}
+                          </h4>
+                          <p className="text-xs text-gray-400 mb-3">{ranking.description}</p>
+                        </div>
+                    
+                    <div className="overflow-x-auto">
+                      <table className="w-full text-xs font-mono min-w-[800px]">
+                        <thead className="bg-gray-800 text-green-400">
+                          <tr>
+                            <th className="px-3 py-2 text-left">#</th>
+                            <th className="px-3 py-2 text-left">Lower Tick</th>
+                            <th className="px-3 py-2 text-left">Upper Tick</th>
+                            <th className="px-3 py-2 text-left">Fee Tier</th>
+                            <th className="px-3 py-2 text-left">APR</th>
+                            <th className="px-3 py-2 text-left">ROI</th>
+                            <th className="px-3 py-2 text-left">TVL</th>
+                            <th className="px-3 py-2 text-left">Age</th>
+                            <th className="px-3 py-2 text-left">Score</th>
+                            <th className="px-3 py-2 text-left"></th>
+                          </tr>
+                        </thead>
+                        <tbody className="text-gray-400">
+                          {positions.slice(0, 10).map((pos: any, index: number) => {
+                            const uniqueKey = `${key}-${pos.nft_id || index}`;
+                            const isExpanded = expandedRow === uniqueKey;
+                            
+                            return (
+                              <>
+                                <tr 
+                                  key={uniqueKey}
+                                  className="border-t border-gray-700 hover:bg-gray-800 cursor-pointer"
+                                  onClick={() => setExpandedRow(isExpanded ? null : uniqueKey)}
+                                >
+                                  <td className="px-3 py-2">{index + 1}</td>
+                                  <td className="px-3 py-2">{pos.tick_lower !== undefined ? pos.tick_lower.toString() : 'N/A'}</td>
+                                  <td className="px-3 py-2">{pos.tick_upper !== undefined ? pos.tick_upper.toString() : 'N/A'}</td>
+                                  <td className="px-3 py-2">{pos.fee_tier || 'N/A'}</td>
+                                  <td className="px-3 py-2 text-green-400">
+                                    {pos.apr !== undefined ? `${(pos.apr * 100).toFixed(2)}%` : 'N/A'}
+                                  </td>
+                                  <td className="px-3 py-2 text-green-400">
+                                    {pos.roi !== undefined ? `${(pos.roi * 100).toFixed(2)}%` : 'N/A'}
+                                  </td>
+                                  <td className="px-3 py-2">
+                                    {pos.underlying_value ? `$${parseFloat(pos.underlying_value.toString()).toLocaleString()}` : 'N/A'}
+                                  </td>
+                                  <td className="px-3 py-2">
+                                    {pos.age !== undefined ? `${parseFloat(pos.age.toString()).toFixed(1)}d` : 'N/A'}
+                                  </td>
+                                  <td className="px-3 py-2 text-yellow-400">
+                                    {key === 'score_1_ranking' && pos.score_1 !== undefined ? `${(pos.score_1 * 100).toFixed(2)}%` : 
+                                     key === 'score_2_ranking' && pos.score_2 !== undefined ? `${(pos.score_2 * 100).toFixed(2)}%` :
+                                     key === 'score_3_ranking' && pos.score_3 !== undefined ? `${(pos.score_3 * 100).toFixed(2)}%` :
+                                     key === 'score_4_ranking' && pos.score_4 !== undefined ? `${(pos.score_4 * 100).toFixed(2)}%` :
+                                     key === 'aggregated_ranking' && pos.weighted_score !== undefined ? `${(pos.weighted_score * 100).toFixed(2)}%` : 'N/A'}
+                                  </td>
+                                  <td className="px-3 py-2">
+                                    {isExpanded ? (
+                                      <ChevronUp className="w-4 h-4 text-green-400" />
+                                    ) : (
+                                      <ChevronDown className="w-4 h-4 text-gray-500" />
+                                    )}
+                                  </td>
+                                </tr>
+                                {isExpanded && (
+                                  <tr className="bg-gray-800 border-t border-gray-700">
+                                    <td colSpan={10} className="px-3 py-4">
+                                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+                                        <div>
+                                          <div className="text-green-400 font-bold mb-2">SOURCE POSITION DETAILS</div>
+                                          <div className="space-y-1 text-gray-400">
+                                            <div><span className="text-gray-500">NFT ID:</span> {pos.nft_id || 'N/A'}</div>
+                                            <div><span className="text-gray-500">Network:</span> {pos.network || 'N/A'}</div>
+                                            <div><span className="text-gray-500">Exchange:</span> {pos.exchange || 'N/A'}</div>
+                                            <div className="mt-2 pt-2 border-t border-gray-700">
+                                              <div className="text-green-400 font-bold mb-1">POOL ADDRESS</div>
+                                              <div className="font-mono text-xs break-all">
+                                                {pos.pool || 'N/A'}
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div>
+                                          <div className="text-green-400 font-bold mb-2">POSITION PERFORMANCE & SCORES</div>
+                                          <div className="space-y-1 text-gray-400">
+                                            <div><span className="text-gray-500">Position Age:</span> {pos.age !== undefined ? `${parseFloat(pos.age.toString()).toFixed(1)} days` : 'N/A'}</div>
+                                            <div><span className="text-gray-500">Currently In Range:</span> {pos.in_range !== undefined ? (
+                                              <span className={pos.in_range ? 'text-green-400' : 'text-red-400'}>
+                                                {pos.in_range ? 'Yes ✓' : 'No ✗'}
+                                              </span>
+                                            ) : 'N/A'}</div>
+                                            <div className="pt-2 border-t border-gray-700 mt-2">
+                                              <div className="text-green-400 font-bold mb-1">ALL SCORES</div>
+                                              <div><span className="text-gray-500">Weighted Score:</span> {pos.weighted_score !== undefined ? `${(pos.weighted_score * 100).toFixed(2)}%` : 'N/A'}</div>
+                                              <div><span className="text-gray-500">Score 1 (Performance):</span> {pos.score_1 !== undefined ? `${(pos.score_1 * 100).toFixed(2)}%` : 'N/A'}</div>
+                                              <div><span className="text-gray-500">Score 2 (Age):</span> {pos.score_2 !== undefined ? `${(pos.score_2 * 100).toFixed(2)}%` : 'N/A'}</div>
+                                              <div><span className="text-gray-500">Score 3 (Sentiment):</span> {pos.score_3 !== undefined ? `${(pos.score_3 * 100).toFixed(2)}%` : 'N/A'}</div>
+                                              <div><span className="text-gray-500">Score 4 (ETH Signal):</span> {pos.score_4 !== undefined ? `${(pos.score_4 * 100).toFixed(2)}%` : 'N/A'}</div>
+                                            </div>
+                                            {pos.pnl !== undefined && (
+                                              <div className="mt-2"><span className="text-gray-500">Profit/Loss:</span> ${parseFloat(pos.pnl.toString()).toLocaleString()}</div>
+                                            )}
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div className="mt-4 pt-3 border-t border-gray-700">
+                                        <button
+                                          onClick={(e) => {
+                                            e.stopPropagation();
+                                            handleAnalyze(index);
+                                          }}
+                                          disabled={positionAnalyzing[index]}
+                                          className="w-full px-3 py-2 text-xs bg-yellow-600 hover:bg-yellow-700 text-white rounded transition-colors disabled:opacity-50"
+                                        >
+                                          {positionAnalyzing[index] ? 'ANALYZING...' : '🔍 AI ANALYZE THIS POSITION'}
+                                        </button>
+                                        {positionAnalysis[index] && (
+                                          <div className="mt-3 p-3 bg-gray-900 border border-yellow-600 rounded text-xs text-gray-300">
+                                            <div className="text-yellow-400 font-bold mb-2">AI ANALYSIS:</div>
+                                            <div className="whitespace-pre-wrap">{positionAnalysis[index]}</div>
+                                          </div>
+                                        )}
+                                      </div>
+                                    </td>
+                                  </tr>
+                                )}
+                              </>
+                            );
+                          })}
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                );
+              })}
+              </div>
+            </div>
+          )}
+
+          {/* Fallback: Structured Table View (if no rankings but has positions) */}
+          {responseData && !responseData.rankings && (
+            (() => {
+              const positions = responseData.position_recommendations || responseData.positions || [];
+              return positions.length > 0 && (
             <div className="border-t border-gray-700 pt-4">
               {/* Actions */}
-              <div className="flex items-center justify-between mb-3">
-                <h4 className="text-xs font-bold text-green-400">TOP RECOMMENDATIONS</h4>
+              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 mb-3">
+                <h4 className="text-xs font-bold text-green-400">TOP POSITION RECOMMENDATIONS</h4>
                 <div className="flex items-center gap-2">
                   <button
                     type="button"
                     onClick={() => handleAnalyze()}
                     disabled={analyzing}
-                    className="flex items-center gap-2 px-3 py-2 text-xs bg-green-600 hover:bg-green-700 text-white rounded transition-colors disabled:opacity-50"
+                    className="flex items-center gap-2 px-3 py-2 text-xs bg-green-600 hover:bg-green-700 text-white rounded transition-colors disabled:opacity-50 whitespace-nowrap"
                   >
                     {analyzing ? 'ANALYZING...' : 'GET AI ANALYSIS'}
                   </button>
                   <button
                     type="button"
                     onClick={copyToClipboard}
-                    className="flex items-center gap-2 px-3 py-2 text-xs bg-gray-800 hover:bg-gray-700 text-gray-300 rounded transition-colors"
+                    className="flex items-center gap-2 px-3 py-2 text-xs bg-gray-800 hover:bg-gray-700 text-gray-300 rounded transition-colors whitespace-nowrap"
                   >
                     {copied ? (
                       <>
@@ -559,8 +988,8 @@ export default function PositionRecommendations() {
                   </button>
                 </div>
               </div>
-              <div className="overflow-x-auto">
-                <table className="w-full text-xs font-mono">
+              <div className="overflow-x-auto -mx-3 sm:mx-0">
+                <table className="w-full text-xs font-mono min-w-[800px]">
                   <thead className="bg-gray-800 text-green-400">
                     <tr>
                       <th className="px-3 py-2 text-left">#</th>
@@ -574,59 +1003,78 @@ export default function PositionRecommendations() {
                     </tr>
                   </thead>
                   <tbody className="text-gray-400">
-                    {responseData.positions.slice(0, 10).map((pos: any, index: number) => (
-                      <>
-                        <tr 
-                          key={index} 
+                    {positions.slice(0, 10).map((pos: any, index: number) => {
+                      const uniqueKey = `fallback-${pos.nft_id || index}`;
+                      const isExpanded = expandedRow === uniqueKey;
+                      
+                      return (
+                        <>
+                          <tr 
+                          key={uniqueKey}
                           className="border-t border-gray-700 hover:bg-gray-800 cursor-pointer"
-                          onClick={() => setExpandedRow(expandedRow === index ? null : index)}
+                          onClick={() => setExpandedRow(isExpanded ? null : uniqueKey)}
                         >
                           <td className="px-3 py-2">{index + 1}</td>
                           <td className="px-3 py-2">{pos.tick_lower !== undefined ? pos.tick_lower.toString() : 'N/A'}</td>
                           <td className="px-3 py-2">{pos.tick_upper !== undefined ? pos.tick_upper.toString() : 'N/A'}</td>
                           <td className="px-3 py-2">{pos.fee_tier || 'N/A'}</td>
                           <td className="px-3 py-2 text-green-400">
-                            {pos.apr !== undefined ? `${pos.apr.toFixed(2)}%` : 'N/A'}
+                            {pos.apr !== undefined ? `${(pos.apr * 100).toFixed(2)}%` : 'N/A'}
                           </td>
                           <td className="px-3 py-2 text-green-400">
-                            {pos.roi !== undefined ? `${pos.roi.toFixed(2)}%` : 'N/A'}
+                            {pos.roi !== undefined ? `${(pos.roi * 100).toFixed(2)}%` : 'N/A'}
                           </td>
                           <td className="px-3 py-2">
                             {pos.underlying_value ? `$${parseFloat(pos.underlying_value.toString()).toLocaleString()}` : 'N/A'}
                           </td>
                           <td className="px-3 py-2">
-                            {expandedRow === index ? (
+                            {isExpanded ? (
                               <ChevronUp className="w-4 h-4 text-green-400" />
                             ) : (
                               <ChevronDown className="w-4 h-4 text-gray-500" />
                             )}
                           </td>
                         </tr>
-                        {expandedRow === index && (
+                        {isExpanded && (
                           <tr className="bg-gray-800 border-t border-gray-700">
                             <td colSpan={8} className="px-3 py-4">
-                              <div className="grid grid-cols-2 gap-4 text-xs">
+                              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
                                 <div>
-                                  <div className="text-green-400 font-bold mb-2">POSITION DETAILS</div>
+                                  <div className="text-green-400 font-bold mb-2">SOURCE POSITION DETAILS</div>
                                   <div className="space-y-1 text-gray-400">
                                     <div><span className="text-gray-500">NFT ID:</span> {pos.nft_id || 'N/A'}</div>
-                                    <div><span className="text-gray-500">Pool:</span> <span className="font-mono text-xs">{pos.pool || 'N/A'}</span></div>
                                     <div><span className="text-gray-500">Network:</span> {pos.network || 'N/A'}</div>
                                     <div><span className="text-gray-500">Exchange:</span> {pos.exchange || 'N/A'}</div>
+                                    <div className="mt-2 pt-2 border-t border-gray-700">
+                                      <div className="text-green-400 font-bold mb-1">POOL ADDRESS</div>
+                                      <div className="font-mono text-xs break-all">
+                                        {pos.pool || 'N/A'}
+                                      </div>
+                                      <div className="text-gray-500 text-xs mt-1">
+                                        Token0 Address: <span className="font-mono text-xs">{pos.token0?.slice(0, 10)}...</span>
+                                      </div>
+                                      <div className="text-gray-500 text-xs">
+                                        Token1 Address: <span className="font-mono text-xs">{pos.token1?.slice(0, 10)}...</span>
+                                      </div>
+                                    </div>
                                   </div>
                                 </div>
                                 <div>
-                                  <div className="text-green-400 font-bold mb-2">PERFORMANCE</div>
+                                  <div className="text-green-400 font-bold mb-2">POSITION PERFORMANCE</div>
                                   <div className="space-y-1 text-gray-400">
-                                    <div><span className="text-gray-500">Age:</span> {pos.age !== undefined ? `${parseFloat(pos.age.toString()).toFixed(1)} days` : 'N/A'}</div>
-                                    <div><span className="text-gray-500">In Range:</span> {pos.in_range !== undefined ? (
+                                    <div><span className="text-gray-500">Position Age:</span> {pos.age !== undefined ? `${parseFloat(pos.age.toString()).toFixed(1)} days` : 'N/A'}</div>
+                                    <div><span className="text-gray-500">Currently In Range:</span> {pos.in_range !== undefined ? (
                                       <span className={pos.in_range ? 'text-green-400' : 'text-red-400'}>
                                         {pos.in_range ? 'Yes ✓' : 'No ✗'}
                                       </span>
                                     ) : 'N/A'}</div>
-                                    <div><span className="text-gray-500">Score:</span> {pos.weighted_score !== undefined ? `${(pos.weighted_score * 100).toFixed(2)}%` : 'N/A'}</div>
+                                    <div><span className="text-gray-500">Weighted Score:</span> {pos.weighted_score !== undefined ? `${(pos.weighted_score * 100).toFixed(2)}%` : 'N/A'}</div>
+                                    <div><span className="text-gray-500">Score 1 (Performance):</span> {pos.score_1 !== undefined ? `${(pos.score_1 * 100).toFixed(2)}%` : 'N/A'}</div>
+                                    <div><span className="text-gray-500">Score 2 (Age):</span> {pos.score_2 !== undefined ? `${(pos.score_2 * 100).toFixed(2)}%` : 'N/A'}</div>
+                                    <div><span className="text-gray-500">Score 3 (Sentiment):</span> {pos.score_3 !== undefined ? `${(pos.score_3 * 100).toFixed(2)}%` : 'N/A'}</div>
+                                    <div><span className="text-gray-500">Score 4 (ETH Signal):</span> {pos.score_4 !== undefined ? `${(pos.score_4 * 100).toFixed(2)}%` : 'N/A'}</div>
                                     {pos.pnl !== undefined && (
-                                      <div><span className="text-gray-500">PNL:</span> ${parseFloat(pos.pnl.toString()).toLocaleString()}</div>
+                                      <div><span className="text-gray-500">Profit/Loss:</span> ${parseFloat(pos.pnl.toString()).toLocaleString()}</div>
                                     )}
                                   </div>
                                 </div>
@@ -637,21 +1085,30 @@ export default function PositionRecommendations() {
                                     e.stopPropagation();
                                     handleAnalyze(index);
                                   }}
-                                  disabled={analyzing}
+                                  disabled={positionAnalyzing[index]}
                                   className="w-full px-3 py-2 text-xs bg-yellow-600 hover:bg-yellow-700 text-white rounded transition-colors disabled:opacity-50"
                                 >
-                                  {analyzing ? 'ANALYZING...' : '🔍 AI ANALYZE THIS POSITION'}
+                                  {positionAnalyzing[index] ? 'ANALYZING...' : '🔍 AI ANALYZE THIS POSITION'}
                                 </button>
+                                {positionAnalysis[index] && (
+                                  <div className="mt-3 p-3 bg-gray-900 border border-yellow-600 rounded text-xs text-gray-300">
+                                    <div className="text-yellow-400 font-bold mb-2">AI ANALYSIS:</div>
+                                    <div className="whitespace-pre-wrap">{positionAnalysis[index]}</div>
+                                  </div>
+                                )}
                               </div>
                             </td>
                           </tr>
                         )}
                       </>
-                    ))}
+                      );
+                    })}
                   </tbody>
                 </table>
               </div>
             </div>
+              );
+            })()
           )}
 
           {/* LLM Analysis Result */}

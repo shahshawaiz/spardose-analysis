@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   spardose-api:
     build:
